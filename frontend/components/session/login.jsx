@@ -40,12 +40,12 @@ class Login extends Component {
             <label className="auth-form__label" htmlFor="login-password">Password
               <input
                 id="login-password"
-                type="text"
+                type="password"
                 onChange={this.handleChange('password')}
               />
             </label>
           </fieldset>
-          <div className='modal-button'>
+          <div className="modal-button">
             <h3>Don’t have an account? <Link to='/signup'>Sign up</Link>.</h3>
             <button onClick={this.handleSubmit}>Log In</button>
           </div>

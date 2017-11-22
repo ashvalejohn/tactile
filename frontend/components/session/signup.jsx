@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Modal from 'react-modal';
+import Modal from 'react-modal';
 
 class Signup extends Component {
   constructor(props) {
@@ -26,27 +26,31 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Sign Up</h2>
-        <form action="">
-          <label htmlFor="signup-email">Email
-            <input
-              id="signup-email"
-              type="text"
-              onChange={this.handleInput('email')}
-            />
-          </label>
-          <label htmlFor="signup-password">Password
-            <input
-              id="signup-password"
-              type="password"
-              onChange={this.handleInput('password')}
-            />
-          </label>
-          <h3>Don’t have an account? <Link to="/login">Log in</Link>.</h3>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+      <Modal isOpen={true} className="modal" overlayClassName="overlay">
+        <form className="auth-form" action="">
+          <h2>Sign Up</h2>
+          <fieldset className="auth-form__fieldset">
+            <label className="auth-form__label" htmlFor="signup-email">Email
+              <input
+                id="signup-email"
+                type="text"
+                onChange={this.handleInput('email')}
+              />
+            </label>
+            <label className="auth-form__label" htmlFor="signup-password">Password
+              <input
+                id="signup-password"
+                type="password"
+                onChange={this.handleInput('password')}
+              />
+            </label>
+          </fieldset>
+          <div className="modal-button">
+            <h3>Don’t have an account? <Link to="/login">Log in</Link>.</h3>
+            <button onClick={this.handleSubmit}>Sign Up</button>
+          </div>
         </form>
-      </div>
+      </Modal>
     );
   }
 }
