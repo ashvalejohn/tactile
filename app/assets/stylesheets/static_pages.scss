@@ -72,7 +72,7 @@ header{
   right: 5vw;
   height: 450px;
   width: 70vw;
-  min-width:500px;
+  min-width: 500px;
   max-width: 750px;
   border: 1px solid darkgrey;
   margin: 0 auto;
@@ -88,7 +88,7 @@ header{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, .50);
 }
 
 .modal-button {
