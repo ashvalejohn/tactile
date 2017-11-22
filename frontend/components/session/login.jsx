@@ -35,14 +35,14 @@ class Login extends Component {
                 id="login-email"
                 type="text"
                 onChange={this.handleChange('email')}
-              />
+                />
             </label>
             <label className="auth-form__label" htmlFor="login-password">Password
               <input
                 id="login-password"
                 type="password"
                 onChange={this.handleChange('password')}
-              />
+                />
             </label>
           </fieldset>
           <div className="modal-button">
