@@ -57,8 +57,11 @@ header{
   margin-top: 2vh;
   input{
     display: block;
-    height: 5vh;
+    height: 40px;
     min-width: 250px;
+    font-size: 1rem;
+    padding-left: 3%;
+    color: #808080;
   }
 }
 
@@ -103,6 +106,7 @@ header{
     font-size: 1rem;
     text-transform: uppercase;
     height: 10vh;
+    max-height: 75px;
     width: 200px;
     margin-top: 2%;
     &:hover{
