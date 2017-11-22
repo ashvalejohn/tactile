@@ -4,7 +4,7 @@ import LoginContainer from './session/login_container';
 import SignupContainer from './session/signup_container';
 import Header from './header';
 
-const app = () => (
+const App = () => (
   <div>
     <Header />
     <Route path="/login" component={LoginContainer} />
@@ -13,4 +13,4 @@ const app = () => (
 );
 
 
-export default app;
+export default App;
