@@ -28,6 +28,10 @@ body{
   fieldset{
     border: none;
   }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 a{
@@ -78,6 +82,9 @@ a{
   &:hover{
     color: $hover;
   }
+  h1{
+    margin: 0 auto;
+  }
 }
 
 .header__buttons{
@@ -112,6 +119,9 @@ a{
   a:hover{
     color: $hover;
   }
+  p{
+    margin: 2% 0;
+  }
 }
 
 .auth-form__fieldset{
@@ -129,7 +139,21 @@ a{
     font-size: 1rem;
     padding-left: $inputpadding;
     color: #808080;
+    &:focus{
+      outline: none;
+      border: 2px solid darkgrey;
+    }
+    &:valid{
+      border: 2px solid green;
+    }
   }
+}
+
+.auth-form__errors{
+  color: red;
+  font-size: .9rem;
+  list-style: none;
+  min-height: 20px;
 }
 
 .modal{
@@ -167,12 +191,15 @@ a{
     font-size: .8rem;
     font-weight: normal;
   }
+  div{
+    display: flex;
+    flex-direction: row;
+  }
   button{
     @extend .button;
     font-size: 1rem;
-    height: 10vh;
-    max-height: 75px;
-    width: 200px;
-    margin-top: 2%;
+    height: 50px;
+    width: 150px;
+    margin: 2% 1% 0 1%;
   }
 }

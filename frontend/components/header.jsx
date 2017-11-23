@@ -5,11 +5,11 @@ const Header = ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div className="header__buttons">
       <button onClick={logout} className="header__button">Logout</button>
-      <button className="header__button">Open Cart</button>
+      <button className="header__button">Cart</button>
     </div>
   ) : (
     <Link to="/cart" className="header__buttons">
-      <button className="header__button">Open Cart</button>
+      <button className="header__button">Cart</button>
     </Link>
   );
 

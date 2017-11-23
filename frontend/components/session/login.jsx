@@ -49,19 +49,13 @@ class Login extends Component {
         <form className="auth-form" action="">
           <h2>Log In</h2>
           <p>You need to log in to see your cart.</p>
-          <ul>
-            {this.props.errors ? this.props.errors.map((error, idx) =>
-              (<li key={idx}>{error}</li>))
-              :
-              (null)
-            }
-          </ul>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="login-email">Email
               <input
                 id="login-email"
                 type="text"
                 onChange={this.handleChange('email')}
+                required
               />
             </label>
             <label className="auth-form__label" htmlFor="login-password">Password
@@ -69,13 +63,24 @@ class Login extends Component {
                 id="login-password"
                 type="password"
                 onChange={this.handleChange('password')}
+                minLength="6"
+                required
               />
             </label>
           </fieldset>
+          <ul className="auth-form__errors">
+            {this.props.errors ? this.props.errors.map((error, idx) =>
+              (<li key={idx}>{error}</li>))
+              :
+              (null)
+            }
+          </ul>
           <div className="modal-button">
             <h3>Don’t have an account? <Link to='/signup'>Sign up</Link>.</h3>
-            <button onClick={this.handleSubmit}>Log In</button>
-            <button onClick={this.handleDemo}>Demo Log In</button>
+            <div>
+              <button onClick={this.handleSubmit}>Log In</button>
+              <button onClick={this.handleDemo}>Demo Log In</button>
+            </div>
           </div>
         </form>
       </Modal>

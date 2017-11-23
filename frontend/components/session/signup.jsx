@@ -41,19 +41,14 @@ class Signup extends Component {
       <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} onAfterOpen={this.shiftModalFocus} ariaHideApp={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Sign Up</h2>
-          <ul>
-            {this.props.errors ? this.props.errors.map((error, idx) =>
-              (<li key={idx}>{error}</li>))
-              :
-              (null)
-            }
-          </ul>
+          <p>Sign up to create a cart</p>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="signup-email">Email
               <input
                 id="signup-email"
                 type="text"
                 onChange={this.handleChange('email')}
+                required
               />
             </label>
             <label className="auth-form__label" htmlFor="signup-password">Password
@@ -61,12 +56,24 @@ class Signup extends Component {
                 id="signup-password"
                 type="password"
                 onChange={this.handleChange('password')}
+                minLength="6"
+                required
               />
             </label>
           </fieldset>
+          <ul className="auth-form__errors">
+            {this.props.errors ? this.props.errors.map((error, idx) =>
+              (<li key={idx}>{error}</li>))
+              :
+              (null)
+            }
+          </ul>
           <div className="modal-button">
             <h3>Don’t have an account? <Link to="/login">Log in</Link>.</h3>
-            <button onClick={this.handleSubmit}>Sign Up</button>
+            <div>
+              <button onClick={this.handleSubmit}>Sign Up</button>
+              <button onClick={this.handleDemo}>Demo Log In</button>
+            </div>
           </div>
         </form>
       </Modal>
