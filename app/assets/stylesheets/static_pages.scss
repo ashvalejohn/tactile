@@ -53,13 +53,12 @@ a{
 }
 
 .header__search{
+  @extend .button;
   min-height: 35px;
   flex: 1;
   width: inherit;
   label{
     position: relative;
-    @extend .button;
-    min-height: 40px;
     font-size: .75rem;
     padding: 3%;
     top: 7px;
