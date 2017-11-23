@@ -3,24 +3,26 @@ import { Link } from 'react-router-dom';
 
 const Header = ({ currentUser, logout }) => {
   const display = currentUser ? (
-    <div>
-      <button onClick={logout}>Logout</button>
-      <button>Open Cart</button>
+    <div className="header__buttons">
+      <button onClick={logout} className="header__button">Logout</button>
+      <button className="header__button">Open Cart</button>
     </div>
   ) : (
-    <Link to="/cart">
-      <button>Open Cart</button>
+    <Link to="/cart" className="header__buttons">
+      <button className="header__button">Open Cart</button>
     </Link>
   );
 
   return (
-    <header>
-      <form action="">
+    <header className="header">
+      <form className="header__search" action="">
         <label htmlFor="search">Search
           <input id="search" type="text" />
         </label>
       </form>
-      <h1>Catalog App</h1>
+      <Link to="/" className="header__logo">
+        <h1>Catalog App</h1>
+      </Link>
       {display}
     </header>
   );

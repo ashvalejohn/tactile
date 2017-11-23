@@ -3,11 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $test: 2px dashed green;
 $hover: red;
+$inputpadding: 3%;
+
+.button {
+  border: 1px solid darkgrey;
+  color: darkgrey;
+  border-radius: 0;
+  
+  text-transform: uppercase;
+  &:hover{
+      border: 1px solid $hover;
+      color: $hover;
+      cursor: pointer;
+    }
+}
 
 body{
   font-family: sans-serif;
   color: darkgrey;
-  h2, h3{
+  h1, h2, h3{
+    font-weight: normal;
     margin: 0;
   }
   fieldset{
@@ -22,12 +37,63 @@ a{
   }
 }
 
-header{
+.header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 1%;
+  min-height: 100px;
   a{
     text-decoration: none;
+  }
+}
+
+.header__search{
+  min-height: 35px;
+  flex: 1;
+  width: inherit;
+  label{
+    position: relative;
+    @extend .button;
+    min-height: 40px;
+    font-size: .75rem;
+    padding: 3%;
+    top: 7px;
+
+  }
+  input{
+    margin-left: $inputpadding;
+    height: 90%;
+    border: 0px;
+    &:focus{
+      outline-width: 0px;
+    }
+  }
+}
+
+.header__logo{
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover{
+    color: $hover;
+  }
+}
+
+.header__buttons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.header__button{
+  @extend .button;
+  font-size: .75rem;
+  height: 35px;
+  min-width: 100px;
+  &:last-of-type{
+    margin-left: 2%;
   }
 }
 
@@ -61,14 +127,15 @@ header{
     height: 40px;
     min-width: 250px;
     font-size: 1rem;
-    padding-left: 3%;
+    padding-left: $inputpadding;
     color: #808080;
   }
 }
 
 .modal{
+  background-color: rgba(255, 255, 255, 1);
   position: fixed;
-  top: 10vh;
+  top: 120px;
   left: 5vw;;
   right: 5vw;
   height: 450px;
@@ -101,19 +168,11 @@ header{
     font-weight: normal;
   }
   button{
-    border: 1px solid darkgrey;
-    color: darkgrey;
-    border-radius: 0;
+    @extend .button;
     font-size: 1rem;
-    text-transform: uppercase;
     height: 10vh;
     max-height: 75px;
     width: 200px;
     margin-top: 2%;
-    &:hover{
-      border: 1px solid $hover;
-      color: $hover;
-      cursor: pointer;
-    }
   }
 }
