@@ -5,7 +5,7 @@ const Header = ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div className="header__buttons">
       <button onClick={logout} className="header__button">Logout</button>
-      <button className="header__button">Cart</button>
+      <Link to="/cart"><button className="header__button">Cart</button></Link>
     </div>
   ) : (
     <Link to="/cart" className="header__buttons">
