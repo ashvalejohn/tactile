@@ -24,7 +24,7 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state).then(() => this.props.history.push("/cart"));
+    this.props.login(this.state);
   }
 
   handleDemo(e) {
@@ -43,6 +43,13 @@ class Login extends Component {
         <form className="auth-form" action="">
           <h2>Log In</h2>
           <p>You need to log in to see your cart.</p>
+          <ul>
+            {this.props.errors ? this.props.errors.map((error, idx) =>
+              (<li key={idx}>{error}</li>))
+              :
+              (null)
+            }
+          </ul>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="login-email">Email
               <input

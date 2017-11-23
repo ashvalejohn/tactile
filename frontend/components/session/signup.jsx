@@ -36,6 +36,13 @@ class Signup extends Component {
       <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Sign Up</h2>
+          <ul>
+            {this.props.errors ? this.props.errors.map((error, idx) =>
+              (<li key={idx}>{error}</li>))
+              :
+              (null)
+            }
+          </ul>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="signup-email">Email
               <input
