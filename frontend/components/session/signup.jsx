@@ -12,9 +12,14 @@ class Signup extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.shiftModalFocus = this.shiftModalFocus.bind(this);
+  }
+  
+  handleCloseModal() {
+    this.props.history.push("/");
   }
 
   handleChange(type) {
@@ -23,13 +28,16 @@ class Signup extends Component {
     };
   }
 
-  handleSubmit(e) {
+  handleDemo(e) {
     e.preventDefault();
-    this.props.signup(this.state);
+    const demoUser = { email: 'demo@email.com', password: 'password' };
+    this.props.login(demoUser).then(() => this.props.history.push("/cart"));
   }
 
-  handleCloseModal() {
-    this.props.history.push("/");
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.clearErrors();
+    this.props.signup(this.state);
   }
 
   shiftModalFocus() {
