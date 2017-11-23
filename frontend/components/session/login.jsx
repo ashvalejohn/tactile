@@ -8,9 +8,12 @@ class Login extends Component {
     this.state = {
       email: ' ',
       password: ' ',
+      showModal: true,
     };
 
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   handleChange(type) {
@@ -24,11 +27,17 @@ class Login extends Component {
     this.props.login(this.state);
   }
 
+  handleCloseModal() {
+    this.props.history.push("/");
+  }
+
   render() {
     return (
-      <Modal isOpen={true} className="modal" overlayClassName="overlay">
+      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
+        <Link to='/'><button>Close</button></Link>
         <form className="auth-form" action="">
           <h2>Log In</h2>
+          <p>You need to log in to see your cart.</p>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="login-email">Email
               <input

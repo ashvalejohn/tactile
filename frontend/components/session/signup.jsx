@@ -8,12 +8,15 @@ class Signup extends Component {
     this.state = {
       email: '',
       password: '',
+      showModal: true,
     };
 
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-  handleInput(type) {
+  handleChange(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
     };
@@ -24,9 +27,13 @@ class Signup extends Component {
     this.props.signup(this.state);
   }
 
+  handleCloseModal() {
+    this.props.history.push("/");
+  }
+
   render() {
     return (
-      <Modal isOpen={true} className="modal" overlayClassName="overlay">
+      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Sign Up</h2>
           <fieldset className="auth-form__fieldset">
@@ -34,14 +41,14 @@ class Signup extends Component {
               <input
                 id="signup-email"
                 type="text"
-                onChange={this.handleInput('email')}
+                onChange={this.handleChange('email')}
               />
             </label>
             <label className="auth-form__label" htmlFor="signup-password">Password
               <input
                 id="signup-password"
                 type="password"
-                onChange={this.handleInput('password')}
+                onChange={this.handleChange('password')}
               />
             </label>
           </fieldset>
