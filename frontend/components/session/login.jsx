@@ -24,13 +24,13 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state).then(() => this.props.history.push("/"));
+    this.props.login(this.state).then(() => this.props.history.push("/cart"));
   }
 
   handleDemo(e) {
     e.preventDefault();
     const demoUser = { email: 'demo@email.com', password: 'password' };
-    this.props.login(demoUser).then(() => this.props.history.push("/"));
+    this.props.login(demoUser).then(() => this.props.history.push("/cart"));
   }
 
   handleCloseModal() {

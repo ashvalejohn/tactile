@@ -8,7 +8,7 @@ const Header = ({ currentUser, logout }) => {
       <button>Open Cart</button>
     </div>
   ) : (
-    <Link to="/login">
+    <Link to="/cart">
       <button>Open Cart</button>
     </Link>
   );
