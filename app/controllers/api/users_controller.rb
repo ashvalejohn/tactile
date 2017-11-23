@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
     else
-      render json: @user.errors.full_messages
+      render json: ["Invalid email or password"], status: 422
     end
   end
 

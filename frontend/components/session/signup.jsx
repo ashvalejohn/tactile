@@ -24,7 +24,7 @@ class Signup extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state).then(() => this.props.history.push("/cart"));;
+    this.props.signup(this.state);
   }
 
   handleCloseModal() {
