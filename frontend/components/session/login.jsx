@@ -14,6 +14,7 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.shiftModalFocus = this.shiftModalFocus.bind(this);
   }
 
   handleChange(type) {
@@ -37,9 +38,14 @@ class Login extends Component {
     this.props.history.push("/");
   }
 
+
+  shiftModalFocus() {
+    document.getElementById('login-email').focus();
+  }
+
   render() {
     return (
-      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
+      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} onAfterOpen={this.shiftModalFocus} ariaHideApp={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Log In</h2>
           <p>You need to log in to see your cart.</p>

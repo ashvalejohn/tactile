@@ -14,6 +14,7 @@ class Signup extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.shiftModalFocus = this.shiftModalFocus.bind(this);
   }
 
   handleChange(type) {
@@ -31,9 +32,13 @@ class Signup extends Component {
     this.props.history.push("/");
   }
 
+  shiftModalFocus() {
+    document.getElementById('signup-email').focus();
+  }
+
   render() {
     return (
-      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
+      <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} onAfterOpen={this.shiftModalFocus} ariaHideApp={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Sign Up</h2>
           <ul>
