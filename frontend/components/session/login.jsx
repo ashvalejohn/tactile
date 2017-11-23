@@ -34,7 +34,6 @@ class Login extends Component {
   render() {
     return (
       <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} shouldCloseOnOverlayClick={this.state.showModal}>
-        <Link to='/'><button>Close</button></Link>
         <form className="auth-form" action="">
           <h2>Log In</h2>
           <p>You need to log in to see your cart.</p>
