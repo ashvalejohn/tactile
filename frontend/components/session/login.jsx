@@ -10,7 +10,6 @@ class Login extends Component {
       password: ' ',
       showModal: true,
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
