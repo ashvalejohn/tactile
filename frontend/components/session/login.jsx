@@ -13,6 +13,7 @@ class Login extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
@@ -24,7 +25,13 @@ class Login extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.login(this.state).then(() => this.props.history.push("/"));
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = { email: 'demo@email.com', password: 'password' };
+    this.props.login(demoUser).then(() => this.props.history.push("/"));
   }
 
   handleCloseModal() {
@@ -43,19 +50,20 @@ class Login extends Component {
                 id="login-email"
                 type="text"
                 onChange={this.handleChange('email')}
-                />
+              />
             </label>
             <label className="auth-form__label" htmlFor="login-password">Password
               <input
                 id="login-password"
                 type="password"
                 onChange={this.handleChange('password')}
-                />
+              />
             </label>
           </fieldset>
           <div className="modal-button">
             <h3>Don’t have an account? <Link to='/signup'>Sign up</Link>.</h3>
             <button onClick={this.handleSubmit}>Log In</button>
+            <button onClick={this.handleDemo}>Demo Log In</button>
           </div>
         </form>
       </Modal>

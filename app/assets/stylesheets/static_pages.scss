@@ -20,15 +20,15 @@ a{
   &:visited{
     color: inherit;
   }
-  &:hover{
-    color: $hover;
-  }
 }
 
 header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  a{
+    text-decoration: none;
+  }
 }
 
 .auth-form{
@@ -42,6 +42,9 @@ header{
   h2{
     font-weight: normal;
     margin-top: 2%;
+  }
+  a:hover{
+    color: $hover;
   }
 }
 
