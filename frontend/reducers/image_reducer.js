@@ -1,6 +1,6 @@
 import { RECEIVE_IMAGES } from '../actions/image_actions';
 
-const ImageReducer = (state = {}, action) => {
+const ImageReducer = (state = [], action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_IMAGES:

@@ -6,10 +6,19 @@ class ImageIndex extends Component {
   }
 
   render() {
-    console.log(this.props.images);
+    if (this.props.images.length === 0) {
+      return (
+        <h1>Loading</h1>
+      );
+    }
+
+    const imageTags = this.props.images.map(image => (
+      <img alt="" src={`${image.image_url}`} />
+    ));
+
     return (
       <div className="image-index">
-        <img alt="" src={this.props.images.image_url} />
+        {imageTags}
       </div>
     );
   }
