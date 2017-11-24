@@ -1,13 +1,14 @@
-import merge from 'lodash/merge';
-import { RECEIVE_IMAGE } from '../actions/image_actions';
+import { RECEIVE_IMAGES } from '../actions/image_actions';
 
 const ImageReducer = (state = {}, action) => {
-  console.log(action);
   Object.freeze(state);
-  const image = { image: action.image };
+  const images = {};
   switch (action.type) {
-    case RECEIVE_IMAGE:
-      return merge({}, { image });
+    case RECEIVE_IMAGES:
+      action.images.forEach((image) => {
+        images[image.id] = image;
+      });
+      return images;
     default:
       return state;
   }

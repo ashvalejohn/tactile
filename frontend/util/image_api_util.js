@@ -1,7 +1,7 @@
-export const receiveImage = image => (
+export const getImages = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/images',
-    data: { image },
+    url: '/api/images',
   })
 );
+

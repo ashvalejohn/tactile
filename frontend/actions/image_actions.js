@@ -1,12 +1,12 @@
-import * as APIUtil from '../util/image_api_util';
+import getImages from '../util/image_api_util';
 
-export const RECEIVE_IMAGE = 'RECEIVE_IMAGE';
+export const RECEIVE_IMAGES = 'RECEIVE_IMAGES';
 
-const receiveImage = image => ({
-  type: RECEIVE_IMAGE,
-  image,
+const receiveImages = images => ({
+  type: RECEIVE_IMAGES,
+  images,
 });
 
-export const showPhotoRoll = image => dispatch => (
-  APIUtil.receiveImage(image).then(photoRoll => dispatch(receiveImage(photoRoll)))
+export const fetchImages = () => dispatch => (
+  getImages().then(images => dispatch(receiveImages(images)))
 );
