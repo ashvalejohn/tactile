@@ -3,11 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $test: 2px dashed green;
 $hover: red;
+$main-text: darkgrey;
 $inputpadding: 3%;
 
 .button {
-  border: 1px solid darkgrey;
-  color: darkgrey;
+  border: 1px solid $main-text;
+  color: $main-text;
   border-radius: 0;
   
   text-transform: uppercase;
@@ -20,7 +21,9 @@ $inputpadding: 3%;
 
 body{
   font-family: sans-serif;
-  color: darkgrey;
+  color: $main-text;
+  margin: 0;
+  padding: 0;
   h1, h2, h3{
     font-weight: normal;
     margin: 0;
@@ -53,21 +56,19 @@ a{
 }
 
 .header__search{
-  @extend .button;
   min-height: 35px;
   flex: 1;
   width: inherit;
   label{
-    position: relative;
+    @extend .button;
     font-size: .75rem;
     padding: 3%;
-    top: 7px;
-
   }
   input{
     margin-left: $inputpadding;
     height: 90%;
     border: 0px;
+    font-size: inherit;
     &:focus{
       outline-width: 0px;
     }
@@ -140,7 +141,7 @@ a{
     color: #808080;
     &:focus{
       outline: none;
-      border: 2px solid darkgrey;
+      border: 2px solid $main-text;
     }
     &:valid{
       border: 2px solid green;
@@ -165,7 +166,7 @@ a{
   width: 70vw;
   min-width: 500px;
   max-width: 750px;
-  border: 1px solid darkgrey;
+  border: 1px solid $main-text;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -201,4 +202,12 @@ a{
     width: 150px;
     margin: 2% 1% 0 1%;
   }
+}
+
+.image_index{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

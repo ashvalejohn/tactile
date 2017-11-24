@@ -7,7 +7,7 @@ class ImageIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div className="image-index">
         <img alt="" src={this.props.images.image_url} />
       </div>
     );
