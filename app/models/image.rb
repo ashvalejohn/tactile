@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  image_url  :string           not null
-#  map        :jsonb            not null
+#  image_map  :jsonb            not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

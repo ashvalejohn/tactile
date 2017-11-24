@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ImageIndexItem from './image_index_item';
 
 class ImageIndex extends Component {
   componentDidMount() {
@@ -12,13 +13,13 @@ class ImageIndex extends Component {
       );
     }
 
-    const imageTags = this.props.images.map(image => (
-      <img key={image.id} alt="" src={`${image.image_url}`} />
+    const imageIndexItems = this.props.images.map(image => (
+      <ImageIndexItem key={image.id} image={image} />
     ));
 
     return (
       <div className="image-index">
-        {imageTags}
+        {imageIndexItems}
       </div>
     );
   }
