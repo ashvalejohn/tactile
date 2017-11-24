@@ -13,7 +13,7 @@ class ImageIndex extends Component {
     }
 
     const imageTags = this.props.images.map(image => (
-      <img alt="" src={`${image.image_url}`} />
+      <img key={image.id} alt="" src={`${image.image_url}`} />
     ));
 
     return (

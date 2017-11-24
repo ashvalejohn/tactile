@@ -1,1 +1,1 @@
-json.array! @images, :image_url, :map
+json.array! @images, :id, :image_url, :map
