@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchImages } from '../actions/image_actions';
+import { fetchImages } from '../../actions/image_actions';
 import ImageIndex from './image_index';
 
 const mapStateToProps = state => ({

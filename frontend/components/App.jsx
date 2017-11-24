@@ -4,7 +4,7 @@ import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import CartContainer from './cart/cart_container';
 import HeaderContainer from './header_container';
 import LoginContainer from './session/login_container';
-import ImageIndexContainer from './image_index_container';
+import ImageIndexContainer from './images/image_index_container';
 import SignupContainer from './session/signup_container';
 
 
