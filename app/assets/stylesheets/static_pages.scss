@@ -99,9 +99,10 @@ a{
   font-size: .75rem;
   height: 35px;
   min-width: 100px;
-  &:last-of-type{
-    margin-left: 2%;
-  }
+}
+
+.header__button--last{
+  margin-left: 2%;
 }
 
 .auth-form{

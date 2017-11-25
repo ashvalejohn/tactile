@@ -5,12 +5,17 @@ const Header = ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div className="header__buttons">
       <button onClick={logout} className="header__button">Logout</button>
-      <Link to="/cart"><button className="header__button">Cart</button></Link>
+      <Link to="/cart" className="header__button--last"><button className="header__button">Cart</button></Link>
     </div>
   ) : (
-    <Link to="/cart" className="header__buttons">
-      <button className="header__button">Cart</button>
-    </Link>
+    <div className="header__buttons">
+      <Link to="/login">
+        <button className="header__button">Log In</button>
+      </Link>
+      <Link to="/cart" className="header__button--last">
+        <button className="header__button">Cart</button>
+      </Link>
+    </div>
   );
 
   return (
