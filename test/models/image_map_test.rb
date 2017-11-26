@@ -1,17 +1,18 @@
 # == Schema Information
 #
-# Table name: images
+# Table name: image_maps
 #
 #  id         :integer          not null, primary key
-#  image_url  :string           not null
+#  image_id   :integer          not null
+#  item_id    :integer          not null
+#  coords     :string           default([]), not null, is an Array
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  image_maps :integer          default([]), is an Array
 #
 
 require 'test_helper'
 
-class ImageTest < ActiveSupport::TestCase
+class ImageMapTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

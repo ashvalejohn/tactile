@@ -10,17 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171124225551) do
+ActiveRecord::Schema.define(version: 20171126191136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "images", force: :cascade do |t|
-    t.string "image_url", null: false
-    t.jsonb "image_map", null: false
+  create_table "image_maps", force: :cascade do |t|
+    t.integer "image_id", null: false
+    t.integer "item_id", null: false
+    t.string "coords", default: [], null: false, array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["image_map"], name: "index_images_on_image_map"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "image_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "item_image_url", null: false
+    t.string "description", null: false
+    t.decimal "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
