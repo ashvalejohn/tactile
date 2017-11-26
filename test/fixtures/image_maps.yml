@@ -1,13 +1,13 @@
 # == Schema Information
 #
-# Table name: items
+# Table name: image_maps
 #
-#  id             :integer          not null, primary key
-#  item_image_url :string           not null
-#  description    :string           not null
-#  price          :decimal(, )      not null
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
+#  id         :integer          not null, primary key
+#  image_id   :integer          not null
+#  item_id    :integer          not null
+#  coords     :string           default([]), not null, is an Array
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
