@@ -11,4 +11,7 @@
 #
 
 class Item < ApplicationRecord
+  validates :item_image_url, :description, :price, presence: true
+
+  has_many :image_maps
 end

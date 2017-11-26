@@ -11,4 +11,8 @@
 #
 
 class ImageMap < ApplicationRecord
+  validates :coords, presence: true
+  
+  belongs_to :image
+  belongs_to :item
 end

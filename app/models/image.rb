@@ -10,5 +10,7 @@
 #
 
 class Image < ApplicationRecord
-  validates :image_url, :image_maps, presence: true
+  validates :image_url, presence: true
+  
+  has_many :image_maps
 end
