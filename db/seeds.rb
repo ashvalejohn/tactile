@@ -75,7 +75,7 @@ img5_black_socks.save!
 # ITEMS ------------------------------------------------------------------------
 ## Red Dress
 red_dress = Item.create({
-  detail_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
+  item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
   description: "Red silk ruffle midi dress",
   price: 128
 })
@@ -84,7 +84,7 @@ red_dress.save!
 
 ## Gray Sweater
 gray_sweater = Item.create({
-  detail_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
+  item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
   description: "Gray fair-isle pullover sweater",
   price: 164
 })
@@ -93,7 +93,7 @@ gray_sweater.save!
 
 ## Pink Converse Sneakers
 pink_converse_sneakers = Item.create({
-  detail_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
+  item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
   description: "Pink furry Converse sneakers",
   price: 78
 })
@@ -102,7 +102,7 @@ pink_converse_sneakers.save!
 
 ## Pink Velvet Hat
 pink_velvet_hat = Item.create({
-  detail_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
+  item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
   description: "Pink velvet hat",
   price: 24
 })
@@ -111,9 +111,9 @@ pink_velvet_hat.save!
 
 ## Black Socks
 black_socks = Item.create({
-  detail_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
+  item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
   description: "Black fair-isle socks",
-  price: 16
+  price: 16.50
 })
 black_socks.id = 5
 black_socks.save!
