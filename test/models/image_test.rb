@@ -4,9 +4,9 @@
 #
 #  id         :integer          not null, primary key
 #  image_url  :string           not null
-#  image_map  :jsonb            not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  image_maps :integer          default([]), is an Array
 #
 
 require 'test_helper'
