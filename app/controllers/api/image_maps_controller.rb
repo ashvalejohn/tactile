@@ -1,6 +1,7 @@
 class Api::ImageMapsController < ApplicationController
   def index
     @image_map = ImageMap.find_by(image_id: :image_map_params[:image_id])
+    render :index
   end
 
   private
