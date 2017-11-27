@@ -33,10 +33,13 @@ class ItemDetail extends Component {
           <h1 className="item-title">{item.description}</h1>
           <img className="item-img" src={item.item_image_url} alt="" />
           <h2 className="item-price">${item.price}</h2>
-          <form>
+          <form className="item-sizes">
             {
               item.sizes.map(size => (
-                <label><input type="checkbox" value={size} />*{size}</label>
+                <label>
+                  <input type="radio" value={size} name="item-size"/>
+                  <span className="size-text">{size}</span>
+                </label>
               ))
             }
           </form>

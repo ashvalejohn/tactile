@@ -32,7 +32,7 @@ body{
   fieldset{
     border: none;
   }
-  ul{
+  ul, input{
     margin: 0;
     padding: 0;
   }
@@ -245,6 +245,49 @@ a{
   font-size: 1.25rem;
 }
 
+.item-sizes{
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  label{
+    margin: 5px;
+  }
+
+  input:checked ~ .size-text{
+    border: 1px solid $hover;
+    color: $hover;
+  }
+
+  input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  span{
+    padding: 10px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .size-text{
+    border: 1px solid $main-text;
+    color: $main-text;
+
+    &:hover{
+      border: 1px solid $hover;
+      color: $hover;
+      cursor: pointer;
+    }
+  }
+}
+
+
 .add-to-cart{
   @extend .button;
   font-size: .9rem;
@@ -257,5 +300,5 @@ a{
   width: 60vw;
   right: 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, .25);
 }
