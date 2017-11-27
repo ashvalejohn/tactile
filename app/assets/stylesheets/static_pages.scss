@@ -236,9 +236,15 @@ a{
   text-transform: capitalize;
 }
 
-.item-img{
-  max-width: 300px;
+.item-img-container{
+  min-height: 300px;
+  min-width: 300px;
   width: 90%;
+}
+
+.item-img{
+  width: 100%;
+  
 }
 
 .item-price{

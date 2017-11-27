@@ -108,16 +108,49 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     price: 8.50,
     sizes: ["One Size"]
   })
-  ## Pink Sneakers
-    pink_sneakers = Item.create({
-      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
-      description: "Pink satin sneakers",
-      price: 64.00,
-      sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
-    })
+## Pink Sneakers
+  pink_sneakers = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
+    description: "Pink satin sneakers",
+    price: 64.00,
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+  })
 
-
-#
+## Green Button Down
+  green_button_down = Item.create({
+    item_image_url: "",
+    description: "",
+    price: ,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Gray Sneakers
+ gray_sneakers = Item.create({
+    item_image_url: "",
+    description: "",
+    price: ,
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+  })
+## Pink Tote
+ pink_tote = Item.create({
+    item_image_url: "",
+    description: "",
+    price: ,
+    sizes: ["One Size"]
+  })
+## Green Sweater
+ green_sweater = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819420/F8882_GR7450_zxhjru.jpg",
+    description: "Green mockneck sweater",
+    price: 78.00,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Tuxedo Stripe Jeans
+ tuxedo_stripe_jeans = Item.create({
+    item_image_url: "",
+    description: "",
+    price: 98.00,
+    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"]
+  })
 # IMAGES -----------------------------------------------------------------------
 ## Image 5
   img5 = Image.create({
@@ -127,9 +160,13 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   img14 = Image.create({
     image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img14_sojgem.jpg", 
   })
-## Image11 
+## Image 11 
   img11 = Image.create({
     image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img11_vyd7y0.jpg", 
+  })
+## Image 12
+  img12 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img12_juudma.jpg"
   })
 #
 # IMAGE MAPS -------------------------------------------------------------------
@@ -255,3 +292,57 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
           "170, 868, 207, 836, 234, 818, 249, 827, 257, 831, 268, 830, 276, 820, 284, 835, 286, 858, 242, 871, 216, 885, 180, 887"
         ]
       })
+#
+## Image 12 Maps:
+### Green Beanie Map
+  img12_green_beanie = ImageMap.create({
+    image_id: img12.id,
+    item.id: green_beanie.id,
+    coords: [
+      "323, 107, 355, 71, 359, 50, 380, 43, 402, 53, 420, 100, 420, 130, 403, 152, 403, 138, 381, 112, 339, 108"
+    ]
+  })
+### Green Button Down Map
+  img12_green_button_down = ImageMap.create({
+    image_id: img12.id,
+    item_id: green_button_down.id,
+    coords: [
+      "340, 229, 329, 195, 329, 181, 283, 148, 272, 154, 272, 166, 236, 197, 236, 205, 221, 238, 225, 306, 214, 411, 217, 499, 234, 500, 275, 468, 280, 426, 288, 427, 292, 411, 271, 358, 276, 344, 305, 342, 317, 383, 334, 382, 347, 364, 356, 381, 364, 379, 356, 329, 351, 228, 357, 184, 344, 180, 333, 192"
+    ]
+  })
+### Gray Sneakers Map
+  img12_gray_sneakers = ImageMap.create({
+    image_id: img12.id,
+    item_id: gray_sneakers.id,
+    coords: [
+      "662, 439, 689, 428, 689, 500, 681, 516, 644, 493, 671, 463",
+      "215, 803, 223, 818, 258, 797, 320, 840, 320, 850, 296, 862, 256, 864, 203, 845, 209, 807"
+    ]
+  })
+### Pink Tote Map
+  img12_pink_tote = ImageMap.create({
+    image_id: img12.id,
+    item_id: pink_tote.id,
+    coords: [
+      "348, 539, 377, 519, 451, 577, 496, 553, 566, 665, 578, 719, 456, 805, 417, 789, 342, 659, 373, 633"
+    ]
+  })
+### Green Sweater Map
+  img12_green_sweater = ImageMap.create({
+      image_id: img12.id,
+      item_id: green_sweater.id,
+      coords: [
+        "321, 382, 344, 363, 364, 415, 376, 494, 372, 495, 349, 457",
+        "248, 488, 260, 593, 263, 595, 273, 577, 262, 488, 294, 428, 294, 416, 280, 430, 273, 467"
+      ]
+    })
+### Tuxedo Stripe Jeans Map
+  img12_tuxedo_stripe_jeans = ImageMap.create({
+    image_id: img12.id,
+    item_id: tuxedo_stripe_jeans.id,
+    coords: [
+      "278, 456, 300, 426, 320, 472, 335, 557, 325, 638, 268, 782, 236, 788, 221, 769, 264, 622, 272, 576, 265, 509",
+      "356, 382, 365, 453, 496, 402, 596, 457, 628, 406, 501, 335"
+    ]
+  })
+#

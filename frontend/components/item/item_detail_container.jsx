@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchItem } from '../../actions/item_actions';
+import { fetchItem, clearItemInfo } from '../../actions/item_actions';
 import ItemDetail from './item_detail';
 
 const mapStateToProps = state => ({
@@ -9,6 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchItem: id => dispatch(fetchItem(id)),
+  clearItem: () => dispatch(clearItemInfo()),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ItemDetail));

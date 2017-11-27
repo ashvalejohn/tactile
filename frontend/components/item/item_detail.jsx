@@ -14,12 +14,16 @@ class ItemDetail extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearItem();
+  }
+
   clickAway() {
     this.props.history.push('/');
   }
 
   render() {
-    if (Object.keys(this.props.item).length === 0) {
+    if (this.props.item === null || Object.keys(this.props.item).length === 0) {
       return (
         <h1></h1>
       );
@@ -28,15 +32,17 @@ class ItemDetail extends Component {
     const item = this.props.item; 
 
     return (
-      <div>
+      <div className="item-detail__panel">
         <div className="item-detail">
           <h1 className="item-title">{item.description}</h1>
-          <img className="item-img" src={item.item_image_url} alt="" />
-          <h2 className="item-price">${item.price}</h2>
+          <div className="item-img-container">
+            <img className="item-img" src={item.item_image_url} alt="" />
+          </div>
+          <h2 className="item-price">{item.price}</h2>
           <form className="item-sizes">
             {
               item.sizes.map(size => (
-                <label>
+                <label key={`${item.id}${size}`}>
                   <input type="radio" value={size} name="item-size"/>
                   <span className="size-text">{size}</span>
                 </label>
