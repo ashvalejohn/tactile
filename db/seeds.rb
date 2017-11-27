@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Item.destroy_all
 Image.destroy_all
 demoUser = User.create({email: "demo@email.com", password: "password"})
 
@@ -14,54 +15,62 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   red_dress = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
     description: "Red silk ruffle midi dress",
-    price: 128
+    price: 128,
+    sizes: ["XS", "S", "M", "L", "XL"]
   })
 
 ## Gray Sweater
   gray_sweater = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
     description: "Gray fair-isle pullover sweater",
-    price: 164
+    price: 164,
+    sizes: ["XS", "S", "M", "L", "XL"]
   })
 
 ## Pink Converse Sneakers
   pink_converse_sneakers = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
     description: "Pink furry Converse sneakers",
-    price: 78
+    price: 78,
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
   })
 
 ## Pink Velvet Hat
   pink_velvet_hat = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
     description: "Pink velvet hat",
-    price: 24
+    price: 24,
+    sizes: ["One Size"]
   })
 
 ## Black Socks
   black_socks = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
     description: "Black fair-isle socks",
-    price: 16.50
+    price: 16.50,
+    sizes: ["One Size"]
   })
 
 ## Green Beanie
   green_beanie = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796133/H3306_EG5539_kteyhy.jpg",
     description: "Green knit beanie",
-    price: 18.50
+    price: 18.50,
+    sizes: ["One Size"]
   })
 ## Green Velvet Dress
   green_velvet_dress = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796127/H2540_GR6182_kmhb7f.jpg",
     description: "Green velvet mini dress",
-    price: 69.50
+    price: 69.50,
+    sizes: ["XS", "S", "M", "L", "XL"]
   })
 ## Green Puffy Jacket
   green_puffy_jacket = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796122/G9903_GR7248_p3vzs5.jpg",
     description: "Green puffy jacket",
-    price: 228.00
+    price: 228.00,
+    sizes: ["XS", "S", "M", "L", "XL"]
   })
 
 
