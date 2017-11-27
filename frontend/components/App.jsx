@@ -11,7 +11,7 @@ import SignupContainer from './session/signup_container';
 
 const App = () => (
   <div>
-    <Route path="/items" component={ItemDetailContainer} />
+    <Route path="/items/:id" component={ItemDetailContainer} />
     <Route path="/" component={HeaderContainer} />
     <Route path="/" component={ImageIndexContainer} />
     <AuthRoute path="/login" component={LoginContainer} />

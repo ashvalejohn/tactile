@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
+import { fetchItem } from '../../actions/item_actions';
 import ItemDetail from './item_detail';
 
 const mapStateToProps = state => ({
-  item: state.entitied.item,
+  item: state.entities.item,
 });
 
-export default connect(mapStateToProps, null)(ItemDetail);
+const mapDispatchToProps = dispatch => ({
+  fetchItem: id => dispatch(fetchItem(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemDetail);

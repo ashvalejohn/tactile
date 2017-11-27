@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const ItemDetail = ({ item }) => (
-  <div className="item-detail">
-    <h1>{item.description}</h1>
-    <img src={item.item_image_url} alt="" />
-    <h2>${item.price}</h2>
-    <button>Add to Cart</button>
-  </div>
-)
+class ItemDetail extends Component {
+  componentDidMount() {
+    this.props.fetchItem(this.props.match.params.id);
+  }
+
+  render() {
+    const item = this.props.item;
+    return (
+      <div className="item-detail">
+        <h1 className="item-title">{item.description}</h1>
+        <img className="item-img" src={item.item_image_url} alt="" />
+        <h2 className="item-price">${item.price}</h2>
+        <button className="">Add to Cart</button>
+      </div>
+    );
+  }
+}
 
 export default ItemDetail;
