@@ -9,26 +9,34 @@ class ImageIndexItem extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    alert(`You clicked ${e.target.alt}!`);
+    this.props.history.replace(`/items/${e.target.alt}`);
   }
 
   render() {
     const image = this.props.image;
+    const image_maps = this.props.image.image_maps;
+
     return (
       <div className="image-index-item">
         <img alt="" src={`${image.image_url}`} useMap={`img${image.id}-map`} />
         <map name={`img${image.id}-map`}>
           {
-            Object.keys(image.image_map).map(key => (
-              image.image_map[key].map(coords => (
-                <area onClick={this.handleClick} alt={key} shape="poly" coords={coords} />
+            image_maps.map(imageMap => (
+              imageMap.coords.map(coord => (
+                <area 
+                  key={coord} 
+                  onClick={this.handleClick} 
+                  shape="poly" 
+                  coords={coord} 
+                  alt={imageMap.item_id}
+                />
               ))
             ))
           }
         </map>
       </div>
-    )
+    );
   }
-} 
+}
 
 export default ImageIndexItem;
