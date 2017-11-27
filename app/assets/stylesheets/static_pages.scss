@@ -218,12 +218,19 @@ a{
 }
 
 .item-detail{
-  background-color: $bgcolor;
-  border-right: 1px solid $main-text;
   position: fixed;
   top: 0;
   height: 100vh;
   width: 40vw;
+  background-color: $bgcolor;
+  border-right: 1px solid $main-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-detail-info{
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
