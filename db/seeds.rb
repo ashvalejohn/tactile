@@ -47,7 +47,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   black_socks = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
     description: "Black fair-isle socks",
-    price: 16.50,
+    price: 8.50,
     sizes: ["One Size"]
   })
 
@@ -72,6 +72,48 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     price: 228.00,
     sizes: ["XS", "S", "M", "L", "XL"]
   })
+## Gold Velvet Bracelet
+  gold_velvet_bracelet = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812098/H4064_PK5516_wk3kha.jpg",
+    description: "Gold velvet bracelet",
+    price: 6.99,
+    sizes: ["One Size"]
+  })
+## Copper Earrings
+  copper_earrings = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811607/G6527_EG6129_eqr25f.jpg",
+    description: "Beaded Copper Earrings",
+    price: 28.00,
+    sizes: ["One Size"]
+  })
+## Pink Femme T-Shirt
+  pink_femme_tshirt = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811889/H2694_KA2444_ktlh7m.jpg",
+    description: "Pink Femme T-Shirt",
+    price: 39.50,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Burgundy Velvet Pants
+  burgundy_velvet_pants = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812012/H2647_RD6573_nohgvr.jpg",
+    description: "Burgundy Velvet Pants",
+    price: 98.00,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Cream Fair-Isle Socks
+  cream_fair_isle_socks = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812212/H5125_EG4105_pobduq.jpg",
+    description: "Cream fair-isle socks",
+    price: 8.50,
+    sizes: ["One Size"]
+  })
+  ## Pink Sneakers
+    pink_sneakers = Item.create({
+      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
+      description: "Pink satin sneakers",
+      price: 64,
+      sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+    })
 
 
 #
@@ -83,6 +125,10 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
 ## Image 14
   img14 = Image.create({
     image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img14_sojgem.jpg", 
+  })
+## Image11 
+  img11 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img11_vyd7y0.jpg", 
   })
 #
 # IMAGE MAPS -------------------------------------------------------------------
@@ -156,3 +202,55 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
         "<197, 468, 232, 439, 280, 421, 320, 445, 338, 489, 350, 537, 353, 568, 347, 596, 344, 624, 338, 662, 338, 695, 339, 743, 345, 778, 259, 788, 238, 773, 270, 789, 282, 804, 309, 807, 324, 813, 336, 807, 335, 785, 345, 784, 351, 869, 368, 872, 378, 906, 295, 891, 213, 849, 132, 803, 198, 671, 214, 631, 210, 578, 193, 530, 231, 475, 221, 468, 192, 472"
       ]
     })
+#
+## Image 11 Maps:
+  ### Gold Velvet Bracelet Map
+    img11_gold_velvet_bracelet = ImageMap.create({
+      image_id: img11.id,
+      item_id: gold_velvet_bracelet.id,
+      coords: [
+        "277, 456, 298, 446, 301, 457, 261, 478"
+      ]
+    })
+  ### Copper Earrings Map
+    img11_copper_earrings = ImageMap.create({
+        image_id: img11.id,
+        item_id: copper_earrings.id,
+        coords: [
+          "362, 126, 378, 126, 381, 152, 365, 157"
+        ]
+      })
+  ### Pink Femme T-Shirt Map
+    img11_pink_femme_tshirt = ImageMap.create({
+        image_id: img11.id,
+        item_id: pink_femme_tshirt.id,
+        coords: [
+          "283, 253, 281, 235, 295, 195, 315, 175, 364, 173, 372, 199, 394, 207, 418, 204, 427, 188, 478, 207, 486, 224, 495, 270, 469, 274, 455, 286, 453, 301, 455, 333, 447, 354, 466, 370, 463, 386, 463, 397, 438, 402, 410, 390, 358, 389, 307, 421, 302, 409, 315, 316, 312, 249, 288, 231"
+        ]
+      })
+  ### Burgundy Velvet Pants Map
+    img11_burgundy_velvet_pants = ImageMap.create({
+        image_id: img11.id,
+        item_id: burgundy_velvet_pants.id,
+        coords: [
+          "235, 770, 245, 793, 285, 788, 307, 666, 386, 507, 400, 567, 402, 669, 392, 771, 404, 782, 434, 781, 452, 763, 452, 748, 462, 657, 479, 442, 463, 397, 436, 408, 408, 390, 357, 387, 307, 421, 302, 442, 312, 481, 303, 529, 279, 528, 265, 596, 255, 605, 240, 672"
+        ]
+      })
+  ### Cream Fair-Isle Socks Map
+    img11_cream_fair_isle_socks = ImageMap.create({
+        image_id: img11.id,
+        item_id: cream_fair_isle_socks.id,
+        coords: [
+          "246, 791, 276, 800, 277, 821, 266, 828, 259, 829, 248, 824, 237, 821, 233, 818, 244, 808",
+          "394, 782, 420, 791, 419, 813, 410, 806, 400, 804, 384, 806"
+        ]
+      })
+  ### Pink Sneakers Map
+    img11_pink_sneakers = ImageMap.create({
+        image_id: img11.id,
+        item_id: pink_sneakers.id,
+        coords: [
+          "379, 829, 397, 874, 430, 888, 446, 875, 443, 845, 424, 815, 408, 804, 393, 804, 384, 811",
+          "170, 868, 207, 836, 234, 818, 249, 827, 257, 831, 268, 830, 276, 820, 284, 835, 286, 858, 242, 871, 216, 885, 180, 887"
+        ]
+      })
