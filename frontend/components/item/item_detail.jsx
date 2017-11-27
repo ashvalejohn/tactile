@@ -33,7 +33,7 @@ class ItemDetail extends Component {
 
     return (
       <div className="item-detail-panel">
-        <div className="item-detail">
+        <div className="item-detail slide-in">
           <div className="item-detail-info">
             <h1 className="item-title">{item.description}</h1>
             <div className="item-img-container">

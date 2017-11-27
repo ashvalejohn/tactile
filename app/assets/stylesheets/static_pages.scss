@@ -227,6 +227,13 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  animation: item-slide-in .5s forwards;
+}
+
+@keyframes item-slide-in {
+  0% {left: -40vw}
+  100% {left: 0}
 }
 
 .item-detail-info{
@@ -310,8 +317,12 @@ a{
 
 .item-detail__overlay{
   height: 100vh;
-  width: 60vw;
+  width: 100vw;
   right: 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, .25);
+  background-color: $bgcolor;
+  opacity: .25;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
 }
