@@ -218,7 +218,7 @@ a{
 }
 
 .item-detail{
-  background-color: rgba(255, 255, 255, .9);
+  background-color: $bgcolor;
   border-right: 1px solid $main-text;
   position: fixed;
   top: 0;
@@ -228,7 +228,25 @@ a{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  button{
-    @extend .button;
-  }
+}
+
+.item-title{
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.item-img{
+  width: 90%;
+}
+
+.item-price{
+  font-size: 1.25rem;
+}
+
+.add-to-cart{
+  @extend .button;
+  font-size: .9rem;
+  height: 50px;
+  width: 150px;
 }
