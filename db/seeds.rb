@@ -16,7 +16,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   red_dress = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
     description: "Red silk ruffle midi dress",
-    price: 128,
+    price: 128.00,
     sizes: ["XS", "S", "M", "L", "XL"]
   })
 
@@ -24,7 +24,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   gray_sweater = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
     description: "Gray fair-isle pullover sweater",
-    price: 164,
+    price: 164.00,
     sizes: ["XS", "S", "M", "L", "XL"]
   })
 
@@ -32,7 +32,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   pink_converse_sneakers = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
     description: "Pink furry Converse sneakers",
-    price: 78,
+    price: 78.00,
     sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
   })
 
@@ -40,7 +40,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   pink_velvet_hat = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
     description: "Pink velvet hat",
-    price: 24,
+    price: 24.00,
     sizes: ["One Size"]
   })
 
@@ -112,7 +112,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     pink_sneakers = Item.create({
       item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
       description: "Pink satin sneakers",
-      price: 64,
+      price: 64.00,
       sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
     })
 
