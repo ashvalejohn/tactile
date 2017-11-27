@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { fetchImages } from '../../actions/image_actions';
 import ImageIndex from './image_index';
 
@@ -10,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   fetchImages: () => dispatch(fetchImages()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ImageIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ImageIndex));

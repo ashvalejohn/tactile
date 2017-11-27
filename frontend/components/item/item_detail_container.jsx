@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { fetchItem } from '../../actions/item_actions';
 import ItemDetail from './item_detail';
 
@@ -10,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   fetchItem: id => dispatch(fetchItem(id)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ItemDetail);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ItemDetail));

@@ -12,11 +12,11 @@ import SignupContainer from './session/signup_container';
 const App = () => (
   <div>
     <Route path="/items/:id" component={ItemDetailContainer} />
+    <ProtectedRoute path="/cart" component={CartContainer} />
     <Route path="/" component={HeaderContainer} />
     <Route path="/" component={ImageIndexContainer} />
     <AuthRoute path="/login" component={LoginContainer} />
     <AuthRoute path="/signup" component={SignupContainer} />
-    <ProtectedRoute path="/cart" component={CartContainer} />
   </div>
 );
 

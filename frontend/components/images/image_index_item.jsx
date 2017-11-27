@@ -9,7 +9,7 @@ class ImageIndexItem extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log(e.target);
+    this.props.history.replace(`/items/${e.target.alt}`);
   }
 
   render() {
@@ -28,7 +28,7 @@ class ImageIndexItem extends Component {
                   onClick={this.handleClick} 
                   shape="poly" 
                   coords={coord} 
-                  alt={`Item id: ${imageMap.item_id}`}
+                  alt={imageMap.item_id}
                 />
               ))
             ))
