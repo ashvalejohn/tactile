@@ -4,7 +4,6 @@ import ImageIndexItem from './image_index_item';
 class ImageIndex extends Component {
   componentDidMount() {
     this.props.fetchImages();
-    console.log(this.props);
   }
 
   render() {
