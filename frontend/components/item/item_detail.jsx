@@ -5,8 +5,16 @@ import { Link } from 'react-router-dom';
 class ItemDetail extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      item_id: null,
+      size: '',
+      quantity: 1,
+    };
+
     this.props.fetchItem(this.props.match.params.id);
+    this.addToCart = this.addToCart.bind(this);
     this.clickAway = this.clickAway.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -23,17 +31,32 @@ class ItemDetail extends Component {
     this.props.history.push('/');
   }
 
+  handleChange(e) {
+    this.setState({
+      size: e.target.value,
+    });
+  }
+
+  addToCart(e) {
+    e.preventDefault;
+    this.setState({
+      item_id: this.props.item.id,
+    }, () => {
+      this.props.addItemToCart(this.state).then(() => this.props.history.push('/cart'));
+    });
+  }
+
   render() {
     if (this.props.item === null || Object.keys(this.props.item).length === 0) {
       return (
-        <h1></h1>
+        <h1 />
       );
     }
 
-    const item = this.props.item; 
+    const item = this.props.item;
 
     return (
-      <div className="item-detail">
+      <div className="item-detail-panel">
         <div className="item-detail-info">
           <h1 className="item-title">{item.description}</h1>
           <div className="item-img-container">
@@ -44,17 +67,15 @@ class ItemDetail extends Component {
             {
               item.sizes.map(size => (
                 <label key={`${item.id}${size}`}>
-                  <input type="radio" value={size} name="item-size"/>
+                  <input checked={this.state.size === size} onChange={this.handleChange} type="radio" value={size} name="item-size" />
                   <span className="size-text">{size}</span>
                 </label>
               ))
             }
           </form>
-          <Link to="/cart">
-            <button className="add-to-cart">Add to Cart</button>
-          </Link>
+          <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
         </div>
-        <div className="item-detail__overlay" onClick={this.clickAway}></div>
+        <div className="item-detail-overlay" onClick={this.clickAway} />
       </div>
     );
   }

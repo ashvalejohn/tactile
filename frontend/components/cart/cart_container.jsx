@@ -1,7 +1,15 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { fetchItemsForCart, removeItemFromCart } from '../../actions/cart_item_actions';
+import CartIndex from './cart_index';
 
-const CartContainer = () => (
-  <h1>Cart</h1>
-);
+const mapStateToProps = state => ({
+  cartItems: state.entities.cartItems,
+});
 
-export default CartContainer;
+const mapDispatchToProps = dispatch => ({
+  fetchCartItems: () => (dispatch(fetchItemsForCart())),
+  removeItemFromCart: itemId => dispatch(removeItemFromCart(itemId)),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartIndex));

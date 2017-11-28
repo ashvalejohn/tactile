@@ -26,7 +26,7 @@ class Login extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.clearErrors();
-    this.props.login(this.state);
+    this.props.login({ email: this.state.email, password: this.state.password });
   }
 
   handleDemo(e) {
@@ -38,7 +38,6 @@ class Login extends Component {
   handleCloseModal() {
     this.props.history.push("/");
   }
-
 
   shiftModalFocus() {
     document.getElementById('login-email').focus();

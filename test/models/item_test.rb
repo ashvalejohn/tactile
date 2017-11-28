@@ -5,9 +5,10 @@
 #  id             :integer          not null, primary key
 #  item_image_url :string           not null
 #  description    :string           not null
-#  price          :decimal(, )      not null
+#  price          :decimal(10, 2)   not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  sizes          :string           default([]), not null, is an Array
 #
 
 require 'test_helper'

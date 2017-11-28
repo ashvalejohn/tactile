@@ -1,14 +1,14 @@
 # == Schema Information
 #
-# Table name: items
+# Table name: cart_items
 #
-#  id             :integer          not null, primary key
-#  item_image_url :string           not null
-#  description    :string           not null
-#  price          :decimal(10, 2)   not null
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
-#  sizes          :string           default([]), not null, is an Array
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  item_id    :integer          not null
+#  size       :string           not null
+#  quantity   :integer          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
