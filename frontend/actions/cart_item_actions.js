@@ -8,5 +8,7 @@ const receiveCartItems = cartItems => ({
 });
 
 export const fetchCartItems = () => dispatch => (
-  getCartItems().then(cartItems => dispatch(receiveCartItems(cartItems)))
+  getCartItems().then((cartItems) => {
+    return dispatch(receiveCartItems(cartItems));
+  })
 );

@@ -1,7 +1,9 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import { fetchCartItems } from '../../actions/cart_item_actions';
+import CartIndex from './cart_index';
 
-const CartContainer = () => (
-  <h1>Cart</h1>
-);
+const mapDispatchToProps = dispatch => ({
+  fetchCartItems: () => (dispatch(fetchCartItems())),
+});
 
-export default CartContainer;
+export default connect(null, mapDispatchToProps)(CartIndex);
