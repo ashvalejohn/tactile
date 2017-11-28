@@ -9,10 +9,6 @@ class ItemDetail extends Component {
     this.clickAway = this.clickAway.bind(this);
   }
 
-  // componentDidMount(){
-  //   add .slide-out class to div
-  // }
-
   componentWillReceiveProps(nextProps) {
     if (this.props.location !== nextProps.location) {
       this.props.fetchItem(nextProps.match.params.id);
@@ -24,7 +20,6 @@ class ItemDetail extends Component {
   }
 
   clickAway() {
-    // onTransitionEnd
     this.props.history.push('/');
   }
 
