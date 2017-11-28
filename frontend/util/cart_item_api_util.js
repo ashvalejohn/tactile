@@ -5,10 +5,10 @@ export const getCartItems = () => (
   })
 );
 
-export const addCartItem = cart_item => (
+export const addCartItem = cartItem => (
   $.ajax({
     type: 'POST',
     url: '/api/cart_items',
-    data: { cart_item },
+    data: { cartItem },
   })
 );

@@ -44,7 +44,7 @@ class ItemDetail extends Component {
       item_id: this.props.item.id,
       user_id: this.props.user_id,
     }, () => {
-      this.props.addItemToCart(this.state);
+      this.props.addItemToCart(this.state).then(() => this.props.history.push('/cart'));
     });
   }
 
