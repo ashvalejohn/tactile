@@ -14,6 +14,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :email, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  has_many :cart_items
 
   before_validation :ensure_session_token
   attr_reader :password

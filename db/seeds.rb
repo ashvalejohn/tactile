@@ -118,23 +118,23 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
 
 ## Green Button Down
   green_button_down = Item.create({
-    item_image_url: "",
-    description: "",
-    price: ,
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819437/H2415_GR6652_w6esk5.jpg",
+    description: "Green flannel button down",
+    price: 88.00,
     sizes: ["XS", "S", "M", "L", "XL"]
   })
 ## Gray Sneakers
  gray_sneakers = Item.create({
-    item_image_url: "",
-    description: "",
-    price: ,
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819427/H0456_EG3441_jxsdzp.jpg",
+    description: "Gray satin sneakers",
+    price: 64.00,
     sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
   })
 ## Pink Tote
  pink_tote = Item.create({
-    item_image_url: "",
-    description: "",
-    price: ,
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819442/H2549_EG5808_krv4cg.jpg",
+    description: "Pink shearling tote",
+    price: 198.00,
     sizes: ["One Size"]
   })
 ## Green Sweater
@@ -146,8 +146,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
   })
 ## Tuxedo Stripe Jeans
  tuxedo_stripe_jeans = Item.create({
-    item_image_url: "",
-    description: "",
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819431/H2248_DM1905_qegtwm.jpg",
+    description: "Tuxedo stripe jeans",
     price: 98.00,
     sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"]
   })
@@ -297,7 +297,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
 ### Green Beanie Map
   img12_green_beanie = ImageMap.create({
     image_id: img12.id,
-    item.id: green_beanie.id,
+    item_id: green_beanie.id,
     coords: [
       "323, 107, 355, 71, 359, 50, 380, 43, 402, 53, 420, 100, 420, 130, 403, 152, 403, 138, 381, 112, 339, 108"
     ]
@@ -346,3 +346,11 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     ]
   })
 #
+# CART_ITEMS -------------------------------------------------------------------
+## 
+  demoCart = CartItem.create({
+    user_id: demoUser.id,
+    item_id: tuxedo_stripe_jeans.id,
+    size: "28",
+    quantity: 1
+  })
