@@ -6,31 +6,34 @@ class CartIndex extends Component {
     super(props);
     this.props.fetchCartItems();
     this.clickAway = this.clickAway.bind(this);
+    this.renderCartItems = this.renderCartItems.bind(this);
   }
 
   clickAway() {
     this.props.history.push('/');
   }
 
-  render() {
+  renderCartItems() {
     if (this.props.cartItems.length === 0) {
       return (
-        <h1>Empty cart</h1>
+        <h1>No items in cart</h1>
       );
     }
 
-    console.log(this.props.cartItems);
+    return (
+      this.props.cartItems.map(item => (
+        <CartIndexItem key={item.id} item={item} />
+      ))
+    );
+  }
 
-    const cartIndexItems = this.props.cartItems.map(item => (
-      <CartIndexItem key={item.id} item={item} />
-    ));
-   
+  render() {
     return (
       <div className="cart-panel">
         <div className="cart">
           <h1>Cart</h1>
           <div className="cart-items">
-            {cartIndexItems}
+            {this.renderCartItems()}
           </div>
           <button className="checkout">Checkout</button>
         </div>
