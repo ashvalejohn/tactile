@@ -26,10 +26,13 @@ class CartIndex extends Component {
     ));
    
     return (
-      <div className="cart">
-        <div className="cart-info">
+      <div className="cart-panel">
+        <div className="cart">
           <h1>Cart</h1>
-          {cartIndexItems}
+          <div className="cart-items">
+            {cartIndexItems}
+          </div>
+          <button className="checkout">Checkout</button>
         </div>
         <div className="cart-overlay" onClick={this.clickAway}></div>
       </div>
