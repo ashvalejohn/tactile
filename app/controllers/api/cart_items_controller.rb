@@ -18,6 +18,15 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @cart_item = CartItem.find(params[:id])
+    if @cart_item
+      @cart_item.destroy
+    else
+      render json: ["Can't delete an item that doesn't exist."], status: 404
+    end
+  end
+
   private
   def cart_item_params
     params.require(:cartItem).permit(:item_id, :user_id, :size, :quantity)

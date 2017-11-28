@@ -12,3 +12,10 @@ export const addCartItem = cartItem => (
     data: { cartItem },
   })
 );
+
+export const removeCartItem = id => (
+  $.ajax({
+    type: 'DELETE',
+    url: `/api/cart_items/${id}`,
+  })
+);
