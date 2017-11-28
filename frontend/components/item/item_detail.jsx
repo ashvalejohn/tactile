@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 class ItemDetail extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      size : "",
+    }
     this.props.fetchItem(this.props.match.params.id);
     this.clickAway = this.clickAway.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -21,6 +25,12 @@ class ItemDetail extends Component {
 
   clickAway() {
     this.props.history.push('/');
+  }
+
+  handleChange(e) {
+    this.setState({
+      size: e.target.value,
+    });
   }
 
   render() {
@@ -44,7 +54,7 @@ class ItemDetail extends Component {
             {
               item.sizes.map(size => (
                 <label key={`${item.id}${size}`}>
-                  <input type="radio" value={size} name="item-size"/>
+                  <input checked={this.state.size === size} onChange={this.handleChange} type="radio" value={size} name="item-size"/>
                   <span className="size-text">{size}</span>
                 </label>
               ))
