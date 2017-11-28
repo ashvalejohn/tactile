@@ -224,19 +224,21 @@ a{
   width: 40vw;
   background-color: $bgcolor;
   border-right: 1px solid $main-text;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  animation: item-slide-in .5s forwards;
+  animation: item-slide .5s forwards;
 }
 
-@keyframes item-slide-in {
+@keyframes item-slide {
   0% {left: -40vw}
   100% {left: 0}
 }
 
+
 .item-detail-info{
+  z-index: 2;
   height: 90%;
   display: flex;
   flex-direction: column;
