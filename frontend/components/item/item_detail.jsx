@@ -33,7 +33,7 @@ class ItemDetail extends Component {
     const item = this.props.item; 
 
     return (
-      <div className="item-detail">
+      <div className="item-detail-panel">
         <div className="item-detail-info">
           <h1 className="item-title">{item.description}</h1>
           <div className="item-img-container">
@@ -54,7 +54,7 @@ class ItemDetail extends Component {
             <button className="add-to-cart">Add to Cart</button>
           </Link>
         </div>
-        <div className="item-detail__overlay" onClick={this.clickAway}></div>
+        <div className="item-detail-overlay" onClick={this.clickAway}></div>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 import React from 'react';
 
 const CartIndexItem = ({ item }) => (
-  <h2>{item}</h2>
+  <div className="cart-item">
+    
+  </div>
 );
 
 export default CartIndexItem;

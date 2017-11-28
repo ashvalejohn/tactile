@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { fetchCartItems } from '../../actions/cart_item_actions';
 import CartIndex from './cart_index';
 
@@ -10,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   fetchCartItems: () => (dispatch(fetchCartItems())),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartIndex));

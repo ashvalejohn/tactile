@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import CartIndexItem from './cart_index_item';
 
 class CartIndex extends Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
     this.props.fetchCartItems();
+    this.clickAway = this.clickAway.bind(this);
+  }
+
+  clickAway() {
+    this.props.history.push('/');
   }
 
   render() {
@@ -16,13 +22,16 @@ class CartIndex extends Component {
     console.log(this.props.cartItems);
 
     const cartIndexItems = this.props.cartItems.map(item => (
-      <CartIndexItem item={item} />
+      <CartIndexItem key={item.id} item={item} />
     ));
    
     return (
-      <div>
-        <h1>Your Cart</h1>
-        {cartIndexItems}
+      <div className="cart">
+        <div className="cart-info">
+          <h1>Cart</h1>
+          {cartIndexItems}
+        </div>
+        <div className="cart-overlay" onClick={this.clickAway}></div>
       </div>
     );
   }
