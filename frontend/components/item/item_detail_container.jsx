@@ -6,6 +6,7 @@ import ItemDetail from './item_detail';
 
 const mapStateToProps = state => ({
   item: state.entities.item,
+  user_id: state.session.currentUser.id,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -6,9 +6,14 @@ class ItemDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      size : "",
-    }
+      user_id: null,
+      item_id: null,
+      size: '',
+      quantity: 1,
+    };
+
     this.props.fetchItem(this.props.match.params.id);
+    this.addToCart = this.addToCart.bind(this);
     this.clickAway = this.clickAway.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -33,14 +38,24 @@ class ItemDetail extends Component {
     });
   }
 
+  addToCart(e) {
+    e.preventDefault;
+    this.setState({
+      item_id: this.props.item.id,
+      user_id: this.props.user_id,
+    }, () => {
+      this.props.addItemToCart(this.state);
+    });
+  }
+
   render() {
     if (this.props.item === null || Object.keys(this.props.item).length === 0) {
       return (
-        <h1></h1>
+        <h1 />
       );
     }
 
-    const item = this.props.item; 
+    const item = this.props.item;
 
     return (
       <div className="item-detail-panel">
@@ -54,17 +69,15 @@ class ItemDetail extends Component {
             {
               item.sizes.map(size => (
                 <label key={`${item.id}${size}`}>
-                  <input checked={this.state.size === size} onChange={this.handleChange} type="radio" value={size} name="item-size"/>
+                  <input checked={this.state.size === size} onChange={this.handleChange} type="radio" value={size} name="item-size" />
                   <span className="size-text">{size}</span>
                 </label>
               ))
             }
           </form>
-          <Link to="/cart">
-            <button className="add-to-cart">Add to Cart</button>
-          </Link>
+          <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
         </div>
-        <div className="item-detail-overlay" onClick={this.clickAway}></div>
+        <div className="item-detail-overlay" onClick={this.clickAway} />
       </div>
     );
   }
