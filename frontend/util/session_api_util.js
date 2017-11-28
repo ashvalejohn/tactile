@@ -6,6 +6,7 @@ export const signup = user => (
   })
 );
 
+// user is getting user object
 export const login = user => (
   $.ajax({
     method: 'POST',

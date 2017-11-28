@@ -6,7 +6,6 @@ class ItemDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user_id: null,
       item_id: null,
       size: '',
       quantity: 1,
@@ -42,7 +41,6 @@ class ItemDetail extends Component {
     e.preventDefault;
     this.setState({
       item_id: this.props.item.id,
-      user_id: this.props.user_id,
     }, () => {
       this.props.addItemToCart(this.state).then(() => this.props.history.push('/cart'));
     });
