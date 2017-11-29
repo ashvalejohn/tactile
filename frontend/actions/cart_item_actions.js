@@ -8,10 +8,6 @@ const receiveCartItems = cartItems => ({
   cartItems,
 });
 
-const deleteCartItem = () => ({
-  type: REMOVE_CART_ITEM,
-});
-
 export const fetchItemsForCart = () => dispatch => (
   getCartItems().then(cartItems => (
     dispatch(receiveCartItems(cartItems))
@@ -25,7 +21,5 @@ export const addItemToCart = item => dispatch => (
 );
 
 export const removeItemFromCart = id => dispatch => (
-  removeCartItem(id).then(() => (
-    dispatch(deleteCartItem())
-  ))
+  removeCartItem(id).then(() => dispatch(fetchItemsForCart()))
 );

@@ -22,7 +22,7 @@ class CartIndex extends Component {
 
     return (
       this.props.cartItems.map(item => (
-        <CartIndexItem key={item.id} item={item} />
+        <CartIndexItem key={item.id} item={item} remove={this.props.removeItemFromCart} cartItemId={item.id} />
       ))
     );
   }
