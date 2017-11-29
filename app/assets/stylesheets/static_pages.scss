@@ -8,6 +8,7 @@ $inputpadding: 3%;
 $bgcolor: white;
 
 .button {
+  background-color: $bgcolor;
   border: 1px solid $main-text;
   color: $main-text;
   border-radius: 0;
@@ -55,6 +56,10 @@ a{
   &:visited{
     color: inherit;
   }
+}
+
+area:hover{
+  cursor: pointer;
 }
 
 .header{
@@ -238,6 +243,10 @@ a{
 @keyframes item-slide-left {
   0% {left: -40vw}
   100% {left: 0}
+}
+
+.slide-out{
+  animation: item-slide-left .5s backwards;
 }
 
 @keyframes item-slide-right {

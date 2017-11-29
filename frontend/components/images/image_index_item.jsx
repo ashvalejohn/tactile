@@ -25,7 +25,7 @@ class ImageIndexItem extends Component {
 
     return (
       <div className="image-index-item">
-        <img alt="" src={`${image.image_url}`} useMap={`img${image.id}-map`} />
+        <img alt="" src={`${image.image_url}`} useMap={`#img${image.id}-map`} />
         <map name={`img${image.id}-map`}>
           {
             image_maps.map(imageMap => (
