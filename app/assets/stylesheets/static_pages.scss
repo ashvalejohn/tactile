@@ -6,6 +6,7 @@ $hover: red;
 $main-text: darkgrey;
 $inputpadding: 3%;
 $bgcolor: white;
+$boxshadow: rgba(0, 0, 0, 0.2);
 
 .button {
   border: 1px solid $main-text;
@@ -26,7 +27,7 @@ $bgcolor: white;
   height: 100vh;
   width: 40vw;
   background-color: $bgcolor;
-  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0px 10px $boxshadow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +38,7 @@ body{
   color: $main-text;
   margin: 0;
   padding: 0;
-  h1, h2, h3{
+  h1, h2, h3, p{
     font-weight: normal;
     margin: 0;
   }
@@ -369,6 +370,7 @@ a{
   align-items: center;
 
   height: 90%;
+  width: 90%;
   z-index: 2;
 }
 
@@ -377,8 +379,13 @@ a{
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+
+  box-shadow: inset 0px -15px 10px -10px $boxshadow;
+  overflow: auto;
+  margin: 15px 0;
+  width: 90%;
 }
 
 .cart-item{
@@ -387,21 +394,24 @@ a{
   align-items: center;
 
   border: 1px solid $main-text;
-  padding: 2% 0;
+  margin: 1%;
+  min-height: 150px;
+  padding: 2%;
   width: 90%;
 }
 
 .cart-item-info{
-  flex: 1.5;
+  width: 60%;
 
   height: 100%;
   padding: 1%;
 }
 
 .cart-img{
-  flex: 1;
-
+  margin: 0 auto;
+  width: 40%;
   img{
+    max-width: 150px;
     width: 80%;
   }
 }
@@ -416,10 +426,20 @@ a{
 
 .remove-from-cart{
   @extend .button;
+  margin-top: 1rem;
+}
+
+.cart-title{
+  @extend .panel-title;
+  text-decoration: none;
 }
 
 .cart-item-title{
-  @extend .panel-title;
-
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   text-decoration: none;
+  &:hover{
+    color: $hover;
+  }
 }

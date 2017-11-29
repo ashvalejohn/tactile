@@ -31,7 +31,7 @@ class CartIndex extends Component {
     return (
       <div className="cart-panel">
         <div className="cart">
-          <h1>Cart</h1>
+          <h1 className="cart-title">Cart</h1>
           <div className="cart-items">
             {this.renderCartItems()}
           </div>
