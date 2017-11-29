@@ -36,13 +36,20 @@ class CartIndexItem extends Component {
           <Link to={`/items/${this.props.item.item_id}`} className="cart-item-title">{this.props.item.description}</Link>
           <p>{this.props.item.price}</p>
           <div className="cart-fields">
-            <p><span className="cart-field-name">Size:</span> {this.props.item.size}</p>
-            { this.props.item.size === "One Size" ? null : <button className="cart-update" onClick={() => (this.openUpdate("size"))}>Update</button> }
+            <label className="cart-field-name">Size:
+              <select>
+                {
+                  this.props.item.sizes.map(size => 
+                    size === this.props.item.size ? <option selected>{size}</option> : <option>{size}</option>
+                  )
+                }
+                </select>
+            </label>
           </div>
-          <div className="cart-fields">
+          {/* <div className="cart-fields">
             <p><span className="cart-field-name">Quantity:</span> {this.props.item.quantity}</p>
             <button className="cart-update">Update</button>
-          </div>
+          </div> */}
   
           <button className="cart-remove" onClick={() => (this.props.remove(this.props.cartItemId))}>Remove</button>
         </div>
