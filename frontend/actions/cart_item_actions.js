@@ -1,4 +1,4 @@
-import { getCartItems, addCartItem, removeCartItem } from '../util/cart_item_api_util';
+import { getCartItems, addCartItem, removeCartItem, updateCartItem } from '../util/cart_item_api_util';
 
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
@@ -23,3 +23,8 @@ export const addItemToCart = item => dispatch => (
 export const removeItemFromCart = id => dispatch => (
   removeCartItem(id).then(() => dispatch(fetchItemsForCart()))
 );
+
+export const updateItemInCart = item => (dispatch) => {
+  console.log(item);
+  return updateCartItem(item).then(() => dispatch(fetchItemsForCart()));
+};

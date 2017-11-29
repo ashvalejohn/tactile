@@ -421,13 +421,36 @@ a{
 .cart-fields{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
 
   margin-top: .5rem;
-  p{
+}
+
+.cart-field-name{
     display: inline-block;
     font-size: .9rem;
+}
+
+.cart-sizes{
+  background-color: $bgcolor;
+  border: 1px solid $main-text;
+  border-radius: 0px;
+  color: $main-text;
+  display: inline-block;
+  margin-left: 2%;
+  min-width: 60px;
+  padding: 2%;
+  -webkit-appearance: none;
+  &:hover{
+    cursor: pointer;
+    color: $hover;
+    border: 1px solid $hover;
+  }
+  option{
+    &::after{
+      content: ">";
+    }
   }
 }
 
@@ -476,6 +499,13 @@ a{
   text-align: center;
   h1{
     width: 100%;
+  }
+}
+
+.one-size{
+  &:hover{
+    border: 1px solid $main-text;
+    color: $main-text;
   }
 }
 
