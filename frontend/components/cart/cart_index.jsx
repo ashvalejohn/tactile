@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CartIndexItem from './cart_index_item';
 
 class CartIndex extends Component {
@@ -18,7 +19,7 @@ class CartIndex extends Component {
       return (
         <div className="cart-item no-items">
           <h1 className="cart-item-title">You don’t have any items in your cart.</h1>
-          <p>⟵ Add some by clicking a product in a photo.</p>
+          <p>⟵ Add something by clicking a product in a photo.</p>
         </div>
       );
     }
@@ -38,7 +39,7 @@ class CartIndex extends Component {
           <div className="cart-items">
             {this.renderCartItems()}
           </div>
-          <button className="checkout">Checkout</button>
+          <Link to="/cart/checkout" ><button className="checkout">Checkout</button></Link>
         </div>
         <div className="cart-overlay" onClick={this.clickAway}></div>
       </div>
