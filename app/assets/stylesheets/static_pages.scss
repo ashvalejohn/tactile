@@ -398,6 +398,8 @@ a{
   min-height: 150px;
   padding: 2%;
   width: 90%;
+  
+  animation: item-slide-left .5s forwards;
 }
 
 .cart-item-info{
@@ -441,5 +443,14 @@ a{
   text-decoration: none;
   &:hover{
     color: $hover;
+  }
+}
+
+.no-items{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  h1{
+    width: 100%;
   }
 }

@@ -16,7 +16,10 @@ class CartIndex extends Component {
   renderCartItems() {
     if (this.props.cartItems.length === 0) {
       return (
-        <h1>No items in cart</h1>
+        <div className="cart-item no-items">
+          <h1 className="cart-item-title">You don’t have any items in your cart.</h1>
+          <p>⟵ Add some by clicking a product in a photo.</p>
+        </div>
       );
     }
 
