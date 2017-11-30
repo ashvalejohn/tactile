@@ -4,7 +4,7 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: '',
+      term: undefined,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,6 +20,7 @@ class Search extends Component {
   handleSearch(e) {
     e.preventDefault();
     this.props.search(this.state);
+    document.getElementById('search').value = '';
   }
 
   render() {
