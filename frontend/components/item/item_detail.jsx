@@ -71,6 +71,13 @@ class ItemDetail extends Component {
               ))
             }
           </form>
+          <ul>
+            {this.props.errors ? this.props.errors.map((error, idx) =>
+              (<li key={idx}>{error}</li>))
+              :
+              (null)
+            }
+          </ul>
           <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
         </div>
         <div className="item-detail-overlay" onClick={this.clickAway} />

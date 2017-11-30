@@ -6,6 +6,7 @@ import ItemDetail from './item_detail';
 
 const mapStateToProps = state => ({
   item: state.entities.item,
+  errors: state.errors.cartErrors,
 });
 
 const mapDispatchToProps = dispatch => ({

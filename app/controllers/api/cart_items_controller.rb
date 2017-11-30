@@ -4,8 +4,8 @@ class Api::CartItemsController < ApplicationController
     @cart_item.user_id = current_user.id
     if @cart_item.save
       render :index
-    else
-      render @cart_item.errors.full_messages, status: 401
+    else 
+      render json: @cart_item.errors.full_messages, status: 401
     end
   end
 
