@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ItemDetail extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class ItemDetail extends Component {
     this.setState({
       size: e.target.value,
     });
+    this.props.clearErrors();
   }
 
   addToCart(e) {
@@ -62,7 +64,7 @@ class ItemDetail extends Component {
             <img className="item-img" src={item.item_image_url} alt="" />
           </div>
           <h2 className="item-price">{item.price}</h2>
-          <form className="item-sizes">
+          <form className={this.props.currentUser ? "item-sizes" : "item-sizes deactivated"}>
             {
               item.sizes.map(size => (
                 <label key={`${item.id}${size}`}>
@@ -79,7 +81,19 @@ class ItemDetail extends Component {
               (null)
             }
           </ul>
-          <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
+
+          {
+            this.props.currentUser ?
+              <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
+              :
+              <div className="log-in-add-to-cart">
+                <p>You must be logged in to add items to your cart.</p>
+                <Link to="/login">
+                  <button className="add-to-cart">Login</button>
+                </Link>
+              </div>
+            }
+
         </div>
         <div className="item-detail-overlay" onClick={this.clickAway} />
       </div>

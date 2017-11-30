@@ -7,6 +7,7 @@ $main-text: darkgrey;
 $inputpadding: 3%;
 $bgcolor: white;
 $boxshadow: rgba(0, 0, 0, 0.2);
+$deactivated: lightgray;
 
 .button {
   background-color: $bgcolor;
@@ -319,19 +320,41 @@ area:hover{
     min-width: 20px;
     text-align: center;
   }
+}
 
+.size-text{
+  border: 1px solid $main-text;
+  color: $main-text;
+
+  &:hover{
+    border: 1px solid $hover;
+    color: $hover;
+    cursor: pointer;
+  }
+}
+
+.deactivated{
   .size-text{
-    border: 1px solid $main-text;
-    color: $main-text;
-
+    border: 1px solid $deactivated;
+    color: $deactivated;
     &:hover{
-      border: 1px solid $hover;
-      color: $hover;
-      cursor: pointer;
+      border: 1px solid $deactivated;
+      color: $deactivated;
+      cursor: default;
     }
   }
 }
 
+.log-in-add-to-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p{
+    width: 90%;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+}
 
 .add-to-cart{
   @extend .button;
