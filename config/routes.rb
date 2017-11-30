@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :images, only: [:index]
     resources :items, only: [:show]
     resources :cart_items, only: [:create, :index]
+    post "items/search", to: 'items#search'
   end
 
   root "static_pages#root"
