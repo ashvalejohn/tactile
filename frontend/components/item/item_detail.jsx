@@ -23,6 +23,7 @@ class ItemDetail extends Component {
 
   componentWillUnmount() {
     this.props.clearItem();
+    this.props.clearErrors();
   }
 
   clickAway() {
@@ -71,7 +72,7 @@ class ItemDetail extends Component {
               ))
             }
           </form>
-          <ul>
+          <ul className="errors">
             {this.props.errors ? this.props.errors.map((error, idx) =>
               (<li key={idx}>{error}</li>))
               :

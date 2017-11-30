@@ -3,6 +3,7 @@ import { getCartItems, addCartItem, removeCartItem, updateCartItem } from '../ut
 export const RECEIVE_CART_ITEMS = 'RECEIVE_CART_ITEMS';
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export const RECEIVE_CART_ERRORS = 'RECEIVE_CART_ERRORS';
+export const CLEAR_CART_ERRORS = 'CLEAR_CART_ERRORS';
 
 const receiveCartItems = cartItems => ({
   type: RECEIVE_CART_ITEMS,
@@ -12,6 +13,10 @@ const receiveCartItems = cartItems => ({
 const receiveErrors = errors => ({
   type: RECEIVE_CART_ERRORS,
   errors,
+});
+
+const clearCartErrors = () => ({
+  type: CLEAR_CART_ERRORS,
 });
 
 export const fetchItemsForCart = () => dispatch => (
@@ -34,4 +39,8 @@ export const removeItemFromCart = id => dispatch => (
 
 export const updateItemInCart = item => dispatch => (
   updateCartItem(item).then(() => dispatch(fetchItemsForCart()))
+);
+
+export const clearErrors = () => dispatch => (
+  dispatch(clearCartErrors())
 );

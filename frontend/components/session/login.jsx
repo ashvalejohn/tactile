@@ -68,7 +68,7 @@ class Login extends Component {
               />
             </label>
           </fieldset>
-          <ul className="auth-form__errors">
+          <ul className="errors">
             {this.props.errors ? this.props.errors.map((error, idx) =>
               (<li key={idx}>{error}</li>))
               :
