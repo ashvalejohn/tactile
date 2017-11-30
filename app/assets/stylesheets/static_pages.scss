@@ -80,6 +80,7 @@ area:hover{
   width: inherit;
   label{
     @extend .button;
+    height: 35px;
     font-size: .75rem;
     padding: 3%;
   }

@@ -24,7 +24,6 @@ export const removeItemFromCart = id => dispatch => (
   removeCartItem(id).then(() => dispatch(fetchItemsForCart()))
 );
 
-export const updateItemInCart = item => (dispatch) => {
-  console.log(item);
-  return updateCartItem(item).then(() => dispatch(fetchItemsForCart()));
-};
+export const updateItemInCart = item => (dispatch) => (
+  updateCartItem(item).then(() => dispatch(fetchItemsForCart()))
+);
