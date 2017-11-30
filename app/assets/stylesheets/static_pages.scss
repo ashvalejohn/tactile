@@ -6,6 +6,7 @@ $hover: red;
 $main-text: darkgrey;
 $inputpadding: 3%;
 $bgcolor: white;
+$boxshadow: rgba(0, 0, 0, 0.2);
 
 .button {
   background-color: $bgcolor;
@@ -27,7 +28,7 @@ $bgcolor: white;
   height: 100vh;
   width: 40vw;
   background-color: $bgcolor;
-  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0px 10px $boxshadow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +39,7 @@ body{
   color: $main-text;
   margin: 0;
   padding: 0;
-  h1, h2, h3{
+  h1, h2, h3, p{
     font-weight: normal;
     margin: 0;
   }
@@ -378,6 +379,7 @@ area:hover{
   align-items: center;
 
   height: 90%;
+  width: 90%;
   z-index: 2;
 }
 
@@ -386,8 +388,13 @@ area:hover{
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+
+  box-shadow: inset 0px -15px 10px -10px $boxshadow;
+  overflow: auto;
+  margin: 15px 0;
+  width: 90%;
 }
 
 .cart-item{
@@ -396,22 +403,79 @@ area:hover{
   align-items: center;
 
   border: 1px solid $main-text;
-  padding: 2% 0;
+  margin: 1%;
+  min-height: 150px;
+  padding: 2%;
   width: 90%;
+  
+  animation: item-slide-left .5s forwards;
 }
 
 .cart-item-info{
-  flex: 1.5;
+  width: 60%;
 
   height: 100%;
   padding: 1%;
 }
 
 .cart-img{
-  flex: 1;
-
+  margin: 0 auto;
+  width: 40%;
   img{
+    max-width: 150px;
     width: 80%;
+  }
+}
+
+.cart-fields{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: .5rem;
+}
+
+.cart-field-name{
+    display: inline-block;
+    font-size: .9rem;
+}
+
+.cart-sizes{
+  background-color: $bgcolor;
+  border: 1px solid $main-text;
+  border-radius: 0px;
+  color: $main-text;
+  display: inline-block;
+  margin-left: 2%;
+  min-width: 60px;
+  padding: 2%;
+  -webkit-appearance: none;
+  &:hover{
+    cursor: pointer;
+    color: $hover;
+    border: 1px solid $hover;
+  }
+  option{
+    &::after{
+      content: ">";
+    }
+  }
+}
+
+.cart-remove{
+  @extend .button;
+  font-size: .7rem;
+  margin-top: 1rem;
+}
+
+.cart-update{
+  @extend .button;
+  display: inline-block;
+  font-size: .7rem;
+  &:hover{
+    border: 1px solid blue;
+    color: blue;
   }
 }
 
@@ -423,12 +487,52 @@ area:hover{
   width: 150px;
 }
 
-.remove-from-cart{
-  @extend .button;
+.cart-title{
+  @extend .panel-title;
+  text-decoration: none;
 }
 
 .cart-item-title{
-  @extend .panel-title;
-
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   text-decoration: none;
+  &:hover{
+    color: $hover;
+  }
+}
+
+.no-items{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  h1{
+    width: 100%;
+  }
+}
+
+.one-size{
+  &:hover{
+    border: 1px solid $main-text;
+    color: $main-text;
+  }
+}
+
+.checkout-modal{
+  img{
+    width: 15vw;
+  }
+}
+
+.ashley-info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ashley-info-links{
+  a{
+    display: block;
+  }
 }

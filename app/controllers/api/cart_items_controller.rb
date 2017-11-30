@@ -19,6 +19,18 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
+  def update
+    @cart_item = CartItem.find(params[:id])
+    if @cart_item && @cart_item.update_attributes(cart_item_params)
+      render :index
+    elsif !@cart_item
+      render json: ["That item is not in your cart."], status: 404
+    else
+      render @cart_item.errors.full_messages, status: 401
+    end
+    
+  end
+
   def destroy
     @cart_item = CartItem.find(params[:id])
     if @cart_item
