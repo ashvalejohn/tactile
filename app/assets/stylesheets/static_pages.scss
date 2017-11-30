@@ -69,22 +69,38 @@ a{
 }
 
 .header__search{
-  min-height: 35px;
+  height: 35px;
   flex: 1;
-  width: inherit;
   label{
     @extend .button;
+    height: inherit;
     font-size: .75rem;
-    padding: 3%;
+    padding: 2.3%;
+    &:focus-within{
+      border: 1px solid $hover;
+      color: $hover;
+    }
   }
   input{
-    margin-left: $inputpadding;
-    height: 90%;
-    border: 0px;
-    font-size: inherit;
+    margin-left: 2%;
     &:focus{
       outline-width: 0px;
     }
+    &[type="text"]{
+      border: 0;
+    }
+  }
+}
+
+.search-submit{
+  @extend .button;
+  height: inherit;
+  padding: 5px;
+  font-size: .75rem;
+  min-width: 100px;
+  &:focus{
+    border: 1px solid $hover;
+    color: $hover;
   }
 }
 

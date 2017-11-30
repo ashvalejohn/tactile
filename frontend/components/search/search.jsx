@@ -24,11 +24,11 @@ class Search extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSearch}>
+      <form className="header__search" onSubmit={this.handleSearch}>
         <label htmlFor="search">Search
           <input id="search" type="text" onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Search" />
+        <input type="submit" value="Submit" className="search-submit" />
       </form>
     );
   }
