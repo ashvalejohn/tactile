@@ -9,16 +9,21 @@ class ImageIndex extends Component {
   render() {
     if (this.props.images.length === 0) {
       return (
-        <div className="null-search-results">
+        <div className="search-results">
           <p>Your search didn’t return any results.</p>
-          <button onClick={this.props.fetchImages}>See All Images</button>
+          <button onClick={this.props.fetchImages}>Back To All Images</button>
         </div>
       );
     }
 
     let youSearched;
     if (this.props.images[0].term !== null) {
-      youSearched = <p>You searched for “{this.props.images[0].term}.”</p>;
+      youSearched = (
+        <div className="search-results">
+          <p>You searched for “{this.props.images[0].term}.”</p>
+          <button onClick={this.props.fetchImages}>Back To All Images</button>
+        </div>
+      );
     }
 
     const imageIndexItems = this.props.images.map(image => (

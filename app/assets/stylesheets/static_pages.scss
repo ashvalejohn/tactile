@@ -445,13 +445,13 @@ a{
   text-decoration: none;
 }
 
-.null-search-results{
-  margin: 0 auto;
+.search-results{
+  margin: 0 auto 2vh auto;
   text-align: center;
   button{
     @extend .button;
-    font-size: 1rem;
+    font-size: .9rem;
     height: 50px;
-    padding: 0 2%;
+    padding: 0 3vw;
   }
 }
