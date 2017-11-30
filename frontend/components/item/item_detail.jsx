@@ -32,10 +32,12 @@ class ItemDetail extends Component {
   }
 
   handleChange(e) {
-    this.setState({
-      size: e.target.value,
-    });
-    this.props.clearErrors();
+    if (this.props.currentUser) {
+      this.setState({
+        size: e.target.value,
+      });
+      this.props.clearErrors();
+    }
   }
 
   addToCart(e) {
