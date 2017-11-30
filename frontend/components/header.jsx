@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchContainer from './search/search_container';
 
-const Header = ({ currentUser, logout }) => {
+const Header = ({ currentUser, logout, fetchImages }) => {
   const display = currentUser ? (
     <div className="header__buttons">
       <button onClick={logout} className="header__button">Logout</button>
@@ -22,9 +22,7 @@ const Header = ({ currentUser, logout }) => {
   return (
     <header className="header">
       <SearchContainer className="header__search" />
-      <Link to="/" className="header__logo">
-        <h1>Catalog App</h1>
-      </Link>
+      <h1 className="header__logo" onClick={fetchImages}>Catalog App</h1>
       {display}
     </header>
   );
