@@ -21,8 +21,7 @@ const Header = ({ currentUser, logout }) => {
 
   return (
     <header className="header">
-      <SearchContainer className="header__search">
-      </SearchContainer>
+      <SearchContainer className="header__search" />
       <Link to="/" className="header__logo">
         <h1>Catalog App</h1>
       </Link>

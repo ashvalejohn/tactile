@@ -13,12 +13,19 @@ class ImageIndex extends Component {
       );
     }
 
+    let youSearched;
+
+    if (this.props.images[0].term !== null) {
+      youSearched = <p>You searched for “{this.props.images[0].term}.”</p>;
+    }
+
     const imageIndexItems = this.props.images.map(image => (
       <ImageIndexItem key={image.id} image={image} history={this.props.history} />
     ));
 
     return (
       <div className="image-index">
+        {youSearched}
         {imageIndexItems}
       </div>
     );
