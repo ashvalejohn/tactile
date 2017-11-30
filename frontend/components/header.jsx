@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from './search/search_container';
 
 const Header = ({ currentUser, logout }) => {
   const display = currentUser ? (
@@ -8,23 +9,20 @@ const Header = ({ currentUser, logout }) => {
       <Link to="/cart" className="header__button--last"><button className="header__button">Cart</button></Link>
     </div>
   ) : (
-    <div className="header__buttons">
-      <Link to="/login">
-        <button className="header__button">Log In</button>
-      </Link>
-      <Link to="/cart" className="header__button--last">
-        <button className="header__button">Cart</button>
-      </Link>
-    </div>
-  );
+      <div className="header__buttons">
+        <Link to="/login">
+          <button className="header__button">Log In</button>
+        </Link>
+        <Link to="/cart" className="header__button--last">
+          <button className="header__button">Cart</button>
+        </Link>
+      </div>
+    );
 
   return (
     <header className="header">
-      <form className="header__search" action="">
-        <label htmlFor="search">Search
-          <input id="search" type="text" />
-        </label>
-      </form>
+      <SearchContainer className="header__search">
+      </SearchContainer>
       <Link to="/" className="header__logo">
         <h1>Catalog App</h1>
       </Link>
