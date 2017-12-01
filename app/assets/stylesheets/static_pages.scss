@@ -3,10 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $test: 2px dashed green;
 $hover: red;
-$main-text: darkgrey;
+$mainfont: 'Lato', sans-serif;
+$logofont: 'Josefin Sans', sans-serif;
+$logocolor: #001b47;
+$main-text: #001b47;
 $inputpadding: 3%;
 $bgcolor: white;
-$boxshadow: rgba(0, 0, 0, 0.2);
+$boxshadow: rgba(0, 10, 27, 0.2);
 $deactivated: lightgray;
 
 .button {
@@ -24,12 +27,12 @@ $deactivated: lightgray;
 }
 
 .panel {
+  font-family: $mainfont;
   position: fixed;
   top: 0;
   height: 100vh;
   width: 40vw;
   background-color: $bgcolor;
-  box-shadow: 1px 0px 10px $boxshadow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +40,7 @@ $deactivated: lightgray;
 }
 
 body{
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $main-text;
   margin: 0;
   padding: 0;
@@ -67,6 +70,7 @@ area:hover{
 
 .header{
   background-color: $bgcolor;
+  box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +96,7 @@ area:hover{
     display: flex;
     align-items: center;
     padding-left: 2%;
+    width: 125px;
     &:focus-within{
       border: 1px solid $hover;
       color: $hover;
@@ -114,7 +119,7 @@ area:hover{
   height: inherit;
   padding: 5px;
   font-size: .75rem;
-      width: 100px;
+  width: 75px;
   &:focus{
     border: 1px solid $hover;
     color: $hover;
@@ -125,10 +130,29 @@ area:hover{
   flex: 1;
   margin: 0 auto;
   text-align: center;
-  text-transform: uppercase;
-  &:hover{
-    color: $hover;
-    cursor: pointer;
+  h1{
+    color: $logocolor;
+    font-family: $logofont;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    &:hover{
+      color: $hover;
+      cursor: pointer;
+    }
+  }
+  h2{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    margin: 1% auto;
+    text-transform: uppercase;
+    width: 180px;
+    padding-right: 2px;
+    span{
+      justify-content: space-between;
+    }
   }
 }
 
@@ -256,7 +280,7 @@ area:hover{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 130px;
   img{
     margin-bottom: 5%;
   }
@@ -264,7 +288,7 @@ area:hover{
 
 .item-detail-panel{
   animation: item-slide-left .5s forwards;
-  border-right: 1px solid $main-text;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.2);
   @extend .panel;
 }
 
@@ -299,12 +323,11 @@ area:hover{
 
 .item-title{
   @extend .panel-title;
+  max-width: 90%;
 }
 
 .item-img-container{
-  min-height: 300px;
-  min-width: 300px;
-  width: 90%;
+  width: 300px;
 }
 
 .item-img{
@@ -375,7 +398,7 @@ area:hover{
   flex-direction: column;
   align-items: center;
   p{
-    width: 90%;
+    width: 70%;
     text-align: center;
     margin-bottom: 5%;
   }
@@ -407,10 +430,8 @@ area:hover{
 
 .cart-panel{
   @extend .panel;
-
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.2);
   animation: item-slide-right .5s forwards;
-  border-left: 1px solid $main-text;
-  
   display: flex;
   flex-direction: column;
 }
@@ -440,7 +461,7 @@ area:hover{
   justify-content: flex-start;
   align-items: center;
 
-  box-shadow: inset 0px -15px 10px -10px $boxshadow;
+  box-shadow: inset 0px -10px 15px -15px rgba(0, 0, 0, 0.2);
   overflow: auto;
   margin: 15px 0;
   width: 90%;

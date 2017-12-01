@@ -22,7 +22,11 @@ const Header = ({ currentUser, logout, fetchImages }) => {
   return (
     <header className="header">
       <SearchContainer className="header__search" />
-      <h1 className="header__logo" onClick={fetchImages}>Catalog App</h1>
+      <div className="header__logo" onClick={fetchImages}>
+        <h1>Tactile</h1>
+        <h2><span>See it.</span><span>Click it.</span><span>Buy it.</span></h2>
+      </div>
+
       {display}
     </header>
   );

@@ -65,7 +65,6 @@ class ItemDetail extends Component {
           <div className="item-img-container">
             <img className="item-img" src={item.item_image_url} alt="" />
           </div>
-          <h2 className="item-price">{item.price}</h2>
           <form className={this.props.currentUser ? "item-sizes" : "item-sizes deactivated"}>
             {
               item.sizes.map(size => (
@@ -76,6 +75,7 @@ class ItemDetail extends Component {
               ))
             }
           </form>
+          <h2 className="item-price">{item.price}</h2>
           <ul className="errors">
             {this.props.errors ? this.props.errors.map((error, idx) =>
               (<li key={idx}>{error}</li>))
@@ -83,7 +83,6 @@ class ItemDetail extends Component {
               (null)
             }
           </ul>
-
           {
             this.props.currentUser ?
               <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
@@ -95,7 +94,6 @@ class ItemDetail extends Component {
                 </Link>
               </div>
             }
-
         </div>
         <div className="item-detail-overlay" onClick={this.clickAway} />
       </div>
