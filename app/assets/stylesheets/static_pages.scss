@@ -84,7 +84,6 @@ area:hover{
     @extend .button;
     height: 33px;
     font-size: .75rem;
-    flex: 2;
     display: flex;
     align-items: center;
     padding-left: 2%;
@@ -110,7 +109,7 @@ area:hover{
   height: inherit;
   padding: 5px;
   font-size: .75rem;
-  flex: 1;
+      width: 100px;
   &:focus{
     border: 1px solid $hover;
     color: $hover;
