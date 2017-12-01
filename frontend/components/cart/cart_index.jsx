@@ -5,13 +5,22 @@ import CartIndexItem from './cart_index_item';
 class CartIndex extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      animateClass: 'slide-in-right',
+    }
+
     this.props.fetchCartItems();
     this.clickAway = this.clickAway.bind(this);
     this.renderCartItems = this.renderCartItems.bind(this);
   }
 
   clickAway() {
-    this.props.history.push('/');
+    this.setState({
+      animateClass: 'slide-out-right',
+    });
+
+    setTimeout(() => this.props.history.push('/'), 500);
   }
 
   renderCartItems() {
@@ -33,7 +42,7 @@ class CartIndex extends Component {
 
   render() {
     return (
-      <div className="cart-panel">
+      <div className={`cart-panel ${this.state.animateClass}`}>
         <div className="cart">
           <h1 className="cart-title">Cart</h1>
           <div className="cart-items">

@@ -27,9 +27,8 @@ class Search extends Component {
     return (
       <form className="header__search" onSubmit={this.handleSearch}>
         <label htmlFor="search">
-          <input id="search" type="text" onChange={this.handleChange} />
+          <input id="search" type="text" placeholder="SEARCH" onChange={this.handleChange} />
         </label>
-        <input type="submit" value="Search" className="search-submit" />
       </form>
     );
   }

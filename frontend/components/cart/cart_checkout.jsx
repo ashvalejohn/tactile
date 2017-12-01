@@ -18,12 +18,21 @@ class Checkout extends Component {
   render() {
     return (
       <Modal isOpen={this.state.showModal} className="modal checkout-modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} ariaHideApp={this.state.showModal}>
-        <h1>Hire Me!</h1>
+        <h1>Made by Ashley Johnson</h1>
         <div className="ashley-info">
-          <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1511982562/LinkedIn_rz29kh.jpg" alt="Ashley Johnson is a software developer for hire" />
+          <div className="ashley-img-container">
+            <img className="ashley-img" src="http://res.cloudinary.com/ashvalejohn/image/upload/v1511982562/LinkedIn_rz29kh.jpg" alt="Ashley Johnson is a software developer for hire" />
+          </div>
           <div className="ashley-info-links">
-            <a href="linkedin.com/ashvalejohn">Linked In</a>
-            <a href="github.com/ashvalejohn">Github</a>
+            <p>Ashley Johnson is a software engineer in San Francisco.</p>
+            <div className="ashley-links">
+              <a href="linkedin.com/ashvalejohn">
+                <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/In-Black-128px-TM_vdgmqf.png" alt="ashvalejohn LinkedIn"/>
+              </a>
+              <a href="github.com/ashvalejohn">
+                <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/GitHub-Mark-120px-plus_z52nkp.png" alt="ashvalejohn Github"/>
+              </a>
+            </div>
           </div>
         </div>
       </Modal>

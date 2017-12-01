@@ -18,7 +18,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
     description: "Red silk ruffle midi dress",
     price: 128.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: ""
   })
 
 ## Gray Sweater
@@ -26,7 +27,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
     description: "Gray fair-isle pullover sweater",
     price: 164.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "crewneck top knit tops"
   })
 
 ## Pink Converse Sneakers
@@ -34,7 +36,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
     description: "Pink furry Converse sneakers",
     price: 78.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    tags: "shoe shoes fuzzy fluffy"
   })
 
 ## Pink Velvet Hat
@@ -42,7 +45,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
     description: "Pink velvet hat",
     price: 24.00,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "cap baseball accessories"
   })
 
 ## Black Socks
@@ -50,7 +54,8 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
     description: "Black fair-isle socks",
     price: 8.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "knit accessories"
   })
 
 ## Green Beanie
@@ -58,63 +63,72 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796133/H3306_EG5539_kteyhy.jpg",
     description: "Green knit beanie",
     price: 18.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "hat"
   })
 ## Green Velvet Dress
   green_velvet_dress = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796127/H2540_GR6182_kmhb7f.jpg",
     description: "Green velvet mini dress",
     price: 69.50,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "mockneck"
   })
 ## Green Puffy Jacket
   green_puffy_jacket = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796122/G9903_GR7248_p3vzs5.jpg",
     description: "Green puffy jacket",
     price: 228.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "coat army puffer"
   })
 ## Gold Velvet Bracelet
   gold_velvet_bracelet = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812098/H4064_PK5516_wk3kha.jpg",
     description: "Gold velvet bracelet",
     price: 6.99,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "accessory accessories jewelry"
   })
 ## Copper Earrings
   copper_earrings = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811607/G6527_EG6129_eqr25f.jpg",
     description: "Beaded Copper Earrings",
     price: 28.00,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "jewelry accessory accesories"
   })
 ## Pink Femme T-Shirt
   pink_femme_tshirt = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811889/H2694_KA2444_ktlh7m.jpg",
     description: "Pink Femme T-Shirt",
     price: 39.50,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tee shirt tops"
   })
 ## Burgundy Velvet Pants
   burgundy_velvet_pants = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812012/H2647_RD6573_nohgvr.jpg",
     description: "Burgundy Velvet Pants",
     price: 98.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "trousers red bottom bottoms"
   })
 ## Cream Fair-Isle Socks
   cream_fair_isle_socks = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812212/H5125_EG4105_pobduq.jpg",
     description: "Cream fair-isle socks",
     price: 8.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "accessory accessories knit"
   })
 ## Pink Sneakers
   pink_sneakers = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
     description: "Pink satin sneakers",
     price: 64.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    tags: "shoe shoes tretorn"
   })
 
 ## Green Button Down
@@ -122,70 +136,80 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819437/H2415_GR6652_w6esk5.jpg",
     description: "Green flannel button down",
     price: 88.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tops shirt"
   })
 ## Gray Sneakers
  gray_sneakers = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819427/H0456_EG3441_jxsdzp.jpg",
     description: "Gray satin sneakers",
     price: 64.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"]
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    tags: "shoe shoes tretorn black"
   })
 ## Pink Tote
  pink_tote = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819442/H2549_EG5808_krv4cg.jpg",
     description: "Pink shearling tote",
     price: 198.00,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "fuzzy furry fluffy bag purse"
   })
 ## Green Sweater
  green_sweater = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819420/F8882_GR7450_zxhjru.jpg",
     description: "Green mockneck sweater",
     price: 78.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tops knit pullover"
   })
 ## Tuxedo Stripe Jeans
  tuxedo_stripe_jeans = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819431/H2248_DM1905_qegtwm.jpg",
     description: "Tuxedo stripe jeans",
     price: 98.00,
-    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"]
+    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
+    tags: "pants bottoms"
   })
 ## Pink Ribbed Sweater
   pink_ribbed_sweater = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085912/H3339_PK5511_j0def5.jpg",
     description: "Pink ribbed sweater",
     price: 92.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tops pullover crewneck knit"
   })
 ## Pink Velvet Skirt
   pink_velvet_skirt = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085917/H2334_PK6102_ryoqba.jpg",
     description: "Pink velvet skirt",
     price: 48.00,
-    sizes: ["XS", "S", "M", "L", "XL"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "bottom bottoms purple"
   })
 ## Gold Pendant Necklace
   gold_pendant_necklace = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086594/H4047_EC5475_rqnqgs.jpg",
     description: "Gold pendant necklace",
     price: 19.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "jewelry accessories accessory"
   })
 ## Gold Stacking Rings
   gold_stacking_rings = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086720/B3708_ED0747_jajzya.jpg",
     description: "Gold stacking rings",
     price: 12.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "jewelry accessories accessory"
   })
 ## Pink Crossbody Purse
   pink_crossbody_purse = Item.create({
     item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086353/H2562_EG5808_oz4pzj.jpg",
     description: "Pink crossbody purse",
     price: 34.50,
-    sizes: ["One Size"]
+    sizes: ["One Size"],
+    tags: "fluffy fuzzy furry bag clutch"
   })
 
 #
