@@ -19,7 +19,7 @@ class Signup extends Component {
   }
   
   handleCloseModal() {
-    this.props.history.push("/");
+    this.props.history.goBack();
   }
 
   handleChange(type) {
@@ -28,16 +28,18 @@ class Signup extends Component {
     };
   }
 
-  handleDemo(e) {
-    e.preventDefault();
-    const demoUser = { email: 'demo@email.com', password: 'password' };
-    this.props.login(demoUser).then(() => this.props.history.push("/cart"));
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     this.props.clearErrors();
-    this.props.signup(this.state);
+    this.props.signup(this.state)
+      .then(() => (this.props.history.go(-2)));
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demoUser = { email: 'demo@email.com', password: 'password' };
+    this.props.login(demoUser)
+      .then(() => this.props.history.go(-2));
   }
 
   shiftModalFocus() {
