@@ -48,4 +48,4 @@ ___
 
 ## Looking Forward
 - responsive images using [this plugin from Matt Stow](https://github.com/stowball/jQuery-rwdImageMaps)
-- expanded cart features: quantity
+- include quantity as a cart feature
