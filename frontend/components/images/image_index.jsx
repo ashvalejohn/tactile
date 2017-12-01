@@ -9,9 +9,11 @@ class ImageIndex extends Component {
   render() {
     if (this.props.images.length === 0) {
       return (
-        <div className="search-results">
-          <p>Your search didn’t return any results.</p>
-          <button onClick={this.props.fetchImages}>Back To All Images</button>
+        <div className="image-index">
+          <div className="search-results">
+            <p>Your search didn’t return any results.</p>
+            <button onClick={this.props.fetchImages}>Back To All Images</button>
+          </div>
         </div>
       );
     }

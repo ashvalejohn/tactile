@@ -19,9 +19,6 @@ class Item < ApplicationRecord
 
   def self.search(term)
     Item
-      .where(
-        "items.description ILIKE :term",
-        term: "%#{term}%"
-      )
+      .where("items.description ILIKE :term OR items.tags ILIKE :term", term: "%#{term}%")
   end
 end

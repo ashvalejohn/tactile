@@ -8,6 +8,7 @@ class ItemDetail extends Component {
       item_id: null,
       size: '',
       quantity: 1,
+      animateClass: 'slide-in-left',
     };
 
     this.props.fetchItem(this.props.match.params.id);
@@ -28,7 +29,11 @@ class ItemDetail extends Component {
   }
 
   clickAway() {
-    this.props.history.push('/');
+    this.setState({
+      animateClass: "slide-out-left",
+    });
+
+    setTimeout(() => this.props.history.push('/'), 500);
   }
 
   handleChange(e) {
@@ -59,7 +64,7 @@ class ItemDetail extends Component {
     const item = this.props.item;
 
     return (
-      <div className="item-detail-panel">
+      <div className={`item-detail-panel ${this.state.animateClass}`}>
         <div className="item-detail-info">
           <h1 className="item-title">{item.description}</h1>
           <div className="item-img-container">
