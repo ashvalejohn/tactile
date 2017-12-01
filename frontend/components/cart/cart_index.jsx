@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CartIndexItem from './cart_index_item';
 
 class CartIndex extends Component {
@@ -16,13 +17,16 @@ class CartIndex extends Component {
   renderCartItems() {
     if (this.props.cartItems.length === 0) {
       return (
-        <h1>No items in cart</h1>
+        <div className="cart-item no-items">
+          <h1 className="cart-item-title">You don’t have any items in your cart.</h1>
+          <p>⟵ Add something by clicking a product in a photo.</p>
+        </div>
       );
     }
 
     return (
       this.props.cartItems.map(item => (
-        <CartIndexItem key={item.id} item={item} />
+        <CartIndexItem key={item.id} item={item} remove={this.props.removeCartItem} update={this.props.updateCartItem} cartItemId={item.id} />
       ))
     );
   }
@@ -31,11 +35,11 @@ class CartIndex extends Component {
     return (
       <div className="cart-panel">
         <div className="cart">
-          <h1>Cart</h1>
+          <h1 className="cart-title">Cart</h1>
           <div className="cart-items">
             {this.renderCartItems()}
           </div>
-          <button className="checkout">Checkout</button>
+          <Link to="/cart/checkout" ><button className="checkout">Checkout</button></Link>
         </div>
         <div className="cart-overlay" onClick={this.clickAway}></div>
       </div>

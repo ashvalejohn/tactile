@@ -26,19 +26,20 @@ class Login extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.clearErrors();
-    this.props.login(this.state);
+    this.props.login({ email: this.state.email, password: this.state.password })
+      .then(() => (this.props.history.goBack()));
   }
 
   handleDemo(e) {
     e.preventDefault();
     const demoUser = { email: 'demo@email.com', password: 'password' };
-    this.props.login(demoUser).then(() => this.props.history.push("/cart"));
+    this.props.login(demoUser)
+      .then(() => (this.props.history.goBack()));
   }
 
   handleCloseModal() {
     this.props.history.push("/");
   }
-
 
   shiftModalFocus() {
     document.getElementById('login-email').focus();
@@ -49,7 +50,6 @@ class Login extends Component {
       <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} onAfterOpen={this.shiftModalFocus} ariaHideApp={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Log In</h2>
-          <p>You need to log in to see your cart.</p>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="login-email">Email
               <input
@@ -69,7 +69,7 @@ class Login extends Component {
               />
             </label>
           </fieldset>
-          <ul className="auth-form__errors">
+          <ul className="errors">
             {this.props.errors ? this.props.errors.map((error, idx) =>
               (<li key={idx}>{error}</li>))
               :

@@ -24,7 +24,11 @@ const clearSessionErrors = () => ({
 });
 
 export const login = user => dispatch => (
-  APIUtil.login(user).then(currentUser => (dispatch(receiveCurrentUser(currentUser))), error => dispatch(receiveErrors(error.responseJSON)))
+  APIUtil.login(user).then(
+    currentUser => (
+      dispatch(receiveCurrentUser(currentUser))),
+    error => dispatch(receiveErrors(error.responseJSON)),
+  )
 );
 
 export const logout = () => dispatch => (
@@ -32,7 +36,10 @@ export const logout = () => dispatch => (
 );
 
 export const signup = user => dispatch => (
-  APIUtil.signup(user).then(currentUser => (dispatch(receiveCurrentUser(currentUser))), error => dispatch(receiveErrors(error.responseJSON)))
+  APIUtil.signup(user).then(
+    currentUser => (dispatch(receiveCurrentUser(currentUser))),
+    error => dispatch(receiveErrors(error.responseJSON)),
+  )
 );
 
 export const clearErrors = () => dispatch => (
