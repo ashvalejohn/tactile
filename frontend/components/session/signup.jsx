@@ -17,7 +17,11 @@ class Signup extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.shiftModalFocus = this.shiftModalFocus.bind(this);
   }
-  
+
+  componentWillMount() {
+    this.props.clearErrors();
+  }
+
   handleCloseModal() {
     this.props.history.goBack();
   }
@@ -71,7 +75,7 @@ class Signup extends Component {
               />
             </label>
           </fieldset>
-          <ul className="auth-form__errors">
+          <ul className="errors">
             {this.props.errors ? this.props.errors.map((error, idx) =>
               (<li key={idx}>{error}</li>))
               :

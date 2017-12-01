@@ -567,6 +567,9 @@ area:hover{
 .search-results{
   margin: 0 auto 2vh auto;
   text-align: center;
+  p{
+    margin-bottom:  2%;
+  }
   button{
     @extend .button;
     font-size: .9rem;

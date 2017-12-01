@@ -17,6 +17,10 @@ class Login extends Component {
     this.shiftModalFocus = this.shiftModalFocus.bind(this);
   }
 
+  componentWillMount() {
+    this.props.clearErrors();
+  }
+
   handleChange(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
