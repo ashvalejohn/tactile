@@ -36,7 +36,7 @@ Every image has a map with several `<area>` tags. Every `<area>` tag references 
 ## Search
 Users can search the database of images and Tactile will return all relevant images. 
 
-![Search Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/v1512168355/search_lsppoe.gif | width="500")
+![Search Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_500/v1512168355/search_lsppoe.gif)
 
 ## Shopping Cart
 Tactile wouldn't be a shopping app without a cart. Users are required to login to see their cart. Logged out users are redirected to `/login` if they try to open their cart. This is achieved using an `<AuthRoute>` on the `/cart` path.
