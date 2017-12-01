@@ -151,6 +151,43 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
     price: 98.00,
     sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"]
   })
+## Pink Ribbed Sweater
+  pink_ribbed_sweater = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085912/H3339_PK5511_j0def5.jpg",
+    description: "Pink ribbed sweater",
+    price: 92.00,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Pink Velvet Skirt
+  pink_velvet_skirt = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085917/H2334_PK6102_ryoqba.jpg",
+    description: "Pink velvet skirt",
+    price: 48.00,
+    sizes: ["XS", "S", "M", "L", "XL"]
+  })
+## Gold Pendant Necklace
+  gold_pendant_necklace = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086594/H4047_EC5475_rqnqgs.jpg",
+    description: "Gold pendant necklace",
+    price: 19.50,
+    sizes: ["One Size"]
+  })
+## Gold Stacking Rings
+  gold_stacking_rings = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086720/B3708_ED0747_jajzya.jpg",
+    description: "Gold stacking rings",
+    price: 12.50,
+    sizes: ["One Size"]
+  })
+## Pink Crossbody Purse
+  pink_crossbody_purse = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086353/H2562_EG5808_oz4pzj.jpg",
+    description: "Pink crossbody purse",
+    price: 34.50,
+    sizes: ["One Size"]
+  })
+
+#
 # IMAGES -----------------------------------------------------------------------
 ## Image 5
   img5 = Image.create({
@@ -167,6 +204,10 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
 ## Image 12
   img12 = Image.create({
     image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img12_juudma.jpg"
+  })
+## Image 6
+  img6 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img6_fnn0qb.jpg"
   })
 #
 # IMAGE MAPS -------------------------------------------------------------------
@@ -188,7 +229,7 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
         "392, 448, 405, 499, 407, 508, 410, 557, 414, 569, 451, 578, 453, 563, 485, 602, 494, 673, 498, 713, 505, 757, 524, 809, 534, 868, 547, 883, 579, 888, 601, 809, 604, 743, 614, 720, 606, 699, 612, 687, 643, 693, 650, 685, 645, 658, 656, 616, 587, 547, 564, 506, 550, 450, 580, 467, 595, 470, 603, 458, 568, 419, 540, 407, 512, 411, 507, 426, 510, 436, 529, 439, 529, 448, 516, 448, 520, 470, 527, 482, 542, 540, 558, 580, 483, 524, 453, 498, 460, 461, 449, 438, 439, 449, 439, 458, 429, 458, 426, 466, 397, 432, 397, 452"]
     })
 
-  ### Pink Conver Sneakers Map
+  ### Pink Converse Sneakers Map
     img5_pink_converse_sneakers = ImageMap.create({
       image_id: img5.id,
       item_id: pink_converse_sneakers.id,
@@ -294,57 +335,126 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
       })
 #
 ## Image 12 Maps:
-### Green Beanie Map
-  img12_green_beanie = ImageMap.create({
-    image_id: img12.id,
-    item_id: green_beanie.id,
-    coords: [
-      "323, 107, 355, 71, 359, 50, 380, 43, 402, 53, 420, 100, 420, 130, 403, 152, 403, 138, 381, 112, 339, 108"
-    ]
-  })
-### Green Button Down Map
-  img12_green_button_down = ImageMap.create({
-    image_id: img12.id,
-    item_id: green_button_down.id,
-    coords: [
-      "340, 229, 329, 195, 329, 181, 283, 148, 272, 154, 272, 166, 236, 197, 236, 205, 221, 238, 225, 306, 214, 411, 217, 499, 234, 500, 275, 468, 280, 426, 288, 427, 292, 411, 271, 358, 276, 344, 305, 342, 317, 383, 334, 382, 347, 364, 356, 381, 364, 379, 356, 329, 351, 228, 357, 184, 344, 180, 333, 192"
-    ]
-  })
-### Gray Sneakers Map
-  img12_gray_sneakers = ImageMap.create({
-    image_id: img12.id,
-    item_id: gray_sneakers.id,
-    coords: [
-      "662, 439, 689, 428, 689, 500, 681, 516, 644, 493, 671, 463",
-      "215, 803, 223, 818, 258, 797, 320, 840, 320, 850, 296, 862, 256, 864, 203, 845, 209, 807"
-    ]
-  })
-### Pink Tote Map
-  img12_pink_tote = ImageMap.create({
-    image_id: img12.id,
-    item_id: pink_tote.id,
-    coords: [
-      "348, 539, 377, 519, 451, 577, 496, 553, 566, 665, 578, 719, 456, 805, 417, 789, 342, 659, 373, 633"
-    ]
-  })
-### Green Sweater Map
-  img12_green_sweater = ImageMap.create({
+  ### Green Beanie Map
+    img12_green_beanie = ImageMap.create({
       image_id: img12.id,
-      item_id: green_sweater.id,
+      item_id: green_beanie.id,
       coords: [
-        "321, 382, 344, 363, 364, 415, 376, 494, 372, 495, 349, 457",
-        "248, 488, 260, 593, 263, 595, 273, 577, 262, 488, 294, 428, 294, 416, 280, 430, 273, 467"
+        "323, 107, 355, 71, 359, 50, 380, 43, 402, 53, 420, 100, 420, 130, 403, 152, 403, 138, 381, 112, 339, 108"
       ]
     })
-### Tuxedo Stripe Jeans Map
-  img12_tuxedo_stripe_jeans = ImageMap.create({
-    image_id: img12.id,
-    item_id: tuxedo_stripe_jeans.id,
-    coords: [
-      "278, 456, 300, 426, 320, 472, 335, 557, 325, 638, 268, 782, 236, 788, 221, 769, 264, 622, 272, 576, 265, 509",
-      "356, 382, 365, 453, 496, 402, 596, 457, 628, 406, 501, 335"
-    ]
-  })
+  ### Green Button Down Map
+    img12_green_button_down = ImageMap.create({
+      image_id: img12.id,
+      item_id: green_button_down.id,
+      coords: [
+        "340, 229, 329, 195, 329, 181, 283, 148, 272, 154, 272, 166, 236, 197, 236, 205, 221, 238, 225, 306, 214, 411, 217, 499, 234, 500, 275, 468, 280, 426, 288, 427, 292, 411, 271, 358, 276, 344, 305, 342, 317, 383, 334, 382, 347, 364, 356, 381, 364, 379, 356, 329, 351, 228, 357, 184, 344, 180, 333, 192"
+      ]
+    })
+  ### Gray Sneakers Map
+    img12_gray_sneakers = ImageMap.create({
+      image_id: img12.id,
+      item_id: gray_sneakers.id,
+      coords: [
+        "662, 439, 689, 428, 689, 500, 681, 516, 644, 493, 671, 463",
+        "215, 803, 223, 818, 258, 797, 320, 840, 320, 850, 296, 862, 256, 864, 203, 845, 209, 807"
+      ]
+    })
+  ### Pink Tote Map
+    img12_pink_tote = ImageMap.create({
+      image_id: img12.id,
+      item_id: pink_tote.id,
+      coords: [
+        "348, 539, 377, 519, 451, 577, 496, 553, 566, 665, 578, 719, 456, 805, 417, 789, 342, 659, 373, 633"
+      ]
+    })
+  ### Green Sweater Map
+    img12_green_sweater = ImageMap.create({
+        image_id: img12.id,
+        item_id: green_sweater.id,
+        coords: [
+          "321, 382, 344, 363, 364, 415, 376, 494, 372, 495, 349, 457",
+          "248, 488, 260, 593, 263, 595, 273, 577, 262, 488, 294, 428, 294, 416, 280, 430, 273, 467"
+        ]
+      })
+  ### Tuxedo Stripe Jeans Map
+    img12_tuxedo_stripe_jeans = ImageMap.create({
+      image_id: img12.id,
+      item_id: tuxedo_stripe_jeans.id,
+      coords: [
+        "278, 456, 300, 426, 320, 472, 335, 557, 325, 638, 268, 782, 236, 788, 221, 769, 264, 622, 272, 576, 265, 509",
+        "356, 382, 365, 453, 496, 402, 596, 457, 628, 406, 501, 335"
+      ]
+    })
+#
+## Image 6 Maps:
+  ### Gold Velvet Bracelet Map
+    img6_gold_velvet_bracelet = ImageMap.create({
+      image_id: img6.id,
+      item_id: gold_velvet_bracelet.id,
+      coords: [
+        "394, 279, 414, 278, 420, 297, 412, 311, 393, 312, 399, 298"
+      ]
+    })
+  ### Pink Converse Sneakers Map
+    img6_pink_converse_sneakers = ImageMap.create({
+      image_id: img6.id,
+      item_id: pink_converse_sneakers.id,
+      coords: [
+        "290, 873, 300, 894, 342, 898, 361, 880, 359, 867, 368, 846, 353, 789, 306, 794, 310, 840",
+        "492, 808, 546, 809, 559, 840, 612, 880, 599, 897, 553, 906, 528, 887, 486, 875, 486, 837"
+      ]
+    })
+  ### Cream Fair Isle Socks Map
+    img6_cream_fair_isle_socks = ImageMap.create({
+      image_id: img6.id,
+      item_id: cream_fair_isle_socks.id,
+      coords: [
+        "304, 771, 341, 761, 347, 799, 323, 788, 310, 804",
+        "488, 782, 529, 782, 540, 806, 495, 807"
+      ]
+    })
+  ### Pink Velvet Skirt Map
+    img6_pink_velvet_skirt = ImageMap.create({
+      image_id: img6.id,
+      item_id: pink_velvet_skirt.id,
+      coords: [
+        "193, 504, 232, 416, 306, 437, 327, 431, 337, 373, 358, 342, 407, 348, 424, 375, 429, 418, 481, 539, 401, 557, 295, 535, 273, 540"
+      ]
+    })
+  ### Pink Crossbody Purse Map
+    img6_pink_crossbody_purse = ImageMap.create({
+      image_id: img6.id,
+      item_id: pink_crossbody_purse.id,
+      coords: [
+        "226, 352, 214, 396, 220, 416, 302, 436, 326, 433, 335, 378, 360, 334, 419, 103, 402, 104, 352, 296, 322, 351, 274, 337, 274, 356"
+      ]
+    })
+  ### Gold Stacking Rings Map
+    img6_gold_stacking_rings = ImageMap.create({
+      image_id: img6.id,
+      item_id: gold_stacking_rings.id,
+      coords: [
+        "240, 329, 251, 323, 256, 332, 247, 336"
+      ]
+    })
+  ### Gold Pendant Necklace Map
+    img6_gold_pendant_necklace = ImageMap.create({
+      image_id: img6.id,
+      item_id: gold_pendant_necklace.id,
+      coords: [
+        "307, 119, 328, 229, 345, 233, 355, 215, 382, 106, 369, 101, 362, 152, 340, 204, 311, 118"
+      ]
+    })
+  ### Pink Ribbed Sweater Map
+    img6_pink_ribbed_sweater = ImageMap.create({
+      image_id: img6.id,
+      item_id: pink_ribbed_sweater.id,
+      coords: [
+       "360, 341, 404, 349, 427, 381, 444, 360, 441, 317, 487, 304, 499, 278, 491, 205, 480, 181, 464, 128, 446, 103, 418, 104, 369, 279, 419, 273, 449, 281, 445, 312, 423, 313, 382, 312", 
+        "201, 312, 182, 271, 231, 152, 309, 112, 329, 243, 350, 243, 385, 94, 371, 92, 340, 192, 318, 118, 360, 90, 405, 109, 347, 288, 306, 334, 279, 327, 253, 298, 268, 228, 234, 286, 208, 269, 192, 283"
+      ]
+    })
 #
 # CART_ITEMS -------------------------------------------------------------------
 ## 
