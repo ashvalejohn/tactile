@@ -76,35 +76,55 @@ area:hover{
 }
 
 .header__search{
-  min-height: 35px;
+  height: 35px;
   flex: 1;
-  width: inherit;
+  display: flex;
+  align-items: center;
   label{
     @extend .button;
-    height: 35px;
+    height: 33px;
     font-size: .75rem;
-    padding: 3%;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    &:focus-within{
+      border: 1px solid $hover;
+      color: $hover;
+    }
   }
   input{
-    margin-left: $inputpadding;
-    height: 90%;
-    border: 0px;
-    font-size: inherit;
+    margin-left: 2%;
     &:focus{
       outline-width: 0px;
     }
+    &[type="text"]{
+      border: 0;
+      width: 90%;
+    }
+  }
+}
+
+.search-submit{
+  @extend .button;
+  height: inherit;
+  padding: 5px;
+  font-size: .75rem;
+  flex: 1;
+  &:focus{
+    border: 1px solid $hover;
+    color: $hover;
   }
 }
 
 .header__logo{
   flex: 1;
+  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   &:hover{
     color: $hover;
-  }
-  h1{
-    margin: 0 auto;
+    cursor: pointer;
   }
 }
 
@@ -461,8 +481,8 @@ area:hover{
 }
 
 .cart-field-name{
-    display: inline-block;
-    font-size: .9rem;
+  display: inline-block;
+  font-size: .9rem;
 }
 
 .cart-sizes{
@@ -479,11 +499,6 @@ area:hover{
     cursor: pointer;
     color: $hover;
     border: 1px solid $hover;
-  }
-  option{
-    &::after{
-      content: ">";
-    }
   }
 }
 
@@ -521,6 +536,17 @@ area:hover{
   font-size: 1.1rem;
   margin-bottom: 1rem;
   text-decoration: none;
+}
+
+.search-results{
+  margin: 0 auto 2vh auto;
+  text-align: center;
+  button{
+    @extend .button;
+    font-size: .9rem;
+    height: 50px;
+    padding: 0 3vw;
+  }
   &:hover{
     color: $hover;
   }

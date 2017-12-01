@@ -16,4 +16,12 @@ class Item < ApplicationRecord
 
   has_many :image_maps
   has_many :cart_items
+
+  def self.search(term)
+    Item
+      .where(
+        "items.description ILIKE :term",
+        term: "%#{term}%"
+      )
+  end
 end
