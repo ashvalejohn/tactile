@@ -9,6 +9,7 @@
 Item.destroy_all
 Image.destroy_all
 ImageMap.destroy_all
+CartItem.destroy_all
 demoUser = User.create({email: "demo@email.com", password: "password"})
 
 # ITEMS ------------------------------------------------------------------------
