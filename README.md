@@ -1,8 +1,10 @@
 # Tactile App
 ## [See it in action](http://ashvalejohn-full-stack.herokuapp.com/#/)
-__Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. Tactile is built with a Ruby on Rails backend, PostgreSQL database, and React/Redux frontend.
+__Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. 
 
 ![Tactile Demo Gif](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_800/v1512164119/readme_ghsm5g.gif)
+
+Tactile is a single-page app built with a Ruby on Rails backend, PostgreSQL database, and React/Redux frontend. Rails is an opinionated backend framework, which makes it ideal for projects built in a short timeframe. React is ideal for single-page apps because it is designed to dynamically render components. PostgreSQL is a relational database, which made it easy to connect images, image maps, and individual clothing items.
 
 Tactile's core features include:
 - Clickable items
