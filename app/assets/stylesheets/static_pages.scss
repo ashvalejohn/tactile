@@ -33,6 +33,7 @@ $deactivated: lightgray;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 body{
@@ -65,11 +66,15 @@ area:hover{
 }
 
 .header{
+  background-color: $bgcolor;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1%;
+  padding: 0 2vw;
+  position: fixed;
   min-height: 100px;
+  top: 0;
+  width: 96vw;
   a{
     text-decoration: none;
   }
@@ -251,6 +256,7 @@ area:hover{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 100px;
   img{
     margin-bottom: 5%;
   }
