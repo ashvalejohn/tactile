@@ -5,18 +5,11 @@ class ImageIndexItem extends Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
 
   handleClick(e) {
     e.preventDefault();
     this.props.history.replace(`/items/${e.target.alt}`);
-  }
-
-  handleMouseLeave(e) {
-    e.preventDefault();
-    // ^^^ Do I need this here?
-    this.props.history.push('/');
   }
 
   render() {

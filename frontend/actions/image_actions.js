@@ -10,3 +10,4 @@ const receiveImages = images => ({
 export const fetchImages = () => dispatch => (
   getImages().then(images => dispatch(receiveImages(images)))
 );
+

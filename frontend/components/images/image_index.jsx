@@ -9,7 +9,20 @@ class ImageIndex extends Component {
   render() {
     if (this.props.images.length === 0) {
       return (
-        <h1></h1>
+        <div className="search-results">
+          <p>Your search didn’t return any results.</p>
+          <button onClick={this.props.fetchImages}>Back To All Images</button>
+        </div>
+      );
+    }
+
+    let youSearched;
+    if (this.props.images[0].term !== null) {
+      youSearched = (
+        <div className="search-results">
+          <p>You searched for “{this.props.images[0].term}.”</p>
+          <button onClick={this.props.fetchImages}>Back To All Images</button>
+        </div>
       );
     }
 
@@ -19,6 +32,7 @@ class ImageIndex extends Component {
 
     return (
       <div className="image-index">
+        {youSearched}
         {imageIndexItems}
       </div>
     );
