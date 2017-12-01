@@ -1,7 +1,5 @@
-# Tactile README
-
-
-## See [Tactile](http://ashvalejohn-full-stack.herokuapp.com/#/) in action
+# Tactile App
+## [See it in action](http://ashvalejohn-full-stack.herokuapp.com/#/)
 __Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. 
 
 ![Tactile Demo Gif](http://res.cloudinary.com/ashvalejohn/image/upload/v1512164119/readme_ghsm5g.gif)
@@ -15,9 +13,10 @@ Tactile is built with:
 - React Modal
 
 Tactile's core features include:
-- [clickable items in images](#clickable)
-- [shopping cart](#shopping)
-- [user authentication](#user)
+- Clickable items
+- Searchable images
+- Shopping cart
+- User authentication
 
 ___
 ## Clickable Items
@@ -34,9 +33,14 @@ Every image has a map with several `<area>` tags. Every `<area>` tag references 
 
 ![Item Detail Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/v1512167147/Screen_Shot_2017-12-01_at_2.24.54_PM_sgji6t.png)
 
+## Search
+Users can search the database of images and Tactile will return all relevant images. 
+![Search Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/v1512168355/search_lsppoe.gif)
+
 ## Shopping Cart
+Tactile wouldn't be a shopping app without a cart. Users are required to login to see their cart. Logged out users are redirected to `/login` if they try to open their cart. This is achieved using an `<AuthRoute>` on the `/cart` path.
 
-
+![Cart Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/v1512167963/Screen_Shot_2017-12-01_at_2.38.58_PM_sev5re.png)
 
 ___
 
