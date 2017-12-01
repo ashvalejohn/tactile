@@ -96,16 +96,23 @@ area:hover{
     display: flex;
     align-items: center;
     padding-left: 2%;
-    width: 125px;
+    width: 200px;
     &:focus-within{
       border: 1px solid $hover;
       color: $hover;
     }
   }
   input{
-    margin-left: 2%;
+    &::placeholder{
+      color: $main-text;
+      text-transform: uppercase;
+      font-size: .75rem;
+    }
     &:focus{
       outline-width: 0px;
+      &::placeholder{
+        color: lightgray;
+      }
     }
     &[type="text"]{
       border: 0;
@@ -114,17 +121,17 @@ area:hover{
   }
 }
 
-.search-submit{
-  @extend .button;
-  height: inherit;
-  padding: 5px;
-  font-size: .75rem;
-  width: 75px;
-  &:focus{
-    border: 1px solid $hover;
-    color: $hover;
-  }
-}
+// .search-submit{
+//   @extend .button;
+//   height: inherit;
+//   padding: 5px;
+//   font-size: .75rem;
+//   width: 75px;
+//   &:focus{
+//     border: 1px solid $hover;
+//     color: $hover;
+//   }
+// }
 
 .header__logo{
   flex: 1;
@@ -251,6 +258,7 @@ area:hover{
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, .50);
+  z-index: 4;
 }
 
 .modal-button {
@@ -607,7 +615,8 @@ area:hover{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 2%;
 }
 
 .ashley-info-links{
