@@ -1,16 +1,8 @@
 # Tactile App
 ## [See it in action](http://ashvalejohn-full-stack.herokuapp.com/#/)
-__Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. 
+__Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. Tactile is built with a Ruby on Rails backend, PostgreSQL database, and React/Redux frontend.
 
 ![Tactile Demo Gif](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_800/v1512164119/readme_ghsm5g.gif)
-
-Tactile is built with:
-- React
-- Redux
-- Rails
-- Postgresql
-- React Router
-- React Modal
 
 Tactile's core features include:
 - Clickable items
@@ -29,7 +21,16 @@ This clickable magic is build using an [HTML image map](https://developer.mozill
     <area shape="poly" coords="123, 345, 456, 746, 12, 23, ..." alt="12">
   </map>
 ```
-Every image has a map with several `<area>` tags. Every `<area>` tag references an item in its alt text. When a user clicks an `<area>` tag, they can see the corresponding item's information and add the item to their cart.
+
+### Rendering Item Details
+#### `<Image Index>` Component
+1. user clicks an `<area>` tag
+2. grabs the `item_id` referenced in the `<area>`'s `alt` tag
+3. redirects to `/item/{item_id}`
+
+#### `<Item Detail>` Component
+4. fetches item information based on URL
+5. renders item details!
 
 ![Item Detail Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_800/v1512167147/Screen_Shot_2017-12-01_at_2.24.54_PM_sgji6t.png)
 
