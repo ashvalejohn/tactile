@@ -15,7 +15,9 @@ Tactile is built with:
 - React Modal
 
 Tactile's core features include:
-- [clickable items in images]()
+- [clickable items in images](#clickable)
+- [shopping cart](#shopping)
+- [user authentication](#user)
 
 ___
 ## Clickable Items
