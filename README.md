@@ -35,6 +35,7 @@ Every image has a map with several `<area>` tags. Every `<area>` tag references 
 
 ## Search
 Users can search the database of images and Tactile will return all relevant images. 
+
 ![Search Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/v1512168355/search_lsppoe.gif)
 
 ## Shopping Cart
