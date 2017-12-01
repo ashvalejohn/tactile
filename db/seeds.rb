@@ -386,6 +386,14 @@ demoUser = User.create({email: "demo@email.com", password: "password"})
         "356, 382, 365, 453, 496, 402, 596, 457, 628, 406, 501, 335"
       ]
     })
+  ### Gold Stacking Rings Map
+    img12_gold_stacking_rings = ImageMap.create({
+      image_id: img12.id,
+      item_id: gold_stacking_rings.id,
+      coords: [
+        "326, 504, 355, 503, 355, 516, 327, 520"
+      ]
+    })
 #
 ## Image 6 Maps:
   ### Gold Velvet Bracelet Map
