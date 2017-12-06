@@ -14,7 +14,7 @@ Tactile's core features include:
 
 ___
 ## Clickable Items
-Tactile's coolest feature is the ability to click directly on something you like in an image. Like her jacket? *Click it*. Want to know more about those shoes? *Click 'em*. Tactile lets editorial photos ~* come to life *~.
+Tactile's coolest feature is the ability to click directly on something you like in an image. Like her jacket? *Click it*. Want to know more about those shoes? *Click 'em*. Tactile lets editorial photos ✨come to life✨.
 
 This clickable magic is build using an [HTML image map](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map), which renders like this:
 ```html
