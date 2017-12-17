@@ -1,6 +1,7 @@
 # Tactile App
-## [See it in action](http://ashvalejohn-full-stack.herokuapp.com/#/)
 __Tactile__ is a shopping app where users can see details about an item by clicking it within an image. Users can browse editorial photographs, click an item they like, then add that item to their cart. 
+
+### [See it in action](http://ashvalejohn-full-stack.herokuapp.com/#/)
 
 ![Tactile Demo Gif](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_800/v1512164119/readme_ghsm5g.gif)
 
