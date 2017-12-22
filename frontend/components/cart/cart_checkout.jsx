@@ -26,10 +26,10 @@ class Checkout extends Component {
           <div className="ashley-info-links">
             <p>Ashley Johnson is a software engineer in San Francisco.</p>
             <div className="ashley-links">
-              <a href="linkedin.com/ashvalejohn">
+              <a href="https://www.linkedin.com/ashvalejohn">
                 <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/In-Black-128px-TM_vdgmqf.png" alt="ashvalejohn LinkedIn"/>
               </a>
-              <a href="github.com/ashvalejohn">
+              <a href="https://www.github.com/ashvalejohn">
                 <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/GitHub-Mark-120px-plus_z52nkp.png" alt="ashvalejohn Github"/>
               </a>
             </div>
