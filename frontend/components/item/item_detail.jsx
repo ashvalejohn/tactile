@@ -29,11 +29,12 @@ class ItemDetail extends Component {
   }
 
   clickAway() {
+    console.log("user clicked away");
     this.setState({
       animateClass: "slide-out-left",
-    });
+    }, console.log(this.state));
 
-    setTimeout(() => this.props.history.push('/'), 500);
+    // setTimeout(() => this.props.history.push('/'), 400);
   }
 
   handleChange(e) {

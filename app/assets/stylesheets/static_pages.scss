@@ -342,6 +342,7 @@ area:hover{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  max-width: 100%;
 }
 
 .panel-title{
@@ -357,6 +358,7 @@ area:hover{
 
 .item-img-container{
   width: 300px;
+  max-width: 100%;
 }
 
 .item-img{
