@@ -11,6 +11,7 @@ $inputpadding: 3%;
 $bgcolor: white;
 $boxshadow: rgba(0, 10, 27, 0.2);
 $deactivated: lightgray;
+$desktop: 800px;
 
 .button {
   background-color: $bgcolor;
@@ -31,12 +32,15 @@ $deactivated: lightgray;
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 40vw;
+  width: 70vw;
   background-color: $bgcolor;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
+  @media screen and (min-width: $desktop){
+    width: 40vw;
+  }
 }
 
 body{
@@ -294,153 +298,79 @@ area:hover{
   }
 }
 
-.item-detail-panel{
-  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  @extend .panel;
+@keyframes mobile-slide-in-left {
+  0% {left: -70vw}
+  100% {left: 0}
 }
 
-@keyframes slide-in-left {
+@keyframes mobile-slide-out-left {
+  0% {left: 0vw}
+  100% {left: -70vw }
+}
+
+@keyframes mobile-slide-in-right {
+  0% {right: -70vw}
+  100% {right: 0}
+}
+
+@keyframes mobile-slide-out-right {
+  0% {right: 0vw}
+  100% {right: -70vw}
+}
+
+@keyframes desktop-slide-in-left {
   0% {left: -40vw}
   100% {left: 0}
 }
 
-@keyframes slide-out-left {
+@keyframes desktop-slide-out-left {
   0% {left: 0vw}
   100% {left: -40vw }
 }
 
-@keyframes slide-in-right {
+@keyframes desktop-slide-in-right {
   0% {right: -40vw}
   100% {right: 0}
 }
 
-@keyframes slide-out-right {
+@keyframes desktop-slide-out-right {
   0% {right: 0vw}
   100% {right: -40vw}
 }
 
 .slide-in-left{
-  animation: slide-in-left .5s;
+  animation: mobile-slide-in-left .5s;
+  @media screen and (min-width: $desktop) {
+    animation: desktop-slide-in-left .5s;
+  }
 }
 
 .slide-out-left{
-  animation: slide-out-left .5s;
+  animation: mobile-slide-out-left .5s;
+  @media screen and (min-width: $desktop) {
+    animation: desktop-slide-out-left .5s;
+  }
 }
 
 .slide-in-right{
-  animation: slide-in-right .5s;
+  animation: mobile-slide-in-right .5s;
+  @media screen and (min-width: $desktop) {
+    animation: desktop-slide-in-right .5s;
+  }
 }
 
 .slide-out-right{
-  animation: slide-out-right .5s;
+  animation: mobile-slide-out-right .5s;
+  @media screen and (min-width: $desktop) {
+    animation: desktop-slide-out-right .5s;
+  }
 }
 
-.item-detail-info{
-  z-index: 2;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 100%;
-}
 
 .panel-title{
   font-size: 1.5rem;
   text-align: center;
   text-transform: capitalize;
-}
-
-.item-title{
-  @extend .panel-title;
-  max-width: 90%;
-}
-
-.item-img-container{
-  width: 300px;
-  max-width: 100%;
-}
-
-.item-img{
-  width: 100%;
-  
-}
-
-.item-price{
-  font-size: 1.25rem;
-}
-
-.item-sizes{
-  width: 80%;
-  max-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  
-  label{
-    margin: 5px;
-  }
-
-  input:checked ~ .size-text{
-    border: 1px solid $hover;
-    color: $hover;
-  }
-
-  input{
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-
-  span{
-    padding: 10px;
-    display: inline-block;
-    min-width: 20px;
-    text-align: center;
-  }
-}
-
-.size-text{
-  border: 1px solid $main-text;
-  color: $main-text;
-
-  &:hover{
-    border: 1px solid $hover;
-    color: $hover;
-    cursor: pointer;
-  }
-}
-
-.deactivated{
-  .size-text{
-    border: 1px solid $deactivated;
-    color: $deactivated;
-    &:hover{
-      border: 1px solid $deactivated;
-      color: $deactivated;
-      cursor: default;
-    }
-  }
-}
-
-.log-in-add-to-cart{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  p{
-    width: 70%;
-    text-align: center;
-    margin-bottom: 5%;
-  }
-}
-
-.add-to-cart{
-  @extend .button;
-
-  font-size: .9rem;
-  height: 50px;
-  width: 150px;
 }
 
 .panel-overlay{
@@ -456,40 +386,40 @@ area:hover{
   right: 0;
 }
 
-@keyframes item-overlay-slide-in-left {
+@keyframes overlay-slide-in-left {
   0% { right: -60vw }
   100% { right: 0 }
 }
 
-@keyframes item-overlay-slide-out-left {
+@keyframes overlay-slide-out-left {
   0% { right: 0 }
   100% { right: -60vw }
 }
 
-@keyframes item-overlay-slide-in-right {
+@keyframes overlay-slide-in-right {
   0% { left: -60vw }
   100% { left: 0 }
 }
 
-@keyframes item-overlay-slide-out-right {
+@keyframes overlay-slide-out-right {
   0% { left: 0 }
   100% { left: -60vw }
 }
 
 .overlay-slide-in-left {
-  animation: item-overlay-slide-in-left .5s;
+  animation: overlay-slide-in-left .5s;
 }
 
 .overlay-slide-out-left {
-  animation: item-overlay-slide-out-left .5s;
+  animation: overlay-slide-out-left .5s;
 }
 
 .overlay-slide-in-right {
-  animation: item-overlay-slide-in-right .5s;
+  animation: overlay-slide-in-right .5s;
 }
 
 .overlay-slide-out-right {
-  animation: item-overlay-slide-out-right .5s;
+  animation: overlay-slide-out-right .5s;
 }
 
 .cart-panel{
@@ -699,3 +629,5 @@ area:hover{
     width: 4vw;
   }
 }
+
+@import 'item-detail/item-detail';
