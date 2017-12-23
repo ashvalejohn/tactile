@@ -448,15 +448,35 @@ area:hover{
   height: 100vh;
   opacity: .25;
   position: fixed;
-  transition-property: opacity;
-  transition-duration: 1s;
-  transition-timing-function: ease-in;
-  width: 100vw;
+  width: 60vw;
 }
 
 .item-detail-overlay{
   @extend .panel-overlay;
   right: 0;
+}
+
+@keyframes item-overlay-slide-in-left {
+  0% { right: -60vw }
+  100% { right: 0 }
+}
+
+@keyframes item-overlay-slide-out-left {
+  0% { right: 0 }
+  100% { right: -60vw }
+}
+
+@keyframes item-overlay-slide-in-right {
+  0% { left: -60vw }
+  100% { left: 0 }
+}
+
+.overlay-slide-in-left {
+  animation: item-overlay-slide-in-left .5s;
+}
+
+.overlay-slide-out-left {
+  animation: item-overlay-slide-out-left .5s;
 }
 
 .cart-panel{

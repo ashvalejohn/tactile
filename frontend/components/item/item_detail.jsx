@@ -8,7 +8,8 @@ class ItemDetail extends Component {
       item_id: null,
       size: '',
       quantity: 1,
-      animateClass: 'slide-in-left',
+      animatePanel: 'slide-in-left',
+      animateOverlay: 'overlay-slide-in-left'
     };
 
     this.props.fetchItem(this.props.match.params.id);
@@ -29,12 +30,12 @@ class ItemDetail extends Component {
   }
 
   clickAway() {
-    console.log("user clicked away");
     this.setState({
-      animateClass: "slide-out-left",
-    }, console.log(this.state));
+      animatePanel: "slide-out-left",
+      animateOverlay: "overlay-slide-out-left"
+    });
 
-    // setTimeout(() => this.props.history.push('/'), 400);
+    setTimeout(() => this.props.history.push('/'), 450);
   }
 
   handleChange(e) {
@@ -65,7 +66,7 @@ class ItemDetail extends Component {
     const item = this.props.item;
 
     return (
-      <div className={`item-detail-panel ${this.state.animateClass}`}>
+      <div className={`item-detail-panel ${this.state.animatePanel}`}>
         <div className="item-detail-info">
           <h1 className="item-title">{item.description}</h1>
           <div className="item-img-container">
@@ -101,7 +102,7 @@ class ItemDetail extends Component {
               </div>
             }
         </div>
-        <div className="item-detail-overlay" onClick={this.clickAway} />
+        <div className={`item-detail-overlay ${this.state.animateOverlay}`} onClick={this.clickAway} />
       </div>
     );
   }
