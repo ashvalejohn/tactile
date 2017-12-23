@@ -32,13 +32,14 @@ class ImageIndex extends Component {
     const imageIndexItems = this.props.images.map(image => (
       <ImageIndexItem key={image.id} image={image} history={this.props.history} />
     ));
-
+    
     return (
       <div className="image-index">
         {youSearched}
         {imageIndexItems}
       </div>
     );
+
   }
 }
 
