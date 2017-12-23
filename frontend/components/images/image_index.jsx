@@ -20,6 +20,7 @@ class ImageIndex extends Component {
 
     let youSearched;
     if (this.props.images[0].term !== null) {
+      window.scrollTo(0, 0);
       youSearched = (
         <div className="search-results">
           <p>You searched for “{this.props.images[0].term}.”</p>
