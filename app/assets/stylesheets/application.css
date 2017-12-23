@@ -604,9 +604,6 @@ area:hover {
   height: 50px;
   padding: 0 3vw;
 }
-.search-results:hover {
-  color: red;
-}
 
 .no-items {
   flex-direction: column;
