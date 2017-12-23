@@ -683,8 +683,9 @@ area:hover {
 }
 
 .item-img-container {
-  width: 300px;
-  max-width: 100%;
+  max-width: 300px;
+  width: 90%;
+  margin: 5%;
 }
 
 .item-img {
@@ -767,7 +768,12 @@ area:hover {
   align-items: center;
   margin-top: 130px;
 }
-.image-index img {
+
+.image-index-item {
   margin-bottom: 5%;
+  max-width: 600px;
   width: 90%;
+}
+.image-index-item img {
+  width: 100%;
 }

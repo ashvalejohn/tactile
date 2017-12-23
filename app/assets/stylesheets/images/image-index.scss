@@ -5,8 +5,13 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 130px;
+}
+
+.image-index-item{
+  margin-bottom: 5%;
+  max-width: 600px;
+  width: 90%;
   img{
-    margin-bottom: 5%;
-    width: 90%;
+    width: 100%;
   }
 }
