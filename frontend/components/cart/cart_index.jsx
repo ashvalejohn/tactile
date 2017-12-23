@@ -7,7 +7,8 @@ class CartIndex extends Component {
     super(props);
 
     this.state = {
-      animateClass: 'slide-in-right',
+      animatePanel: 'slide-in-right',
+      animateOverlay: 'overlay-slide-in-right'
     }
 
     this.props.fetchCartItems();
@@ -17,10 +18,11 @@ class CartIndex extends Component {
 
   clickAway() {
     this.setState({
-      animateClass: 'slide-out-right',
+      animatePanel: 'slide-out-right',
+      animateOverlay: 'overlay-slide-out-right',
     });
 
-    setTimeout(() => this.props.history.push('/'), 500);
+    setTimeout(() => this.props.history.push('/'), 450);
   }
 
   renderCartItems() {
@@ -42,7 +44,7 @@ class CartIndex extends Component {
 
   render() {
     return (
-      <div className={`cart-panel ${this.state.animateClass}`}>
+      <div className={`cart-panel ${this.state.animatePanel}`}>
         <div className="cart">
           <h1 className="cart-title">Cart</h1>
           <div className="cart-items">
@@ -50,7 +52,7 @@ class CartIndex extends Component {
           </div>
           <Link to="/cart/checkout" ><button className="checkout">Checkout</button></Link>
         </div>
-        <div className="cart-overlay" onClick={this.clickAway}></div>
+        <div className={`cart-overlay ${this.state.animateOverlay}`} onClick={this.clickAway}></div>
       </div>
     );
   }

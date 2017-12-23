@@ -447,12 +447,28 @@ area:hover {
     left: 0;
   }
 }
+@keyframes item-overlay-slide-out-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -60vw;
+  }
+}
 .overlay-slide-in-left {
   animation: item-overlay-slide-in-left .5s;
 }
 
 .overlay-slide-out-left {
   animation: item-overlay-slide-out-left .5s;
+}
+
+.overlay-slide-in-right {
+  animation: item-overlay-slide-in-right .5s;
+}
+
+.overlay-slide-out-right {
+  animation: item-overlay-slide-out-right .5s;
 }
 
 .cart-panel {
