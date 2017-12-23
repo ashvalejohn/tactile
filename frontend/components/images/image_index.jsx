@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import imageMapResize from 'image-map-resizer';
 import ImageIndexItem from './image_index_item';
 
 class ImageIndex extends Component {
   componentDidMount() {
-    this.props.fetchImages();
+    this.props.fetchImages().then(() => {
+      imageMapResize();
+    });
   }
 
   render() {
@@ -32,14 +35,13 @@ class ImageIndex extends Component {
     const imageIndexItems = this.props.images.map(image => (
       <ImageIndexItem key={image.id} image={image} history={this.props.history} />
     ));
-    
+
     return (
       <div className="image-index">
         {youSearched}
         {imageIndexItems}
       </div>
     );
-
   }
 }
 

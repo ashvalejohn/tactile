@@ -286,17 +286,6 @@ area:hover{
   }
 }
 
-.image-index{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 130px;
-  img{
-    margin-bottom: 5%;
-  }
-}
 
 @keyframes mobile-slide-in-left {
   0% {left: -70vw}
@@ -664,4 +653,5 @@ area:hover{
   }
 }
 
-@import 'item-detail/item-detail';
+@import 'item/item-detail';
+@import 'images/image-index';
