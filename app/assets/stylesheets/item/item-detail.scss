@@ -11,6 +11,7 @@
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
+  max-height: 80vh;
 }
 
 .item-title{
@@ -19,6 +20,7 @@
 }
 
 .item-img-container{
+  min-height: 200px;
   max-width: 300px;
   width: 90%;
   margin: 5%;
@@ -30,6 +32,7 @@
 
 .item-price{
   font-size: 1.25rem;
+  margin-top: 20px;
 }
 
 .item-sizes{

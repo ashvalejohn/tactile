@@ -15,7 +15,7 @@
   font-family: "Lato", sans-serif;
   position: fixed;
   top: 0;
-  height: 100vh;
+  height: 101vh;
   width: 70vw;
   background-color: white;
   display: flex;
@@ -676,6 +676,7 @@ area:hover {
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
+  max-height: 80vh;
 }
 
 .item-title {
@@ -683,6 +684,7 @@ area:hover {
 }
 
 .item-img-container {
+  min-height: 200px;
   max-width: 300px;
   width: 90%;
   margin: 5%;
@@ -694,6 +696,7 @@ area:hover {
 
 .item-price {
   font-size: 1.25rem;
+  margin-top: 20px;
 }
 
 .item-sizes {
