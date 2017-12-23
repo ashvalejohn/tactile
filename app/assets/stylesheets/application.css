@@ -676,7 +676,6 @@ area:hover {
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
-  max-height: 80vh;
 }
 
 .item-title {
@@ -700,7 +699,6 @@ area:hover {
 }
 
 .item-sizes {
-  width: 80%;
   max-width: 300px;
   display: flex;
   justify-content: center;
