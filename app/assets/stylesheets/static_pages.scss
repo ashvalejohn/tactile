@@ -1,17 +1,7 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$test: 2px dashed green;
-$hover: red;
-$mainfont: 'Lato', sans-serif;
-$logofont: 'Josefin Sans', sans-serif;
-$logocolor: #001b47;
-$main-text: #001b47;
-$inputpadding: 3%;
-$bgcolor: white;
-$boxshadow: rgba(0, 10, 27, 0.2);
-$deactivated: lightgray;
-$desktop: 800px;
+
 
 .button {
   background-color: $bgcolor;
@@ -72,163 +62,7 @@ area:hover{
   cursor: pointer;
 }
 
-.header{
-  background-color: $bgcolor;
-  box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2vw;
-  position: fixed;
-  min-height: 100px;
-  top: 0;
-  width: 96vw;
-  a{
-    text-decoration: none;
-  }
-}
 
-.header__search{
-  height: 35px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  label{
-    @extend .button;
-    height: 33px;
-    font-size: .75rem;
-    display: flex;
-    align-items: center;
-    padding-left: 2%;
-    width: 200px;
-    &:focus-within{
-      border: 1px solid $hover;
-      color: $hover;
-    }
-  }
-  input{
-    &::placeholder{
-      color: $main-text;
-      text-transform: uppercase;
-      font-size: .75rem;
-    }
-    &:focus{
-      outline-width: 0px;
-      &::placeholder{
-        color: rgba(211, 211, 211, 0.671);
-      }
-    }
-    &[type="text"]{
-      border: 0;
-      width: 90%;
-    }
-  }
-}
-
-// .search-submit{
-//   @extend .button;
-//   height: inherit;
-//   padding: 5px;
-//   font-size: .75rem;
-//   width: 75px;
-//   &:focus{
-//     border: 1px solid $hover;
-//     color: $hover;
-//   }
-// }
-
-.header__logo{
-  flex: 1;
-  margin: 0 auto;
-  text-align: center;
-  h1{
-    color: $logocolor;
-    font-family: $logofont;
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    &:hover{
-      color: $hover;
-      cursor: pointer;
-    }
-  }
-  h2{
-    font-size: 12px;
-    display: flex;
-    justify-content: space-around;
-    margin: 1% auto;
-    text-transform: uppercase;
-    width: 180px;
-    padding-right: 2px;
-    span{
-      justify-content: space-between;
-    }
-  }
-}
-
-.header__buttons{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-}
-
-.header__button{
-  @extend .button;
-  font-size: .75rem;
-  height: 35px;
-  min-width: 100px;
-}
-
-.header__button--last{
-  margin-left: 2%;
-}
-
-.auth-form{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 90%;
-  h2{
-    font-weight: normal;
-    margin-top: 2%;
-  }
-  a:hover{
-    color: $hover;
-  }
-  p{
-    margin: 2% 0;
-  }
-}
-
-.auth-form__fieldset{
-  width: 40%;
-}
-
-.auth-form__label{
-  display: flex;
-  flex-direction: column;
-  margin-top: 2vh;
-  input{
-    display: block;
-    height: 40px;
-    min-width: 250px;
-    font-size: 1rem;
-    padding-left: $inputpadding;
-    color: #808080;
-    &:focus{
-      outline: none;
-      border: 2px solid $main-text;
-    }
-    &:valid{
-      border: 2px solid green;
-    }
-  }
-}
 
 .errors{
   color: red;
@@ -287,73 +121,6 @@ area:hover{
 }
 
 
-@keyframes mobile-slide-in-left {
-  0% {left: -70vw}
-  100% {left: 0}
-}
-
-@keyframes mobile-slide-out-left {
-  0% {left: 0vw}
-  100% {left: -70vw }
-}
-
-@keyframes mobile-slide-in-right {
-  0% {right: -70vw}
-  100% {right: 0}
-}
-
-@keyframes mobile-slide-out-right {
-  0% {right: 0vw}
-  100% {right: -70vw}
-}
-
-@keyframes desktop-slide-in-left {
-  0% {left: -40vw}
-  100% {left: 0}
-}
-
-@keyframes desktop-slide-out-left {
-  0% {left: 0vw}
-  100% {left: -40vw }
-}
-
-@keyframes desktop-slide-in-right {
-  0% {right: -40vw}
-  100% {right: 0}
-}
-
-@keyframes desktop-slide-out-right {
-  0% {right: 0vw}
-  100% {right: -40vw}
-}
-
-.slide-in-left{
-  animation: mobile-slide-in-left .5s;
-  @media screen and (min-width: $desktop) {
-    animation: desktop-slide-in-left .5s;
-  }
-}
-
-.slide-out-left{
-  animation: mobile-slide-out-left .5s;
-  @media screen and (min-width: $desktop) {
-    animation: desktop-slide-out-left .5s;
-  }
-}
-
-.slide-in-right{
-  animation: mobile-slide-in-right .5s;
-  @media screen and (min-width: $desktop) {
-    animation: desktop-slide-in-right .5s;
-  }
-}
-
-.slide-out-right{
-  animation: mobile-slide-out-right .5s;
-  @media screen and (min-width: $desktop) {
-    animation: desktop-slide-out-right .5s;
-  }
-}
 
 .panel-title{
   font-size: 1.5rem;
@@ -377,97 +144,6 @@ area:hover{
   right: 0;
 }
 
-@keyframes desktop-overlay-slide-in-left {
-  0% { right: -60vw }
-  100% { right: 0 }
-}
-
-@keyframes desktop-overlay-slide-out-left {
-  0% { right: 0 }
-  100% { right: -60vw }
-}
-
-@keyframes desktop-overlay-slide-in-right {
-  0% { left: -60vw }
-  100% { left: 0 }
-}
-
-@keyframes desktop-overlay-slide-out-right {
-  0% { left: 0 }
-  100% { left: -60vw }
-}
-
-@keyframes mobile-overlay-slide-in-left {
-  0% { right: -30vw }
-  100% { right: 0 }
-}
-
-@keyframes mobile-overlay-slide-out-left {
-  0% { right: 0 }
-  100% { right: -30vw }
-}
-
-@keyframes mobile-overlay-slide-in-right {
-  0% { left: -30vw }
-  100% { left: 0 }
-}
-
-@keyframes mobile-overlay-slide-out-right {
-  0% { left: 0 }
-  100% { left: -30vw }
-}
-
-.overlay-slide-in-left {
-  animation: mobile-overlay-slide-in-left .5s;
-  @media screen and (min-width: $desktop) { 
-    animation: desktop-overlay-slide-in-left .5s;
-  }
-}
-
-.overlay-slide-out-left {
-  animation: mobile-overlay-slide-out-left .5s;
-  @media screen and (min-width: $desktop) { 
-    animation: desktop-overlay-slide-out-left .5s;
-  }
-}
-
-.overlay-slide-in-right {
-  animation: mobile-overlay-slide-in-right .5s;
-  @media screen and (min-width: $desktop) { 
-    animation: desktop-overlay-slide-in-right .5s;
-  }
-}
-
-.overlay-slide-out-right {
-  animation: mobile-overlay-slide-out-right .5s;
-  @media screen and (min-width: $desktop) { 
-    animation: desktop-overlay-slide-out-right .5s;
-  }
-}
-
-.search-results{
-  margin: 2vh auto;
-  text-align: center;
-  p{
-    margin-bottom:  2%;
-  }
-  button{
-    @extend .button;
-    font-size: .9rem;
-    height: 50px;
-    padding: 0 3vw;
-  }
-}
-
-.no-items{
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  h1{
-    width: 100%;
-  }
-}
-
 .one-size{
   &:hover{
     border: 1px solid $main-text;
@@ -475,8 +151,12 @@ area:hover{
   }
 }
 
-
-@import 'item/item-detail';
-@import 'images/image-index';
-@import 'cart/cart-index';
-@import 'cart/cart-checkout';
+@import 'helpers/_variables';
+@import 'helpers/_animations';
+@import 'components/auth';
+@import 'components/header';
+@import 'components/search';
+@import 'components/item-detail';
+@import 'components/image-index';
+@import 'components/cart-index';
+@import 'components/cart-checkout';
