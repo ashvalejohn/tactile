@@ -24,7 +24,7 @@ const Header = ({ currentUser, logout, fetchImages }) => {
       <SearchContainer className="header__search" />
       <div className="header__logo" onClick={fetchImages}>
         <h1>Tactile</h1>
-        <h2><span>See it.</span><span>Click it.</span><span>Buy it.</span></h2>
+        <h2 className='header__tagline'><span>See it.</span><span>Click it.</span><span>Buy it.</span></h2>
       </div>
 
       {display}
