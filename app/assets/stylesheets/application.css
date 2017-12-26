@@ -268,7 +268,7 @@ area:hover {
 .modal {
   background-color: white;
   position: fixed;
-  top: 120px;
+  top: 10vh;
   left: 5vw;
   right: 5vw;
   height: 450px;
@@ -280,6 +280,11 @@ area:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .modal {
+    top: 120px;
+  }
 }
 
 .overlay {
@@ -404,11 +409,11 @@ area:hover {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   padding: 0 2vw;
   position: fixed;
-  min-height: 100px;
+  min-height: 50px;
   top: 0;
   width: 96vw;
 }
@@ -417,37 +422,19 @@ area:hover {
 }
 @media screen and (min-width: 800px) {
   .header {
-    flex-direction: row;
-  }
-}
-
-.header__tagline {
-  display: none;
-}
-.header__tagline span {
-  justify-content: space-between;
-}
-@media screen and (min-width: 800px) {
-  .header__tagline {
-    font-size: 12px;
-    display: flex;
-    justify-content: space-around;
-    margin: 1% auto;
-    text-transform: uppercase;
-    width: 180px;
-    padding-right: 2px;
+    min-height: 100px;
   }
 }
 
 .header__search {
-  height: 35px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  order: 3;
+  display: none;
 }
 @media screen and (min-width: 800px) {
   .header__search {
+    height: 35px;
+    flex: 1;
+    display: flex;
+    align-items: center;
     order: 1;
   }
 }
@@ -493,26 +480,57 @@ area:hover {
 .header__logo h1 {
   color: #001b47;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 45px;
   font-weight: bold;
   letter-spacing: 4px;
   text-transform: uppercase;
+  font-size: 30px;
+}
+@media screen and (min-width: 800px) {
+  .header__logo h1 {
+    font-size: 45px;
+  }
 }
 .header__logo h1:hover {
   color: red;
   cursor: pointer;
 }
 
+.header__tagline {
+  display: none;
+}
+.header__tagline span {
+  justify-content: space-between;
+}
+@media screen and (min-width: 800px) {
+  .header__tagline {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    margin: 1% auto;
+    text-transform: uppercase;
+    width: 180px;
+    padding-right: 2px;
+  }
+}
+
 .header__buttons {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
   flex: 1;
-  order: 2;
+  position: fixed;
+  bottom: -2px;
+  min-height: 70px;
+  width: 100vw;
 }
 @media screen and (min-width: 800px) {
   .header__buttons {
+    box-shadow: none;
+    justify-content: flex-end;
     order: 3;
+    position: static;
   }
 }
 
@@ -651,7 +669,12 @@ area:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 130px;
+  margin: 70px 0;
+}
+@media screen and (min-width: 800px) {
+  .image-index {
+    margin: 130px 0 0 0;
+  }
 }
 
 .image-index-item {

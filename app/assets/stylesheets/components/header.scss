@@ -1,48 +1,30 @@
-
 .header{
   background-color: $bgcolor;
   box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   padding: 0 2vw;
   position: fixed;
-  min-height: 100px;
+  min-height: 50px;
   top: 0;
   width: 96vw;
   a{
     text-decoration: none;
   }
   @media screen and (min-width: $desktop){
-    flex-direction: row;
-  }
-}
-
-
-.header__tagline{
-  display: none;
-  span{
-    justify-content: space-between;
-  }
-  @media screen and (min-width: $desktop) {
-    font-size: 12px;
-    display: flex;
-    justify-content: space-around;
-    margin: 1% auto;
-    text-transform: uppercase;
-    width: 180px;
-    padding-right: 2px;
+    min-height: 100px;
   }
 }
 
 .header__search{
-  height: 35px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  order: 3;
+  display: none;
   @media screen and (min-width: $desktop){
+    height: 35px;
+    flex: 1;
+    display: flex;
+    align-items: center;
     order: 1;
   }
   label{
@@ -88,10 +70,13 @@
   h1{
     color: $logocolor;
     font-family: $logofont;
-    font-size: 45px;
     font-weight: bold;
     letter-spacing: 4px;
     text-transform: uppercase;
+    font-size: 30px;
+    @media screen and (min-width: $desktop){
+      font-size: 45px;
+    }
     &:hover{
       color: $hover;
       cursor: pointer;
@@ -99,14 +84,38 @@
   }
 }
 
+.header__tagline{
+  display: none;
+  span{
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    margin: 1% auto;
+    text-transform: uppercase;
+    width: 180px;
+    padding-right: 2px;
+  }
+}
+
 .header__buttons{
+  background-color: #fff;
+  box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
   flex: 1;
-  order: 2;
+  position: fixed;
+  bottom: -2px;
+  min-height: 70px;
+  width: 100vw;
   @media screen and (min-width: $desktop){
+    box-shadow: none;
+    justify-content: flex-end;
     order: 3;
+    position: static;
   }
 }
 

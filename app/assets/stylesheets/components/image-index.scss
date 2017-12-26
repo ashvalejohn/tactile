@@ -4,7 +4,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 130px;
+  margin: 70px 0;
+  @media screen and (min-width: $desktop){
+    margin: 130px 0 0 0;
+  }
 }
 
 .image-index-item{

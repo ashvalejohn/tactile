@@ -67,21 +67,24 @@ area:hover{
   min-height: 20px;
 }
 
-.modal{
-  background-color: rgba(255, 255, 255, 1);
+.modal {
+  background-color: white;
   position: fixed;
-  top: 120px;
-  left: 5vw;;
+  top: 10vh;
+  left: 5vw;
   right: 5vw;
   height: 450px;
   width: 70vw;
   max-width: 750px;
-  border: 1px solid $main-text;
+  border: 1px solid #001b47;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: $desktop) {
+    top: 120px;
+  }
 }
 
 .overlay{
