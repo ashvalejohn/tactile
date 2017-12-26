@@ -52,6 +52,7 @@ class Login extends Component {
       <Modal isOpen={this.state.showModal} className="modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} onAfterOpen={this.shiftModalFocus} ariaHideApp={this.state.showModal}>
         <form className="auth-form" action="">
           <h2>Log In</h2>
+          <p>Log in to see your cart</p>
           <fieldset className="auth-form__fieldset">
             <label className="auth-form__label" htmlFor="login-email">Email
               <input
