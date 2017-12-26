@@ -1,0 +1,51 @@
+.auth-form{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+  h2{
+    font-weight: normal;
+    margin-top: 2%;
+  }
+  a:hover{
+    color: $hover;
+  }
+  p{
+    margin: 2% 0;
+  }
+}
+
+.auth-form__fieldset{
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+}
+
+.auth-form__label{
+  display: flex;
+  flex-direction: column;
+  margin: 2vh auto 0 auto;
+  width: 90%;
+  input{
+    border: 1px solid $main-text;
+    display: block;
+    height: 40px;
+    font-size: 1rem;
+    padding-left: $inputpadding;
+    color: #808080;
+    &:focus{
+      outline: none;
+      border: 2px solid $main-text;
+    }
+    &:valid{
+      border: 2px solid green;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 40%;
+    }
+  }
+}

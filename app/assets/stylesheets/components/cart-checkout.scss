@@ -1,0 +1,43 @@
+
+.checkout-modal{
+  
+}
+
+.ashley-info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.ashley-img-container{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ashley-img{
+  width: 50%;
+}
+
+.ashley-info-links{
+  flex: 1;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ashley-links{
+  display: flex;
+  flex-direction: row;
+  a{
+    margin-right: 2%;
+  }
+  img{
+    width: 4vw;
+  }
+}

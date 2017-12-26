@@ -1,0 +1,135 @@
+
+.cart-panel{
+  @extend .panel;
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  right: 0;
+}
+
+.cart-overlay{
+  @extend .panel-overlay;
+  left: 0;
+}
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 90%;
+  width: 90%;
+  z-index: 2;
+}
+
+.cart-items{
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  box-shadow: inset 0px -10px 15px -15px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  margin: 15px 0;
+  width: 90%;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid $main-text;
+  margin: 1%;
+  min-height: 150px;
+  padding: 2%;
+  width: 90%;
+  
+  animation: item-slide-left .5s forwards;
+}
+
+.cart-item-info{
+  width: 60%;
+
+  height: 100%;
+  padding: 1%;
+}
+
+.cart-img{
+  margin: 0 auto;
+  width: 40%;
+  img{
+    max-width: 150px;
+    width: 80%;
+  }
+}
+
+.cart-fields{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: .5rem;
+}
+
+.cart-field-name{
+  display: inline-block;
+  font-size: .9rem;
+}
+
+.cart-sizes{
+  background-color: $bgcolor;
+  border: 1px solid $main-text;
+  border-radius: 0px;
+  color: $main-text;
+  display: inline-block;
+  margin-left: 2%;
+  min-width: 60px;
+  padding: 2%;
+  -webkit-appearance: none;
+  &:hover{
+    cursor: pointer;
+    color: $hover;
+    border: 1px solid $hover;
+  }
+}
+
+.cart-remove{
+  @extend .button;
+  font-size: .7rem;
+  margin-top: 1rem;
+}
+
+.cart-update{
+  @extend .button;
+  display: inline-block;
+  font-size: .7rem;
+  &:hover{
+    border: 1px solid blue;
+    color: blue;
+  }
+}
+
+.checkout{
+  @extend .button;
+
+  font-size: .9rem;
+  height: 50px;
+  width: 150px;
+}
+
+.cart-title{
+  @extend .panel-title;
+  text-decoration: none;
+}
+
+.cart-item-title{
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
