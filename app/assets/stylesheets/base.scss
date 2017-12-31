@@ -133,6 +133,7 @@ area:hover{
   opacity: .25;
   position: fixed;
   width: 30vw;
+  top: 0;
   @media screen and (min-width: $desktop) {
     width: 60vw;
   }
@@ -141,7 +142,6 @@ area:hover{
 .item-detail-overlay{
   @extend .panel-overlay;
   right: 0;
-  top: 0;
 }
 
 .one-size{
