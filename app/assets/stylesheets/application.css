@@ -343,6 +343,7 @@ area:hover {
 
 .item-detail-overlay {
   right: 0;
+  top: 0;
 }
 
 .one-size:hover {
@@ -575,7 +576,7 @@ area:hover {
   height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   max-width: 100%;
 }

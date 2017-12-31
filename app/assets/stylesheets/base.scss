@@ -141,6 +141,7 @@ area:hover{
 .item-detail-overlay{
   @extend .panel-overlay;
   right: 0;
+  top: 0;
 }
 
 .one-size{
