@@ -815,6 +815,11 @@ area:hover {
   text-decoration: none;
 }
 
+.checkout-title {
+  font-size: 28px;
+  text-align: center;
+}
+
 .ashley-info {
   display: flex;
   flex-direction: row;

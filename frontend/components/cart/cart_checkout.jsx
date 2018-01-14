@@ -18,7 +18,7 @@ class Checkout extends Component {
   render() {
     return (
       <Modal isOpen={this.state.showModal} className="modal checkout-modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} ariaHideApp={this.state.showModal}>
-        <h1>Made by Ashley Johnson</h1>
+        <h1 className='checkout-title'>Made by Ashley Johnson</h1>
         <div className="ashley-info">
           <div className="ashley-img-container">
             <img className="ashley-img" src="http://res.cloudinary.com/ashvalejohn/image/upload/v1511982562/LinkedIn_rz29kh.jpg" alt="Ashley Johnson is a software developer for hire" />
