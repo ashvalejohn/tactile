@@ -377,12 +377,24 @@ area:hover {
   padding: 0;
   width: 100%;
 }
+@media screen and (min-width: 800px) {
+  .auth-form__fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .auth-form__label {
   display: flex;
   flex-direction: column;
   margin: 2vh auto 0 auto;
   width: 90%;
+}
+@media screen and (min-width: 800px) {
+  .auth-form__label {
+    width: 40%;
+  }
 }
 .auth-form__label input {
   border: 1px solid #001b47;
@@ -398,11 +410,6 @@ area:hover {
 }
 .auth-form__label input:valid {
   border: 2px solid green;
-}
-@media screen and (min-width: 800px) {
-  .auth-form__label input {
-    width: 40%;
-  }
 }
 
 .header {

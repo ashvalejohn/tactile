@@ -23,6 +23,11 @@
   display: inline-block;
   padding: 0;
   width: 100%;
+  @media screen and (min-width: $desktop){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .auth-form__label{
@@ -30,6 +35,9 @@
   flex-direction: column;
   margin: 2vh auto 0 auto;
   width: 90%;
+  @media screen and (min-width: $desktop) {
+      width: 40%;
+    }
   input{
     border: 1px solid $main-text;
     display: block;
@@ -44,8 +52,6 @@
     &:valid{
       border: 2px solid green;
     }
-    @media screen and (min-width: $desktop) {
-      width: 40%;
-    }
+    
   }
 }
