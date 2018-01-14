@@ -8,7 +8,7 @@ __Tactile__ is a shopping app where users can see details about an item by click
 Tactile is a single-page app built with a Ruby on Rails backend, PostgreSQL database, and React/Redux frontend. Rails is an opinionated backend framework, which makes it ideal for projects built in a short timeframe. React is ideal for single-page apps because it is designed to dynamically render components. PostgreSQL is a relational database, which made it easy to connect images, image maps, and individual clothing items.
 
 Tactile's core features include:
-- Clickable items
+- Responsive clickable items
 - Searchable images
 - Shopping cart
 - User authentication
@@ -24,6 +24,8 @@ This clickable magic is build using an [HTML image map](https://developer.mozill
     <area shape="poly" coords="123, 345, 456, 746, 12, 23, ..." alt="12">
   </map>
 ```
+
+Tactile uses [image-map-resizer](https://www.npmjs.com/package/image-map-resizer) to render clickable maps on desktop and mobile.
 
 ### Rendering Item Details
 #### `<Image Index>` Component
@@ -46,9 +48,3 @@ Users can search the database of images and Tactile will return all relevant ima
 Tactile wouldn't be a shopping app without a cart. Users are required to login to see their cart. Logged out users are redirected to `/login` if they try to open their cart. This is achieved using an `<AuthRoute>` on the `/cart` path.
 
 ![Cart Screenshot](http://res.cloudinary.com/ashvalejohn/image/upload/c_scale,w_800/v1512167963/Screen_Shot_2017-12-01_at_2.38.58_PM_sev5re.png)
-
-___
-
-## Looking Forward
-- responsive images using [this plugin from Matt Stow](https://github.com/stowball/jQuery-rwdImageMaps)
-- include quantity as a cart feature
