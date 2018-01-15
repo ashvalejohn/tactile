@@ -18,21 +18,18 @@ class Checkout extends Component {
   render() {
     return (
       <Modal isOpen={this.state.showModal} className="modal checkout-modal" overlayClassName="overlay" onRequestClose={this.handleCloseModal} ariaHideApp={this.state.showModal}>
-        <h1 className='checkout-title'>Made by Ashley Johnson</h1>
+        <h1 className="checkout-title">Thank you for visiting <span>Tactile</span></h1>
         <div className="ashley-info">
-          <div className="ashley-img-container">
+          <a className="ashley-img-container" target="_blank" rel="noreferrer noopener" href="http://www.linkedin.com/in/ashvalejohn">
             <img className="ashley-img" src="http://res.cloudinary.com/ashvalejohn/image/upload/v1511982562/LinkedIn_rz29kh.jpg" alt="Ashley Johnson is a software developer for hire" />
-          </div>
+          </a>
           <div className="ashley-info-links">
-            <p>Ashley Johnson is a software engineer in San Francisco.</p>
-            <div className="ashley-links">
-              <a href="https://www.linkedin.com/ashvalejohn">
-                <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/In-Black-128px-TM_vdgmqf.png" alt="ashvalejohn LinkedIn"/>
-              </a>
-              <a href="https://www.github.com/ashvalejohn">
-                <img src="http://res.cloudinary.com/ashvalejohn/image/upload/v1512149637/GitHub-Mark-120px-plus_z52nkp.png" alt="ashvalejohn Github"/>
-              </a>
-            </div>
+            <p>Tactile was built by <a target="_blank" rel="noreferrer noopener" alt="Ashley Johnson's LinkedIn profile" href="https://www.linkedin.com/in/ashvalejohn">Ashley Johnson</a>.
+            </p>
+            <p>Read more about this project <a target="_blank" rel="noreferrer noopener" alt="Tactile Github" href="https://github.com/ashvalejohn/tactile">here</a>.
+            </p>
+            <p>See other projects built by Ashley <a target="_blank" rel="noreferrer noopener" alt="Tactile Github" href="https://github.com/ashvalejohn">here</a>.
+            </p>
           </div>
         </div>
       </Modal>

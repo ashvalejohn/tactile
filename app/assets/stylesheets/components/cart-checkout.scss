@@ -1,7 +1,14 @@
 
 .checkout-title{
+  font-weight: normal;
   font-size: 28px;
   text-align: center;
+  span{
+    font-family: $logofont;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
 }
 
 .ashley-info{
@@ -9,27 +16,36 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 2%;
+  margin: 2%;
 }
 
 .ashley-img-container{
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
 }
 
 .ashley-img{
-  width: 50%;
+  width: 60%;
 }
 
 .ashley-info-links{
-  flex: 1;
+  flex: 1.5;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  p{
+    margin-bottom: 2%;
+  }
+  a{
+    &:hover{
+      color: $hover;
+      font-style: italic;
+    }
+  }
 }
 
 .ashley-links{
