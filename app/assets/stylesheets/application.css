@@ -837,10 +837,15 @@ area:hover {
 }
 
 .ashley-img-container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .ashley-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .ashley-img {
@@ -849,10 +854,11 @@ area:hover {
 
 .ashley-info-links {
   flex: 1.5;
-  margin-left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: center;
+  margin-top: 5%;
 }
 .ashley-info-links p {
   margin-bottom: 2%;
@@ -860,6 +866,13 @@ area:hover {
 .ashley-info-links a:hover {
   color: red;
   font-style: italic;
+}
+@media screen and (min-width: 800px) {
+  .ashley-info-links {
+    margin-left: 5%;
+    text-align: left;
+    margin-top: inherit;
+  }
 }
 
 .ashley-links {
