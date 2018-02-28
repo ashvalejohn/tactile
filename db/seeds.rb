@@ -13,487 +13,276 @@ CartItem.destroy_all
 demoUser = User.create({email: "demo@email.com", password: "password"})
 
 # ITEMS ------------------------------------------------------------------------
-## Red Dress
-  red_dress = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511669755/H3634_RD5655_bnovr8.jpg",
-    description: "Red silk ruffle midi dress",
-    price: 128.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: ""
-  })
-
-## Gray Sweater
-  gray_sweater = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721100/H1410_EG5089_dapmwi.jpg",
-    description: "Gray fair-isle pullover sweater",
-    price: 164.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "crewneck top knit tops"
-  })
-
-## Pink Converse Sneakers
-  pink_converse_sneakers = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721202/H1034_EG4939_jmogcl.jpg",
-    description: "Pink furry Converse sneakers",
-    price: 78.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
-    tags: "shoe shoes fuzzy fluffy"
-  })
-
-## Pink Velvet Hat
-  pink_velvet_hat = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721623/G9119_EG5407_sl6y4u.jpg",
-    description: "Pink velvet hat",
-    price: 24.00,
-    sizes: ["One Size"],
-    tags: "cap baseball accessories"
-  })
-
-## Black Socks
-  black_socks = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511721629/H5038_EG4108_y78q0p.jpg",
-    description: "Black fair-isle socks",
-    price: 8.50,
-    sizes: ["One Size"],
-    tags: "knit accessories"
-  })
-
-## Green Beanie
-  green_beanie = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796133/H3306_EG5539_kteyhy.jpg",
-    description: "Green knit beanie",
-    price: 18.50,
-    sizes: ["One Size"],
-    tags: "hat"
-  })
-## Green Velvet Dress
-  green_velvet_dress = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796127/H2540_GR6182_kmhb7f.jpg",
-    description: "Green velvet mini dress",
-    price: 69.50,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "mockneck"
-  })
-## Green Puffy Jacket
-  green_puffy_jacket = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511796122/G9903_GR7248_p3vzs5.jpg",
-    description: "Green puffy jacket",
-    price: 228.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "coat army puffer"
-  })
-## Gold Velvet Bracelet
-  gold_velvet_bracelet = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812098/H4064_PK5516_wk3kha.jpg",
-    description: "Gold velvet bracelet",
-    price: 6.99,
-    sizes: ["One Size"],
-    tags: "accessory accessories jewelry"
-  })
-## Copper Earrings
-  copper_earrings = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811607/G6527_EG6129_eqr25f.jpg",
-    description: "Beaded Copper Earrings",
-    price: 28.00,
-    sizes: ["One Size"],
-    tags: "jewelry accessory accesories"
-  })
-## Pink Femme T-Shirt
-  pink_femme_tshirt = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811889/H2694_KA2444_ktlh7m.jpg",
-    description: "Pink Femme T-Shirt",
-    price: 39.50,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "top tee shirt tops"
-  })
-## Burgundy Velvet Pants
-  burgundy_velvet_pants = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812012/H2647_RD6573_nohgvr.jpg",
-    description: "Burgundy Velvet Pants",
-    price: 98.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "trousers red bottom bottoms"
-  })
-## Cream Fair-Isle Socks
-  cream_fair_isle_socks = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511812212/H5125_EG4105_pobduq.jpg",
-    description: "Cream fair-isle socks",
-    price: 8.50,
-    sizes: ["One Size"],
-    tags: "accessory accessories knit"
-  })
-## Pink Sneakers
-  pink_sneakers = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511811615/H0456_EG3439_jnsgr4.jpg",
-    description: "Pink satin sneakers",
-    price: 64.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
-    tags: "shoe shoes tretorn"
-  })
-
-## Green Button Down
-  green_button_down = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819437/H2415_GR6652_w6esk5.jpg",
-    description: "Green flannel button down",
+## Blush Silk Shirt
+  blush_silk_shirt = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850655/blush-silk-shirt_p0bius.jpg",
+    description: "The Silk Short-Sleeve Square Shirt in Blush",
     price: 88.00,
     sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "top tops shirt"
-  })
-## Gray Sneakers
- gray_sneakers = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819427/H0456_EG3441_jxsdzp.jpg",
-    description: "Gray satin sneakers",
-    price: 64.00,
-    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
-    tags: "shoe shoes tretorn black"
-  })
-## Pink Tote
- pink_tote = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819442/H2549_EG5808_krv4cg.jpg",
-    description: "Pink shearling tote",
-    price: 198.00,
-    sizes: ["One Size"],
-    tags: "fuzzy furry fluffy bag purse"
-  })
-## Green Sweater
- green_sweater = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819420/F8882_GR7450_zxhjru.jpg",
-    description: "Green mockneck sweater",
-    price: 78.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "top tops knit pullover"
-  })
-## Tuxedo Stripe Jeans
- tuxedo_stripe_jeans = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511819431/H2248_DM1905_qegtwm.jpg",
-    description: "Tuxedo stripe jeans",
-    price: 98.00,
-    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
-    tags: "pants bottoms"
-  })
-## Pink Ribbed Sweater
-  pink_ribbed_sweater = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085912/H3339_PK5511_j0def5.jpg",
-    description: "Pink ribbed sweater",
-    price: 92.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "top tops pullover crewneck knit"
-  })
-## Pink Velvet Skirt
-  pink_velvet_skirt = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512085917/H2334_PK6102_ryoqba.jpg",
-    description: "Pink velvet skirt",
-    price: 48.00,
-    sizes: ["XS", "S", "M", "L", "XL"],
-    tags: "bottom bottoms purple"
-  })
-## Gold Pendant Necklace
-  gold_pendant_necklace = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086594/H4047_EC5475_rqnqgs.jpg",
-    description: "Gold pendant necklace",
-    price: 19.50,
-    sizes: ["One Size"],
-    tags: "jewelry accessories accessory"
-  })
-## Gold Stacking Rings
-  gold_stacking_rings = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086720/B3708_ED0747_jajzya.jpg",
-    description: "Gold stacking rings",
-    price: 12.50,
-    sizes: ["One Size"],
-    tags: "jewelry accessories accessory"
-  })
-## Pink Crossbody Purse
-  pink_crossbody_purse = Item.create({
-    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1512086353/H2562_EG5808_oz4pzj.jpg",
-    description: "Pink crossbody purse",
-    price: 34.50,
-    sizes: ["One Size"],
-    tags: "fluffy fuzzy furry bag clutch"
+    tags: "shirt top pink blush collared blouse silk short square short-sleeve"
   })
 
+## High Rise Skinny Jean
+  blue_high_rise_skinny_jean = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850655/blue-jeans_tgozn2.jpg",
+    description: "The High-Rise Skinny Jean in Mid-Blue",
+    price: 68.00,
+    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
+    tags: "jeans jean denim blue pant pants bottom bottoms high-rise high"
+  })
+
+## Cognac Day Heel
+  cognac_day_heel = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519851082/cognac-day-heel_rjechu.jpg",
+    description: "The Day Heel in Cognac",
+    price: 145.00,
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    tags: "brown suede cognac heel shoe shoes heels day tan orange"
+  })
+
+## Black V Neck Sweater
+  black_v_neck_sweater = Item.create({
+      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850645/black-v-neck-sweater_wtwhxk.jpg",
+      description: "The Cashmere Crop V-Neck",
+      price: 100.00,
+      sizes: ["XS", "S", "M", "L", "XL"],
+      tags: "top tops knit pullover black v-neck vneck sweater cashmere cropped"
+    })
+## White High Rise Skinny Jean
+  white_high_rise_skinny_jean = Item.create({
+      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850645/white-jeans_hdghdr.jpg",
+      description: "The High-Rise Skinny Jean in Bone",
+      price: 68.00,
+      sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
+      tags: "jeans jean denim white bone pant pants bottom bottoms high-rise high"
+    })
+## Burgundy Boots
+  burgundy_boots = Item.create({
+      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850645/burgundy-boots_orrs7g.jpg",
+      description: "The Boss Boot",
+      price: 225.00,
+      sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+      tags: "shoe shoes boots burgundy leather heels heel"
+    })
+
+## Colorblocked Sweater
+  colorblocked_sweater = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850665/colorblocked-sweater_h0kp4t.jpg",
+    description: "The Cashmere Crew in Black/White Colorblock",
+    price: 100.00,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tops knit pullover black v-neck vneck sweater cashmere black white colorblock"
+  })
+## Khaki Pants
+  khaki_pants = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850665/khaki-pants_tevdhh.jpg",
+    description: "The Wide Leg Crop Pant in Ochre",
+    price: 68.00,
+    sizes: ["24", "25", "26", "27", "28", "29", "30", "31", "32"],
+    tags: "tan brown wide leg pants bottom bottom high-waist high chino"
+  })
+## Red Crop Mockneck Sweater
+  red_crop_mockneck_sweater = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850635/red-sweater_pavwo6.jpg",
+    description: "The Cashmere Crop Mockneck in Persimmon",
+    price: 100.00,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    tags: "top tops knit pullover red mock mockneck turtleneck sweater cashmere crop cropped"
+  })
+## White Beanie
+  white_beanie = Item.create({
+      item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850635/white-beanie_bkxzw1.jpg",
+      description: "The Wool-Cashmere Rib Chunky Beanie in White",
+      price: 38.00,
+      sizes: ["One Size"],
+      tags: "hat wool cashmere beanie knit"
+    })
+## Navy Puffer Jacket
+  navy_puffer_jacket = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850635/puffer-jacket_yofo7v.jpg",
+    description: "The Lightweight Puffer Jacket in Navy",
+    price: 88.00,
+    sizes:["XS", "S", "M", "L", "XL"],
+    tags: "outerwear coat jacket puff blue"
+  })
+
+## Black Silk Contrast Top
+  black_silk_contrast_top = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850620/black-silk-shirt_tjkn8l.jpg",
+      description: "The Piped Silk Pocket Shirt in Black",
+      price: 98.00,
+      sizes:["XS", "S", "M", "L", "XL"],
+      tags: "top silk blouse contrast black white pajama"
+  })
+## Red Day Heel
+  red_day_heel = Item.create({
+    item_image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850619/red-velvet-shoes_k3iswk.jpg",
+    description: "The Day Heel in Crimson Velvet",
+    price: 155.00,
+    sizes: ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10"],
+    tags: "red velvet suede cognac heel shoe shoes heels day"
+  })
 #
 # IMAGES -----------------------------------------------------------------------
+## Image 1
+  img1 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850645/01_paqgct.jpg"
+  })
+## Image 2
+  img2 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850655/02_yb4duf.jpg"
+  })
+## Image 3
+  img3 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850665/03_ivepw6.jpg"
+  })
+## Image 4
+  img4 = Image.create({
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850635/04_tzh8yb.jpg"
+  })
 ## Image 5
   img5 = Image.create({
-    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img5_uca9mz.jpg", 
-  })
-## Image 14
-  img14 = Image.create({
-    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img14_sojgem.jpg", 
-  })
-## Image 11 
-  img11 = Image.create({
-    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img11_vyd7y0.jpg", 
-  })
-## Image 12
-  img12 = Image.create({
-    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img12_juudma.jpg"
-  })
-## Image 6
-  img6 = Image.create({
-    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1511394433/2017-dec1-lwl-img6_fnn0qb.jpg"
+    image_url: "http://res.cloudinary.com/ashvalejohn/image/upload/v1519850620/05_fyn3i8.jpg"
   })
 #
 # IMAGE MAPS -------------------------------------------------------------------
+## Image 1 Maps:
+  ### Black V Neck Sweater Map
+    img1_black_v_neck_sweater = ImageMap.create({
+      image_id: img1.id,
+      item_id: black_v_neck_sweater.id,
+      coords: ["689,483,716,431,760,370,855,297,970,208,1000,216,1024,232,1032,266,1107,377,1158,343,1191,288,1185,264,1247,304,1264,364,1298,590,1312,700,1336,814,1272,813,1237,700,997,706,972,636,940,623,917,660,940,727,919,728,895,642,887,569,886,421,805,482,887,569,895,644"]
+    })
+  ### White High Rise Skinny Jean Map
+    img1_white_high_rise_skinny_jean = ImageMap.create({
+      image_id: img1.id,
+      item_id: white_high_rise_skinny_jean.id,
+      coords: [
+        "946,754,972,840,1002,844,1242,1140,1345,1514,1450,1480,1407,1318,1482,1334,1581,1022,1339,789,1328,828,1328,925,1296,959,1439,1062,1388,1215,1380,1084,1302,968,1240,863,1269,816,1234,703,1000,712,1002,733,975,717,973,739"
+      ]
+    })
+  ### Burgundy Boots Map
+    img1_burgundy_boots = ImageMap.create({
+      image_id: img1.id,
+      item_id: burgundy_boots.id,
+      coords: [
+        "1236,1449,1307,1396,1353,1519,1382,1507,1395,1531,1388,1574,1401,1600,1410,1569,1399,1541,1480,1541,1472,1523,1511,1528,1527,1595,1573,1668,1679,1741,1628,1762,1496,1738,1466,1709,1430,1720,1388,1706,1393,1652,1320,1589,1305,1538,1302,1477,1288,1495,1259,1492"
+      ]
+    })
+# 
+## Image 2 Maps:
+  ### Cognac Day Heel Map
+    img2_cognac_day_heel = ImageMap.create({
+      image_id: img2.id,
+      item_id: cognac_day_heel.id,
+      coords: [
+        "811,1285,859,1270,887,1298,910,1310,924,1348,902,1360,782,1340,797,1315,811,1312",
+        "671,1294,598,1315,555,1358,557,1391,642,1414",
+        "560,1576,482,1654,487,1670,531,1674,665,1639,725,1568,725,1587,763,1608,817,1582,814,1493,773,1422,782,1387,766,1382,765,1426,708,1506,650,1571,568,1592"
+      ]
+    })
+  ### Blue High Rise Skinny Jean
+    img2_blue_high_rise_skinny_jean = ImageMap.create({
+      image_id: img2.id,
+      item_id: blue_high_rise_skinny_jean.id,
+      coords: [
+        "674,1282,679,1261,758,1278,784,1305,787,1323,836,1196,878,1108,913,984,986,1065,1137,1194,1317,1121,1261,1104,1202,1019,1134,917,956,797,905,773,859,787,830,778,811,800,773,887,735,1002,690,1172,655,1259",
+        "1003,1468,1056,1444,1418,1388,1536,1301,1558,1259,1544,1259,1546,1212,1511,1154,1348,1193,1231,1242,1261,1247,1193,1261,1142,1347,1129,1425,1107,1371,1107,1430,1081,1430,1073,1396,1073,1434,1051,1431,1043,1393,1027,1420,1016,1356,1032,1326,970,1333,959,1352,970,1422"
+      ]
+    })
+  ### Blush Silk Shirt
+    img2_blush_silk_shirt = ImageMap.create({
+      image_id: img2.id,
+      item_id: blush_silk_shirt.id,
+      coords: [
+        "967,611,1021,541,1086,612,1188,550,1208,574,1267,781,1255,894,1274,860,1293,774,1278,736,1278,700,1251,652,1309,572,1336,496,1453,517,1542,598,1592,681,1589,730,1603,945,1600,1153,1589,1231,1563,1258,1554,1256,1552,1207,1533,1175,1514,1154,1544,1132,1565,1034,1566,929,1560,873,1509,910,1436,945,1442,1061,1318,1116,1291,1115,1256,1094,1156,949,1131,913,1102,894,1108,763,1102,708,1026,766,1002,757,987,738,1038,704,1046,674,1026,639,995,614"
+      ]
+    })
+#
+## Image 3 Maps:
+  ### Colorblocked Sweater Map
+    img3_colorblocked_sweater = ImageMap.create({
+      image_id: img3.id,
+      item_id: colorblocked_sweater.id,
+      coords: ["812,999,802,961,807,894,810,758,836,658,837,524,874,435,915,403,981,400,1057,376,1043,390,1047,421,1078,440,1136,446,1192,424,1216,387,1340,432,1389,462,1431,540,1467,678,1494,802,1489,836,1445,912,1372,1031,1334,1060,1329,1026,1295,988,1313,984,1341,944,1394,828,1397,788,1334,631,1273,832,1270,880,1284,936,1281,961,1257,969,1234,979,1142,939,1042,917,996,933,907,923,883,912,881,933,883,944"]
+    })
+  ### Khaki Pants Map
+    img3_khaki_pants = ImageMap.create({
+      image_id: img3.id,
+      item_id: khaki_pants.id,
+      coords: [
+        "757,1797,792,1471,816,1177,844,1073,833,1061,876,975,898,975,894,951,886,938,887,917,987,937,1040,917,1140,940,1236,983,1258,987,1299,1091,1321,1181,1312,1353,1344,1798,1108,1795,1108,1630,1092,1360,1078,1236,1075,1201,1062,1204,1056,1226,1029,1361,1005,1471,1014,1608,1013,1797"
+      ]
+    })
+#
+## Image 4 Maps:
+  ### Red Crop Mockneck Sweater Map
+    img4_red_crop_mockneck_sweater = ImageMap.create({
+      image_id: img4.id,
+      item_id: red_crop_mockneck_sweater.id,
+      coords: [
+        "943,491,1088,533,1123,518,1091,634,1183,919,1220,1003,1229,1116,1251,1197,1185,1275,1072,1364,1097,1140,1088,1000,995,650,962,563"
+      ]
+    })
+  ### White Beanie Map
+    img4_white_beanie = ImageMap.create({
+      image_id: img4.id,
+      item_id: white_beanie.id,
+      coords: [
+        "881,393,875,366,895,194,911,157,911,130,913,111,924,56,1022,86,1119,92,1199,145,1239,248,1226,369,1208,409,1208,332,1207,273,1180,235,1105,208,1021,239,956,285,919,320"
+      ]
+    })
+  ### Navy Puffer Jacket Map
+    img4_navy_puffer_jacket = ImageMap.create({
+      image_id: img4.id,
+      item_id: navy_puffer_jacket.id,
+      coords: [
+        "886,448,854,482,849,550,673,649,633,754,641,1008,661,1148,633,1369,630,1561,674,1604,741,1614,757,1596,778,1579,790,1539,1005,1552,1073,1347,1091,1143,1083,1000,981,604,932,504",
+        "1224,588,1274,595,1372,797,1450,1016,1504,1331,1499,1418,1466,1474,1417,1412,1345,1434,1326,1372,1264,1208,1226,1007,1173,875,1185,760" 
+      ]
+    })
+  ### Blue High Rise Skinny Jean Map
+    img4_blue_high_rise_skinny_jean = ImageMap.create({
+      image_id: img4.id,
+      item_id: blue_high_rise_skinny_jean.id,
+      coords: [
+        "952,1555,1011,1660,1183,1733,1681,1797,1797,1797,1797,1517,1503,1417,1471,1479,1488,1546,1422,1611,1383,1620,1333,1639,1325,1625,1325,1584,1320,1499,1340,1439,1256,1215,1069,1369,1011,1550"
+      ]
+    })
+#
 ## Image 5 Maps:
-  ### Red Dress Map
-    img5_red_dress = ImageMap.create({
+  ### Black Silk Contrast Top
+  img5_black_silk_contrast_top = ImageMap.create({
       image_id: img5.id,
-      item_id: red_dress.id,
+      item_id: black_silk_contrast_top.id,
       coords: [
-        "355, 112, 375, 115, 392, 147, 400, 202, 420, 234, 416, 257, 424, 268, 420, 275, 426, 293, 418, 297, 423, 313, 406, 313, 395, 247, 383, 195, 385, 195, 379, 147, 368, 124", 
-        "273, 239, 315, 175, 337, 198, 357, 248, 370, 319, 381, 398, 383, 436, 394, 453, 401, 501, 406, 509, 409, 561, 426, 607, 465, 664, 453, 681, 461, 695, 441, 709, 430, 721, 430, 728, 407, 741, 396, 724, 389, 727, 375, 714, 371, 715, 358, 696, 349, 698, 347, 647, 334, 625, 314, 634, 309, 672, 298, 700, 278, 625, 223, 638, 222, 614, 201, 600, 171, 626, 148, 613, 186, 551, 228, 450, 252, 402, 272, 317, 290, 280, 290, 253"]
-    })
-
-  ### Gray Sweater Map
-    img5_gray_sweater = ImageMap.create({
+        "428,275,491,334,531,305,501,378,572,475,614,424,639,353,634,314,696,332,746,486,760,607,757,702,728,806,709,901,630,920,660,787,654,758,588,719,512,717,499,681,463,636,393,584,347,612,367,655,440,746,366,786,350,824,350,793,336,760,347,677,299,673,299,652,280,654,272,709,224,668,227,569,243,386,275,332"
+      ]
+  })
+  ### Blue High Rise Skinny Jeans
+    img5_blue_high_rise_skinny_jean = ImageMap.create({
       image_id: img5.id,
-      item_id: gray_sweater.id,
+      item_id: blue_high_rise_skinny_jean.id,
       coords: [
-        "392, 448, 405, 499, 407, 508, 410, 557, 414, 569, 451, 578, 453, 563, 485, 602, 494, 673, 498, 713, 505, 757, 524, 809, 534, 868, 547, 883, 579, 888, 601, 809, 604, 743, 614, 720, 606, 699, 612, 687, 643, 693, 650, 685, 645, 658, 656, 616, 587, 547, 564, 506, 550, 450, 580, 467, 595, 470, 603, 458, 568, 419, 540, 407, 512, 411, 507, 426, 510, 436, 529, 439, 529, 448, 516, 448, 520, 470, 527, 482, 542, 540, 558, 580, 483, 524, 453, 498, 460, 461, 449, 438, 439, 449, 439, 458, 429, 458, 426, 466, 397, 432, 397, 452"]
-    })
-
-  ### Pink Converse Sneakers Map
-    img5_pink_converse_sneakers = ImageMap.create({
-      image_id: img5.id,
-      item_id: pink_converse_sneakers.id,
-      coords: [
-        "41, 826, 80, 821, 135, 782, 144, 798, 162, 802, 182, 795, 183, 815, 193, 845, 193, 868, 167, 876, 58, 874, 28, 856",
-        "292, 836, 312, 791, 324, 803, 338, 806, 356, 803, 356, 795, 361, 808, 366, 843, 370, 876, 360, 889, 328, 886, 313, 863"]
-    })
-
-  ### Pink Velvet Hat Map
-    img5_pink_velvet_hat = ImageMap.create({
-      image_id: img5.id,
-      item_id: pink_velvet_hat.id,
-      coords: [
-        "258, 58, 263, 27, 281, 2, 346, 2, 362, 36, 365, 46, 342, 32, 326, 42, 288, 29, 277, 59"]
-    })
-
-  ### Black Socks Map
-    img5_black_socks = ImageMap.create({
-      image_id: img5.id,
-      item_id: black_socks.id,
-      coords: [
-        "317, 767, 354, 761, 354, 794, 350, 805, 330, 805, 315, 794", 
-        "137, 780, 145, 759, 160, 768, 177, 768, 191, 764, 181, 796, 169, 801, 146, 799" ]
-    })
-#
-## Image 14 Maps:
-  ### Green Velvet Dress Map
-    img14_green_velvet_dress = ImageMap.create({
-      image_id: img14.id,
-      item_id: green_velvet_dress.id,
-      coords: [
-        "<280, 380, 277, 356, 300, 270, 390, 233, 468, 253, 481, 239, 475, 291, 539, 325, 564, 424, 548, 435, 544, 421, 533, 423, 532, 464, 553, 532, 564, 605, 562, 647, 573, 713, 567, 865, 454, 852, 399, 860, 357, 875, 355, 875, 356, 836, 338, 741, 339, 659, 344, 611, 353, 553, 343, 506, 322, 452, 338, 393, 290, 364"
+        "733,1492,755,1492,774,1482,757,1461,848,1450,822,1331,895,1355,922,1340,935,1310,941,1237,968,1135,967,1008,946,972,727,841,709,919,727,1000,622,946,625,924,619,900,630,852,657,789,652,766,592,722,512,723,490,749,442,749,374,781,350,833,348,932,385,1035,634,1146"
       ]
     })
-  ### Green Beanie Map
-    img14_green_beanie = ImageMap.create({
-      image_id: img14.id,
-      item_id: green_beanie.id,
-      coords: [
-        "<405, 154, 415, 126, 454, 76, 474, 50, 503, 62, 513, 79, 535, 84, 549, 135, 542, 173, 519, 208, 516, 202, 527, 178, 525, 161, 498, 139, 464, 131, 428, 142, 406, 161"
-      ]
-    })
-  ### Green Puffy Jacket Map
-    img14_green_puffy_jacket = ImageMap.create({
-      image_id: img14.id,
-      item_id: green_puffy_jacket.id,
-      coords: [
-        "<538, 481, 555, 470, 591, 499, 593, 545, 604, 542, 633, 586, 652, 599, 657, 618, 676, 653, 660, 788, 601, 820, 603, 834, 597, 837, 586, 819, 569, 832, 571, 801, 622, 801, 640, 789, 639, 766, 585, 753, 579, 767, 589, 795, 569, 795, 578, 716, 567, 623, 565, 583", 
-        "<197, 468, 232, 439, 280, 421, 320, 445, 338, 489, 350, 537, 353, 568, 347, 596, 344, 624, 338, 662, 338, 695, 339, 743, 345, 778, 259, 788, 238, 773, 270, 789, 282, 804, 309, 807, 324, 813, 336, 807, 335, 785, 345, 784, 351, 869, 368, 872, 378, 906, 295, 891, 213, 849, 132, 803, 198, 671, 214, 631, 210, 578, 193, 530, 231, 475, 221, 468, 192, 472"
-      ]
-    })
-#
-## Image 11 Maps:
-  ### Gold Velvet Bracelet Map
-    img11_gold_velvet_bracelet = ImageMap.create({
-      image_id: img11.id,
-      item_id: gold_velvet_bracelet.id,
-      coords: [
-        "277, 456, 298, 446, 301, 457, 261, 478"
-      ]
-    })
-  ### Copper Earrings Map
-    img11_copper_earrings = ImageMap.create({
-        image_id: img11.id,
-        item_id: copper_earrings.id,
-        coords: [
-          "362, 126, 378, 126, 381, 152, 365, 157"
-        ]
-      })
-  ### Pink Femme T-Shirt Map
-    img11_pink_femme_tshirt = ImageMap.create({
-        image_id: img11.id,
-        item_id: pink_femme_tshirt.id,
-        coords: [
-          "283, 253, 281, 235, 295, 195, 315, 175, 364, 173, 372, 199, 394, 207, 418, 204, 427, 188, 478, 207, 486, 224, 495, 270, 469, 274, 455, 286, 453, 301, 455, 333, 447, 354, 466, 370, 463, 386, 463, 397, 438, 402, 410, 390, 358, 389, 307, 421, 302, 409, 315, 316, 312, 249, 288, 231"
-        ]
-      })
-  ### Burgundy Velvet Pants Map
-    img11_burgundy_velvet_pants = ImageMap.create({
-        image_id: img11.id,
-        item_id: burgundy_velvet_pants.id,
-        coords: [
-          "235, 770, 245, 793, 285, 788, 307, 666, 386, 507, 400, 567, 402, 669, 392, 771, 404, 782, 434, 781, 452, 763, 452, 748, 462, 657, 479, 442, 463, 397, 436, 408, 408, 390, 357, 387, 307, 421, 302, 442, 312, 481, 303, 529, 279, 528, 265, 596, 255, 605, 240, 672"
-        ]
-      })
-  ### Cream Fair-Isle Socks Map
-    img11_cream_fair_isle_socks = ImageMap.create({
-        image_id: img11.id,
-        item_id: cream_fair_isle_socks.id,
-        coords: [
-          "246, 791, 276, 800, 277, 821, 266, 828, 259, 829, 248, 824, 237, 821, 233, 818, 244, 808",
-          "394, 782, 420, 791, 419, 813, 410, 806, 400, 804, 384, 806"
-        ]
-      })
-  ### Pink Sneakers Map
-    img11_pink_sneakers = ImageMap.create({
-        image_id: img11.id,
-        item_id: pink_sneakers.id,
-        coords: [
-          "379, 829, 397, 874, 430, 888, 446, 875, 443, 845, 424, 815, 408, 804, 393, 804, 384, 811",
-          "170, 868, 207, 836, 234, 818, 249, 827, 257, 831, 268, 830, 276, 820, 284, 835, 286, 858, 242, 871, 216, 885, 180, 887"
-        ]
-      })
-#
-## Image 12 Maps:
-  ### Green Beanie Map
-    img12_green_beanie = ImageMap.create({
-      image_id: img12.id,
-      item_id: green_beanie.id,
-      coords: [
-        "323, 107, 355, 71, 359, 50, 380, 43, 402, 53, 420, 100, 420, 130, 403, 152, 403, 138, 381, 112, 339, 108"
-      ]
-    })
-  ### Green Button Down Map
-    img12_green_button_down = ImageMap.create({
-      image_id: img12.id,
-      item_id: green_button_down.id,
-      coords: [
-        "340, 229, 329, 195, 329, 181, 283, 148, 272, 154, 272, 166, 236, 197, 236, 205, 221, 238, 225, 306, 214, 411, 217, 499, 234, 500, 275, 468, 280, 426, 288, 427, 292, 411, 271, 358, 276, 344, 305, 342, 317, 383, 334, 382, 347, 364, 356, 381, 364, 379, 356, 329, 351, 228, 357, 184, 344, 180, 333, 192"
-      ]
-    })
-  ### Gray Sneakers Map
-    img12_gray_sneakers = ImageMap.create({
-      image_id: img12.id,
-      item_id: gray_sneakers.id,
-      coords: [
-        "662, 439, 689, 428, 689, 500, 681, 516, 644, 493, 671, 463",
-        "215, 803, 223, 818, 258, 797, 320, 840, 320, 850, 296, 862, 256, 864, 203, 845, 209, 807"
-      ]
-    })
-  ### Pink Tote Map
-    img12_pink_tote = ImageMap.create({
-      image_id: img12.id,
-      item_id: pink_tote.id,
-      coords: [
-        "348, 539, 377, 519, 451, 577, 496, 553, 566, 665, 578, 719, 456, 805, 417, 789, 342, 659, 373, 633"
-      ]
-    })
-  ### Green Sweater Map
-    img12_green_sweater = ImageMap.create({
-        image_id: img12.id,
-        item_id: green_sweater.id,
-        coords: [
-          "321, 382, 344, 363, 364, 415, 376, 494, 372, 495, 349, 457",
-          "248, 488, 260, 593, 263, 595, 273, 577, 262, 488, 294, 428, 294, 416, 280, 430, 273, 467"
-        ]
-      })
-  ### Tuxedo Stripe Jeans Map
-    img12_tuxedo_stripe_jeans = ImageMap.create({
-      image_id: img12.id,
-      item_id: tuxedo_stripe_jeans.id,
-      coords: [
-        "278, 456, 300, 426, 320, 472, 335, 557, 325, 638, 268, 782, 236, 788, 221, 769, 264, 622, 272, 576, 265, 509",
-        "356, 382, 365, 453, 496, 402, 596, 457, 628, 406, 501, 335"
-      ]
-    })
-  ### Gold Stacking Rings Map
-    img12_gold_stacking_rings = ImageMap.create({
-      image_id: img12.id,
-      item_id: gold_stacking_rings.id,
-      coords: [
-        "326, 504, 355, 503, 355, 516, 327, 520"
-      ]
-    })
-#
-## Image 6 Maps:
-  ### Gold Velvet Bracelet Map
-    img6_gold_velvet_bracelet = ImageMap.create({
-      image_id: img6.id,
-      item_id: gold_velvet_bracelet.id,
-      coords: [
-        "394, 279, 414, 278, 420, 297, 412, 311, 393, 312, 399, 298"
-      ]
-    })
-  ### Pink Converse Sneakers Map
-    img6_pink_converse_sneakers = ImageMap.create({
-      image_id: img6.id,
-      item_id: pink_converse_sneakers.id,
-      coords: [
-        "290, 873, 300, 894, 342, 898, 361, 880, 359, 867, 368, 846, 353, 789, 306, 794, 310, 840",
-        "492, 808, 546, 809, 559, 840, 612, 880, 599, 897, 553, 906, 528, 887, 486, 875, 486, 837"
-      ]
-    })
-  ### Cream Fair Isle Socks Map
-    img6_cream_fair_isle_socks = ImageMap.create({
-      image_id: img6.id,
-      item_id: cream_fair_isle_socks.id,
-      coords: [
-        "304, 771, 341, 761, 347, 799, 323, 788, 310, 804",
-        "488, 782, 529, 782, 540, 806, 495, 807"
-      ]
-    })
-  ### Pink Velvet Skirt Map
-    img6_pink_velvet_skirt = ImageMap.create({
-      image_id: img6.id,
-      item_id: pink_velvet_skirt.id,
-      coords: [
-        "193, 504, 232, 416, 306, 437, 327, 431, 337, 373, 358, 342, 407, 348, 424, 375, 429, 418, 481, 539, 401, 557, 295, 535, 273, 540"
-      ]
-    })
-  ### Pink Crossbody Purse Map
-    img6_pink_crossbody_purse = ImageMap.create({
-      image_id: img6.id,
-      item_id: pink_crossbody_purse.id,
-      coords: [
-        "226, 352, 214, 396, 220, 416, 302, 436, 326, 433, 335, 378, 360, 334, 419, 103, 402, 104, 352, 296, 322, 351, 274, 337, 274, 356"
-      ]
-    })
-  ### Gold Stacking Rings Map
-    img6_gold_stacking_rings = ImageMap.create({
-      image_id: img6.id,
-      item_id: gold_stacking_rings.id,
-      coords: [
-        "240, 329, 251, 323, 256, 332, 247, 336"
-      ]
-    })
-  ### Gold Pendant Necklace Map
-    img6_gold_pendant_necklace = ImageMap.create({
-      image_id: img6.id,
-      item_id: gold_pendant_necklace.id,
-      coords: [
-        "307, 119, 328, 229, 345, 233, 355, 215, 382, 106, 369, 101, 362, 152, 340, 204, 311, 118"
-      ]
-    })
-  ### Pink Ribbed Sweater Map
-    img6_pink_ribbed_sweater = ImageMap.create({
-      image_id: img6.id,
-      item_id: pink_ribbed_sweater.id,
-      coords: [
-       "360, 341, 404, 349, 427, 381, 444, 360, 441, 317, 487, 304, 499, 278, 491, 205, 480, 181, 464, 128, 446, 103, 418, 104, 369, 279, 419, 273, 449, 281, 445, 312, 423, 313, 382, 312", 
-        "201, 312, 182, 271, 231, 152, 309, 112, 329, 243, 350, 243, 385, 94, 371, 92, 340, 192, 318, 118, 360, 90, 405, 109, 347, 288, 306, 334, 279, 327, 253, 298, 268, 228, 234, 286, 208, 269, 192, 283"
-      ]
-    })
+  ### Red Velvet Day Heel
+  img5_red_day_heel = ImageMap.create({
+    image_id: img5.id,
+    item_id: red_day_heel.id,
+    coords: [
+      "798,1732,798,1668,811,1612,824,1596,890,1725,945,1749,989,1735,981,1719,995,1722,1045,1794,898,1798,873,1768,862,1743,820,1751",
+      "892,1533,948,1593,973,1636,956,1662",
+      "758,1490,778,1484,819,1576,779,1592,752,1571"
+    ]
+  })
 #
 # CART_ITEMS -------------------------------------------------------------------
 ## 
   demoCart = CartItem.create({
     user_id: demoUser.id,
-    item_id: tuxedo_stripe_jeans.id,
-    size: "28",
+    item_id: burgundy_boots.id,
+    size: "8",
     quantity: 1
   })
