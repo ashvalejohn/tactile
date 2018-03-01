@@ -30,6 +30,7 @@ class Checkout extends Component {
             </p>
             <p>See other projects built by Ashley <a target="_blank" rel="noreferrer noopener" alt="Tactile Github" href="https://github.com/ashvalejohn">here</a>.
             </p>
+            <p>Images sourced from <a target="_blank" href="http://www.everlane.com" rel="noreferrer noopener">Everlane</a>.</p>
           </div>
         </div>
       </Modal>
