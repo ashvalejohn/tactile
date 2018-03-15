@@ -1,4 +1,3 @@
-import merge from 'lodash/merge';
 import { RECEIVE_ITEM, CLEAR_ITEM } from '../actions/item_actions';
 
 const itemReducer = (state = {}, action) => {
