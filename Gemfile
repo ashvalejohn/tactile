@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'annotate'
 gem 'jquery-rails'
+gem 'rails_real_favicon'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
